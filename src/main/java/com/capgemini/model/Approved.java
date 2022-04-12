@@ -28,7 +28,7 @@ public class Approved  {
 	private double emi;
 	private LocalDate emidate;
 	
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	@JsonBackReference
 	private Account account;
 	

@@ -34,14 +34,99 @@ public class UserAdvanced  {
 	private String pan;
 	private String salarySlip;
 	private String addressProof;
-	
-	@OneToOne(cascade=CascadeType.ALL)
-	private UserBasic userregister;
-	
+	/*
 	@OneToMany(mappedBy="user")
 	private Set<LoanAppTable> loanapp;
 	
 	@OneToOne(cascade=CascadeType.ALL)
 	private Account account;
+	 */
 
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getPin() {
+		return pin;
+	}
+
+	public void setPin(String pin) {
+		this.pin = pin;
+	}
+
+	public String getEmptype() {
+		return emptype;
+	}
+
+	public void setEmptype(String emptype) {
+		this.emptype = emptype;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public String getAadhar() {
+		return aadhar;
+	}
+
+	public void setAadhar(String aadhar) {
+		this.aadhar = aadhar;
+	}
+
+	public String getPan() {
+		return pan;
+	}
+
+	public void setPan(String pan) {
+		this.pan = pan;
+	}
+
+	public String getSalarySlip() {
+		return salarySlip;
+	}
+
+	public void setSalarySlip(String salarySlip) {
+		this.salarySlip = salarySlip;
+	}
+
+	public String getAddressProof() {
+		return addressProof;
+	}
+
+	public void setAddressProof(String addressProof) {
+		this.addressProof = addressProof;
+	}
 }

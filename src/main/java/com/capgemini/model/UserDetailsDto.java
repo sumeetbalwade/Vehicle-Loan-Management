@@ -3,8 +3,6 @@ package com.capgemini.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
 public class UserDetailsDto {
 	
 	private String aadhar;

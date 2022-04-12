@@ -1,8 +1,10 @@
+/*
 package com.capgemini.model;
 
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -18,7 +20,9 @@ import lombok.NoArgsConstructor;
 @Table(name="EmiClass_VLA")
 public class EmiClass {
 	
+	@Id
 	
+	private int emiid;
 	private LocalDate date;
 	private String beginningBalance;
 	private String emi;
@@ -30,3 +34,4 @@ public class EmiClass {
 	
 	
 }
+*/

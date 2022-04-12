@@ -1,4 +1,4 @@
-package com.capgemini.service;
+/*package com.capgemini.service;
 
 import java.util.Date;
 import java.util.List;
@@ -71,3 +71,4 @@ public interface VehicleService {
 	// EMI LIST
 	public List<EmiClass> calculateEmi(double loanAmount, int termInYears, double interestRate,Date appdate);
 }
+*/
