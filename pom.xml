@@ -63,6 +63,12 @@
 		    <artifactId>springfox-swagger-ui</artifactId>
 		    <version>2.9.2</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-mail -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-mail</artifactId>
+		    <version>2.6.6</version>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -1,39 +1,46 @@
 package com.capgemini.model;
 
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Table(name="UserAdvanced_VLA")
 public class UserAdvanced  {
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int userId;
 	
+	@NotBlank(message="Address shouldn't be left empty.")
 	private String address;
+	@NotBlank(message="State shouldn't be left empty.")
 	private String state;
+	@NotBlank(message="City shouldn't be left empty.")
 	private String city;
+	@NotBlank(message="Pin shouldn't be left empty.")
 	private String pin;
+	@NotBlank(message="Employee Type shouldn't be left empty.")
 	private String emptype;
+	@NotNull(message="Salary shouldn't be blank")
 	private double salary;
+	@NotBlank(message="Aadhar details shouldn't be left empty.")
 	private String aadhar;
+	@NotBlank(message="PAN details shouldn't be left empty.")
 	private String pan;
+	@NotBlank(message="Salary Slip details shouldn't be left empty.")
 	private String salarySlip;
+	@NotBlank(message="Address Proof shouldn't be left empty.")
 	private String addressProof;
+	
+	
 
 	public int getUserId() {
 		return userId;

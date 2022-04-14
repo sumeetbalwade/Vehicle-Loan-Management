@@ -12,7 +12,7 @@ import com.capgemini.model.UserBasic;
 
 public interface UserService {
 	public void UserRegisterService(UserBasic userbasic) throws UserAlreadyExistsException;
-	public void applyVehicleLoan(LoanAppTable loanapp, UserBasic userbasic, UserAdvanced userdetails);
+	public void applyVehicleLoan(LoanAppTable loanapp, UserBasic userbasic);
 	public void resetPasswordService(UserBasic userbasic) throws UserNotFoundException;
 	public void modifyUserDetails(UserAdvanced user);
 	public UserBasic getUserRegistrationdetails(String email) throws UserNotFoundException;

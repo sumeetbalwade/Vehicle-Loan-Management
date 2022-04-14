@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -16,10 +19,20 @@ public class UserBasic {
 	@Id
 	private String email;
 	
+	@NotBlank(message="Name shouldn't be left empty.")
 	private String name;
+	
+	@NotBlank(message="Gender shouldn't be left empty.")
 	private String gender;
+	
+	@NotBlank(message="Mobile Number shouldn't be left empty.")
 	private String mobile;
+	
+	@NotNull(message="Age shouldn't be blank")
+	@DecimalMin(value="20",message="minimum age should be 20")
 	private int age;
+	
+	
 	private String password;
 
 	@OneToOne(cascade=CascadeType.ALL)

@@ -27,8 +27,6 @@ public class AdminController {
 		return adao.verifyAdminLogin(login);
 	}
 	
-	
-	
 	@PutMapping(path="/modifyStatus")
 	public void modifyStatus(@RequestBody LoanAppTable loanapp) {
 		adao.modifyStatus(loanapp);

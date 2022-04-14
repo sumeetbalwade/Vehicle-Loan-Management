@@ -3,6 +3,8 @@ package com.capgemini.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.capgemini.dao.EMIDao;
 import com.capgemini.dao.UserDao;
 import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.exception.UserNotFoundException;
@@ -28,6 +31,11 @@ public class UserController {
 	@PostMapping(path="/registerUser")
 	public void UserRegisterService(@RequestBody UserBasic userbasic) throws UserAlreadyExistsException {
 		udao.UserRegisterService(userbasic);
+	}
+	
+	@PutMapping(path="/applyVehicleLoan")
+	public void applyVehicleLoan(@RequestBody LoanAppTable loanapp,@RequestBody UserBasic userbasic) {
+		udao.applyVehicleLoan(loanapp, userbasic);
 	}
 
 	

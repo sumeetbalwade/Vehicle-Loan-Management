@@ -35,7 +35,7 @@ public class UserDao implements UserService{
 
 	
 	@Override
-	public void applyVehicleLoan(LoanAppTable loanapp, UserBasic userbasic, UserAdvanced userdetails) {
+	public void applyVehicleLoan(LoanAppTable loanapp, UserBasic userbasic) {
 		
 	}
 

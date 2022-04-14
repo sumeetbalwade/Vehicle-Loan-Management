@@ -23,5 +23,4 @@ public class LoginDto {
 		this.password = password;
 	}
 	
-	
 }
