@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cg1</groupId>
-	<artifactId>Sprint-1</artifactId>
+	<artifactId>VLoanManagment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>VehicleLoanAppDemo</name>
 	<description>Application using Spring Boot</description>
