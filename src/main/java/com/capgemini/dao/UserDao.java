@@ -12,6 +12,7 @@ import com.capgemini.model.LoanAppTable;
 import com.capgemini.model.LoginDto;
 import com.capgemini.model.UserAdvanced;
 import com.capgemini.model.UserBasic;
+import com.capgemini.repository.UserAdvancedRepository;
 import com.capgemini.repository.UserBasicRepository;
 import com.capgemini.service.UserService;
 
@@ -21,6 +22,9 @@ public class UserDao implements UserService{
 	@Autowired
 	UserBasicRepository ubrepo;
 
+	@Autowired
+	UserAdvancedRepository uadrepo;
+	
 	@Override
 	public void UserRegisterService(UserBasic userbasic) throws UserAlreadyExistsException {
 		if(ubrepo.existsById(userbasic.getEmail())) {
@@ -32,7 +36,6 @@ public class UserDao implements UserService{
 	
 	@Override
 	public void applyVehicleLoan(LoanAppTable loanapp, UserBasic userbasic, UserAdvanced userdetails) {
-		// TODO Auto-generated method stub 
 		
 	}
 
@@ -48,8 +51,9 @@ public class UserDao implements UserService{
 
 	@Override
 	public void modifyUserDetails(UserAdvanced user) {
-		// TODO Auto-generated method stub
-		
+		if(uadrepo.existsById(user.getUserId())) {
+			
+		}
 	}
 
 	@Override
@@ -62,38 +66,32 @@ public class UserDao implements UserService{
 
 	@Override
 	public UserAdvanced getUserDetailsService(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		return ubrepo.getUserDetailsService(email);
 	}
 
 	@Override
 	public List<LoanAppTable> getAllLoanApplication(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		return ubrepo.getAllLoanApplication(email);
 	}
 
 	@Override
 	public List<Approved> viewAllApprovedByEmail(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		return ubrepo.viewAllApprovedByEmail(email);
 	}
 
 	@Override
 	public LoanAppTable getLoanApplicationByChassis(String chassisNo) {
-		// TODO Auto-generated method stub
-		return null;
+		return ubrepo.getLoanApplicationByChassis(chassisNo);
 	}
 
 	@Override
 	public Approved viewApprovedByLoanId(int loanId) {
-		// TODO Auto-generated method stub
-		return null;
+		return ubrepo.viewApprovedByLoanId(loanId);
 	}
 
 	@Override
 	public List<LoanAppTable> getAllRejectedByEmail(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		return ubrepo.getAllRejectedByEmail(email);
 	}
 
 	@Override

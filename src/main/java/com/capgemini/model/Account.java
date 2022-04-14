@@ -18,8 +18,6 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Table(name="Account_VLA")
@@ -35,5 +33,31 @@ public class Account {
 	@OneToMany(mappedBy="account",cascade=CascadeType.ALL)//targetEntity=Account.class
 	@JsonManagedReference
 	private Set<Approved> loans;
+
+	public long getAccountNo() {
+		return accountNo;
+	}
+
+	public void setAccountNo(long accountNo) {
+		this.accountNo = accountNo;
+	}
+
+	public UserAdvanced getUser() {
+		return user;
+	}
+
+	public void setUser(UserAdvanced user) {
+		this.user = user;
+	}
+
+	public Set<Approved> getLoans() {
+		return loans;
+	}
+
+	public void setLoans(Set<Approved> loans) {
+		this.loans = loans;
+	}	
+	
+	
 
 }

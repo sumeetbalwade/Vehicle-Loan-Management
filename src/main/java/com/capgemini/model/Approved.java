@@ -15,9 +15,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-@Data
-@NoArgsConstructor
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Table(name="Approved_VLA")
@@ -25,6 +22,7 @@ public class Approved  {
 	
 	@Id
 	private int loanId;
+	
 	private double emi;
 	private LocalDate emidate;
 	
@@ -34,4 +32,46 @@ public class Approved  {
 	
 	@OneToOne(cascade=CascadeType.ALL)
 	private LoanAppTable loanapp;
+
+	public int getLoanId() {
+		return loanId;
+	}
+
+	public void setLoanId(int loanId) {
+		this.loanId = loanId;
+	}
+
+	public double getEmi() {
+		return emi;
+	}
+
+	public void setEmi(double emi) {
+		this.emi = emi;
+	}
+
+	public LocalDate getEmidate() {
+		return emidate;
+	}
+
+	public void setEmidate(LocalDate emidate) {
+		this.emidate = emidate;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+	public LoanAppTable getLoanapp() {
+		return loanapp;
+	}
+
+	public void setLoanapp(LoanAppTable loanapp) {
+		this.loanapp = loanapp;
+	}
+	
+	
 }

@@ -34,13 +34,6 @@ public class UserAdvanced  {
 	private String pan;
 	private String salarySlip;
 	private String addressProof;
-	/*
-	@OneToMany(mappedBy="user")
-	private Set<LoanAppTable> loanapp;
-	
-	@OneToOne(cascade=CascadeType.ALL)
-	private Account account;
-	 */
 
 	public int getUserId() {
 		return userId;
@@ -129,4 +122,13 @@ public class UserAdvanced  {
 	public void setAddressProof(String addressProof) {
 		this.addressProof = addressProof;
 	}
+
+	@Override
+	public String toString() {
+		return "UserAdvanced [userId=" + userId + ", address=" + address + ", state=" + state + ", city=" + city
+				+ ", pin=" + pin + ", emptype=" + emptype + ", salary=" + salary + ", aadhar=" + aadhar + ", pan=" + pan
+				+ ", salarySlip=" + salarySlip + ", addressProof=" + addressProof + "]";
+	}
+	
+	
 }
