@@ -24,9 +24,14 @@ public class AdminController {
 	@Autowired
 	AdminDao adao;
 	
-	@PostMapping(path="/verifyAdminLogin")
+	@GetMapping(path="/verifyAdminLogin")
 	public boolean verifyAdminLogin(@RequestBody LoginDto login) {
 		return adao.verifyAdminLogin(login);
+	}
+	
+	@PostMapping(path="/adminRegisterService")
+	public void adminRegisterService(AdminDetails admin) {
+		adao.adminRegisterService(admin);
 	}
 	
 	@PutMapping(path="/modifyStatus")

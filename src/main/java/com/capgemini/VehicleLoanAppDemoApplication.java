@@ -13,5 +13,4 @@ public class VehicleLoanAppDemoApplication {
 		SpringApplication.run(VehicleLoanAppDemoApplication.class, args);
 		
 	}
-
 }

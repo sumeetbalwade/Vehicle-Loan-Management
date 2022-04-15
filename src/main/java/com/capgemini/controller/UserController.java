@@ -72,7 +72,7 @@ public class UserController {
 	}
 	
 	@GetMapping(path="/getLoanApplicationByChassis/{chassisNo}")
-	public LoanAppTable getLoanApplicationByChassis(@PathVariable String chassisNo) {
+	public LoanAppTable getLoanApplicationByChassis(@PathVariable int chassisNo) {
 		return udao.getLoanApplicationByChassis(chassisNo);
 	}
 

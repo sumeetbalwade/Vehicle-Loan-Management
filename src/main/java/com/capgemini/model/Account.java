@@ -1,4 +1,4 @@
-package com.capgemini.model;
+	package com.capgemini.model;
 
 import java.util.Set;
 
@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 public class Account {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private long accountNo;
 	
 	@OneToOne(fetch = FetchType.LAZY,cascade=CascadeType.ALL)

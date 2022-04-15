@@ -15,7 +15,7 @@ import com.capgemini.model.UserBasic;
 public interface AdminRepository extends JpaRepository<AdminDetails,String>{
 	
 	@Query(value="update loan_app_table_vla set status=?1 where chassis_no=?2",nativeQuery=true)
-	public void modifyStatus(String status,String chassisno);
+	public void modifyStatus(String status,int i);
 	
 	@Query(value="select * from account_vla av,user_basic_vla ubv where ubv.userdetails_user_id=av.user_user_id and ubv.email=?1",nativeQuery=true)
 	public Account getAccountByEmailService(String email);

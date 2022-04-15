@@ -1,9 +1,15 @@
 package com.capgemini.model;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -40,8 +46,13 @@ public class UserAdvanced  {
 	@NotBlank(message="Address Proof shouldn't be left empty.")
 	private String addressProof;
 	
+	@OneToMany(cascade=CascadeType.ALL,fetch= FetchType.EAGER)
+	private Set<LoanAppTable> loanapp;
 	
-
+	@OneToOne
+	private Account account;
+	
+		
 	public int getUserId() {
 		return userId;
 	}

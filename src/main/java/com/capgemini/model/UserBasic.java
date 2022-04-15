@@ -2,6 +2,7 @@ package com.capgemini.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -35,7 +36,7 @@ public class UserBasic {
 	
 	private String password;
 
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne(cascade=CascadeType.ALL,fetch= FetchType.EAGER)	
 	private UserAdvanced userdetails;
 
 	public String getEmail() {

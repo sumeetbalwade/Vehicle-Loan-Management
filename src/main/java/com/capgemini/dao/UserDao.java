@@ -1,5 +1,6 @@
 package com.capgemini.dao;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,6 +16,7 @@ import com.capgemini.model.LoanUserHolder;
 import com.capgemini.model.LoginDto;
 import com.capgemini.model.UserAdvanced;
 import com.capgemini.model.UserBasic;
+import com.capgemini.repository.ApprovedRepository;
 import com.capgemini.repository.LoanApplicationRepository;
 import com.capgemini.repository.UserAdvancedRepository;
 import com.capgemini.repository.UserBasicRepository;
@@ -31,6 +33,10 @@ public class UserDao implements UserService {
 	
 	@Autowired
 	LoanApplicationRepository larepo;
+	
+	@Autowired
+	ApprovedRepository aprepo;
+	
 
 	public static boolean isValidPassword(String password) {
 
@@ -72,6 +78,7 @@ public class UserDao implements UserService {
 
 	@Override
 	public void applyVehicleLoan(LoanUserHolder loanuserholder) {
+		loanuserholder.lat.setAppdate(LocalDate.now());
 		System.out.println("DAO");
 		larepo.save(loanuserholder.lat);
 		System.out.println("DAO1");
@@ -118,27 +125,27 @@ public class UserDao implements UserService {
 
 	@Override
 	public List<LoanAppTable> getAllLoanApplication(String email) {
-		return ubrepo.getAllLoanApplication(email);
+		return larepo.getAllLoanApplication(email);
 	}
 
 	@Override
 	public List<Approved> viewAllApprovedByEmail(String email) {
-		return ubrepo.viewAllApprovedByEmail(email);
+		return aprepo.viewAllApprovedByEmail(email);
 	}
 
 	@Override
-	public LoanAppTable getLoanApplicationByChassis(String chassisNo) {
-		return ubrepo.getLoanApplicationByChassis(chassisNo);
+	public LoanAppTable getLoanApplicationByChassis(int chassisNo) {
+		return larepo.getById(chassisNo);
 	}
 
 	@Override
 	public Approved viewApprovedByLoanId(int loanId) {
-		return ubrepo.viewApprovedByLoanId(loanId);
+		return aprepo.viewApprovedByLoanId(loanId);
 	}
 
 	@Override
 	public List<LoanAppTable> getAllRejectedByEmail(String email) {
-		return ubrepo.getAllRejectedByEmail(email);
+		return larepo.getAllRejectedByEmail(email);
 	}
 
 	@Override

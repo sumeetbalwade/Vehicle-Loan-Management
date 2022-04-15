@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,6 +12,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -23,7 +27,7 @@ public class LoanAppTable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private String chassisNo;
+	private int chassisNo;
 	
 	@NotNull(message="Existing EMI shouldn't be blank")
 	private double existingEMI;
@@ -34,6 +38,8 @@ public class LoanAppTable {
 	@NotNull(message="Amount shouldn't be blank")
 	private double amount;
 	
+	@Value("${my.date}")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate appdate;
 	private String status="PENDING";
 	
@@ -50,14 +56,14 @@ public class LoanAppTable {
 	@NotNull(message="On Road Price shouldn't be blank")
 	private double onRoadPrice;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	private UserAdvanced user;
 
-	public String getChassisNo() {
+	public int getChassisNo() {
 		return chassisNo;
 	}
 
-	public void setChassisNo(String chassisNo) {
+	public void setChassisNo(int chassisNo) {
 		this.chassisNo = chassisNo;
 	}
 
