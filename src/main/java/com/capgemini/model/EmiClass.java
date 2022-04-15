@@ -31,6 +31,8 @@ public class EmiClass {
 	private double endingBalance;
 	private String status;
 	
+	
+	
 	public EmiClass(LocalDate date, double beginningBalance, double emi, double principal, double interest,
 			double endingBalance, String status) {
 		super();

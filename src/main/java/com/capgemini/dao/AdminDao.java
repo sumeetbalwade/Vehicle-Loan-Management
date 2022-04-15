@@ -54,7 +54,10 @@ public class AdminDao implements AdminService{
 
 	@Override
 	public void modifyStatus(LoanAppTable loanapp) {
-		adrepo.modifyStatus(loanapp.getStatus(), loanapp.getChassisNo());
+		LoanAppTable late=larepo.getById(loanapp.getChassisNo());
+		late.setStatus(loanapp.getStatus());
+		larepo.save(late);
+		//larepo.modifyStatus(loanapp.getStatus(), loanapp.getChassisNo());
 	}
 
 	@Override
@@ -79,27 +82,27 @@ public class AdminDao implements AdminService{
 
 	@Override
 	public List<LoanAppTable> viewAllAcceptedLoanApplications() {
-		return adrepo.viewAllAcceptedLoanApplications();
+		return larepo.viewAllAcceptedLoanApplications();
 	}
 
 	@Override
 	public List<LoanAppTable> viewAllRejectedLoanApplications() {
-		return adrepo.viewAllRejectedLoanApplications();
+		return larepo.viewAllRejectedLoanApplications();
 	}
 
 	@Override
 	public List<UserBasic> viewAllApprovedUsers() {
-		return adrepo.viewAllApprovedUsers();
+		return ubrepo.viewAllApprovedUsers();
 	}
 
 	@Override
 	public List<UserBasic> viewAllRejectedUsers() {
-		return adrepo.viewAllRejectedUsers();
+		return ubrepo.viewAllRejectedUsers();
 	}
 
 	@Override
 	public List<UserBasic> viewAllPendingUsers() {
-		return adrepo.viewAllPendingUsers();
+		return ubrepo.viewAllPendingUsers();
 	}
 	
 }

@@ -17,6 +17,15 @@ public interface LoanApplicationRepository extends JpaRepository<LoanAppTable,In
 	@Query(value="select * from loan_app_table_vla latv, user_basic_vla ubv where ubv.email=?1 and ubv.userdetails_user_id=latv.user_user_id and latv.status='Rejected'",nativeQuery=true)
 	public List<LoanAppTable> getAllRejectedByEmail(String email);
 	
+	//@Query(value="update loan_app_table_vla set status=?1 where chassis_no=?2",nativeQuery=true)
+	//public void modifyStatus(String status,int i);
+	
+	@Query(value="select * from loan_app_table_vla where status='ACCEPTED'",nativeQuery=true)
+	public List<LoanAppTable> viewAllAcceptedLoanApplications();
+	
+	@Query(value="select * from loan_app_table_vla where status='Rejected'",nativeQuery=true)
+	public List<LoanAppTable> viewAllRejectedLoanApplications();
+	
 	//@Query(value="select * from loan_app_table_vla where chassis_no=?1",nativeQuery=true)
 	//public LoanAppTable getLoanApplicationByChassis(String chassisNo);
 

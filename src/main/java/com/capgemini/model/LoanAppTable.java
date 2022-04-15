@@ -41,6 +41,8 @@ public class LoanAppTable {
 	@Value("${my.date}")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate appdate;
+	
+	
 	private String status="PENDING";
 	
 	@NotBlank(message="Brand shouldn't be left empty.")
@@ -112,7 +114,7 @@ public class LoanAppTable {
 	}
 
 	public void setStatus(String status) {
-		this.status = status;
+		this.status = status	;
 	}
 
 	public String getBrand() {
