@@ -31,6 +31,18 @@ public class EmiClass {
 	private double endingBalance;
 	private String status;
 	
+	public EmiClass(LocalDate date, double beginningBalance, double emi, double principal, double interest,
+			double endingBalance, String status) {
+		super();
+		this.emiid = emiid;
+		this.date = date;
+		this.beginningBalance = beginningBalance;
+		this.emi = emi;
+		this.principal = principal;
+		this.interest = interest;
+		this.endingBalance = endingBalance;
+		this.status = status;
+	}
 	public int getEmiid() {
 		return emiid;
 	}
@@ -79,5 +91,7 @@ public class EmiClass {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+	
 	
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.capgemini.dao.AdminDao;
 import com.capgemini.model.Account;
@@ -17,6 +18,7 @@ import com.capgemini.model.LoanAppTable;
 import com.capgemini.model.LoginDto;
 import com.capgemini.model.UserBasic;
 
+@RestController
 public class AdminController {
 
 	@Autowired

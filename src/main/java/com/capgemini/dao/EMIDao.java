@@ -6,14 +6,20 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.stereotype.Service;
 
 import com.capgemini.model.EmiClass;
+import com.capgemini.repository.EMIRepository;
 import com.capgemini.service.EMIService;
 
+@Service
 public class EMIDao implements EMIService{
 
 	@Autowired
 	private JavaMailSender jms;
+	
+	@Autowired
+	EMIRepository emirepo;
 	
 	@Override
 	public String generateOTP() {
@@ -37,13 +43,12 @@ public class EMIDao implements EMIService{
 	@Override
 	public double EMICalculate(double loanAmount, int termInYears, double interestRate) {
 		//double E= loanAmount*interestRate[ ((1+interestRate)^n)/ (((1+interestRate)^n)-1)] ;
-		return 0;
+		return (double) loanAmount*interestRate*(Math.pow((1+interestRate),(termInYears*12))/ (Math.pow((1+interestRate),(termInYears*12))-1));
 	}
 
 	@Override
 	public List<EmiClass> calculateEmi(double loanAmount, int termInYears, double interestRate, Date appdate) {
-		
-		return null;
+		return emirepo.calculateEmi(appdate);
 	}
 
 }

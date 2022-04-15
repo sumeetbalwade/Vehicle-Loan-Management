@@ -18,6 +18,7 @@ import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.exception.UserNotFoundException;
 import com.capgemini.model.Approved;
 import com.capgemini.model.LoanAppTable;
+import com.capgemini.model.LoanUserHolder;
 import com.capgemini.model.LoginDto;
 import com.capgemini.model.UserAdvanced;
 import com.capgemini.model.UserBasic;
@@ -34,8 +35,8 @@ public class UserController {
 	}
 	
 	@PutMapping(path="/applyVehicleLoan")
-	public void applyVehicleLoan(@RequestBody LoanAppTable loanapp,@RequestBody UserBasic userbasic) {
-		udao.applyVehicleLoan(loanapp, userbasic);
+	public void applyVehicleLoan(@RequestBody LoanUserHolder loanuserholder) {
+		udao.applyVehicleLoan(loanuserholder);
 	}
 
 	
@@ -45,7 +46,7 @@ public class UserController {
 	}
 	
 	@PostMapping(path="/modifyUserDetails")
-	public void modifyUserDetails(@RequestBody UserAdvanced user) {
+	public void modifyUserDetails(@RequestBody UserAdvanced user) throws UserNotFoundException {
 		udao.modifyUserDetails(user);
 	}
 	
@@ -55,7 +56,7 @@ public class UserController {
 	}
 	
 	@GetMapping(path="/getUserDetailsService/{email}")
-	public UserAdvanced getUserDetailsService(@PathVariable String email) {
+	public UserAdvanced getUserDetailsService(@PathVariable String email) throws UserNotFoundException {
 		return udao.getUserDetailsService(email);
 	}
 

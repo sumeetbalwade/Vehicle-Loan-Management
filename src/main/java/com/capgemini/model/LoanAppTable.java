@@ -98,7 +98,7 @@ public class LoanAppTable {
 	}
 
 	public void setAppdate(LocalDate appdate) {
-		this.appdate = appdate;
+		this.appdate = LocalDate.now();
 	}
 
 	public String getStatus() {

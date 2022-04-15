@@ -11,9 +11,11 @@ import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.exception.UserNotFoundException;
 import com.capgemini.model.Approved;
 import com.capgemini.model.LoanAppTable;
+import com.capgemini.model.LoanUserHolder;
 import com.capgemini.model.LoginDto;
 import com.capgemini.model.UserAdvanced;
 import com.capgemini.model.UserBasic;
+import com.capgemini.repository.LoanApplicationRepository;
 import com.capgemini.repository.UserAdvancedRepository;
 import com.capgemini.repository.UserBasicRepository;
 import com.capgemini.service.UserService;
@@ -26,6 +28,9 @@ public class UserDao implements UserService {
 
 	@Autowired
 	UserAdvancedRepository uadrepo;
+	
+	@Autowired
+	LoanApplicationRepository larepo;
 
 	public static boolean isValidPassword(String password) {
 
@@ -66,8 +71,14 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public void applyVehicleLoan(LoanAppTable loanapp, UserBasic userbasic) {
-
+	public void applyVehicleLoan(LoanUserHolder loanuserholder) {
+		System.out.println("DAO");
+		larepo.save(loanuserholder.lat);
+		System.out.println("DAO1");
+		if (ubrepo.existsById(loanuserholder.ub.getEmail())) {
+		}
+		else ubrepo.save(loanuserholder.ub);
+		System.out.println("DAO2");
 	}
 
 	@Override
@@ -81,11 +92,13 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public void modifyUserDetails(UserAdvanced user) {
+	public void modifyUserDetails(UserAdvanced user) throws UserNotFoundException {
 		if (uadrepo.existsById(user.getUserId())) {
-
+			uadrepo.save(user);
 		}
+		else throw new UserNotFoundException("The user doesn't exist. Create a new Profile.");
 	}
+
 
 	@Override
 	public UserBasic getUserRegistrationdetails(String email) throws UserNotFoundException {
@@ -96,8 +109,11 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public UserAdvanced getUserDetailsService(String email) {
-		return ubrepo.getUserDetailsService(email);
+	public UserAdvanced getUserDetailsService(String email) throws UserNotFoundException {
+		if (!ubrepo.existsById(email)) {
+			throw new UserNotFoundException("The User is not found.");
+		}
+		return ubrepo.getById(email).getUserdetails();
 	}
 
 	@Override

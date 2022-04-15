@@ -29,8 +29,8 @@ public interface UserBasicRepository extends JpaRepository<UserBasic,String>{
 	@Query(value="select * from loan_app_table_vla latv, user_basic_vla ubv where ubv.email=?1 and ubv.userdetails_user_id=latv.user_user_id",nativeQuery=true)
 	public List<LoanAppTable> getAllLoanApplication(String email);
 	
-	@Query(value="select * from user_advanced_vla uav, user_basic_val ubv where ubv.email=?1 and ubv.userdetails_user_id=uav.user_id",nativeQuery=true)
-	public UserAdvanced getUserDetailsService(String email);
+	//@Query(value="select * from user_advanced_vla uav, user_basic_vla ubv where ubv.email=?1 and ubv.userdetails_user_id=uav.user_id",nativeQuery=true)
+	//public UserAdvanced getUserDetailsService(String email);
 	
 	
 
