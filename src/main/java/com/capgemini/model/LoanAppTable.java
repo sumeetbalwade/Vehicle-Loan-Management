@@ -10,13 +10,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
@@ -24,6 +27,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class LoanAppTable {
 	
 	private static final long serialVersionUID = 1L;
+
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -42,9 +46,20 @@ public class LoanAppTable {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate appdate;
 	
+	@Transient
+	@JsonProperty
+	Status status=Status.PENDING;
+	@JsonIgnore
+	private String s=status.toString();
 	
-	private String status="PENDING";
-	
+	public String getS() {
+		return s;
+	}
+
+	public void setS(String s) {
+		this.s = s;
+	}
+
 	@NotBlank(message="Brand shouldn't be left empty.")
 	private String brand;
 	@NotBlank(message="Color shouldn't be left empty.")
@@ -109,13 +124,11 @@ public class LoanAppTable {
 		this.appdate = LocalDate.now();
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status	;
-	}
+	/*
+	 * public Status getStatus() { return status; }
+	 * 
+	 * public void setStatus(Status status) { this.status = status; }
+	 */
 
 	public String getBrand() {
 		return brand;

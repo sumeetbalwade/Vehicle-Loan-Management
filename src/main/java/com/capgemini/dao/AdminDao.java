@@ -10,6 +10,8 @@ import com.capgemini.model.AdminDetails;
 import com.capgemini.model.Approved;
 import com.capgemini.model.LoanAppTable;
 import com.capgemini.model.LoginDto;
+import com.capgemini.model.Status;
+import com.capgemini.model.UserAdvanced;
 import com.capgemini.model.UserBasic;
 import com.capgemini.repository.AdminRepository;
 import com.capgemini.repository.ApprovedRepository;
@@ -54,9 +56,22 @@ public class AdminDao implements AdminService{
 
 	@Override
 	public void modifyStatus(LoanAppTable loanapp) {
-		LoanAppTable late=larepo.getById(loanapp.getChassisNo());
-		late.setStatus(loanapp.getStatus());
-		larepo.save(late);
+		int ratio=(int)(loanapp.getAmount()/loanapp.getUser().getSalary());
+		if(ratio<20) {
+			Status status=Status.APPROVED;
+			String s=status.toString();
+			loanapp.setS(s);
+			larepo.save(loanapp);
+		}
+		else {
+			Status status=Status.REJECTED;
+			String s=status.toString();
+			loanapp.setS(s);
+			larepo.save(loanapp);
+		}
+		//LoanAppTable late=larepo.getById(loanapp.getChassisNo());
+		//late.setStatus(loanapp.getStatus());
+		//larepo.save(late);
 		//larepo.modifyStatus(loanapp.getStatus(), loanapp.getChassisNo());
 	}
 

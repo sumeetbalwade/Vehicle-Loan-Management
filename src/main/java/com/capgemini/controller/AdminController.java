@@ -17,12 +17,15 @@ import com.capgemini.model.Approved;
 import com.capgemini.model.LoanAppTable;
 import com.capgemini.model.LoginDto;
 import com.capgemini.model.UserBasic;
+import com.capgemini.repository.LoanApplicationRepository;
 
 @RestController
 public class AdminController {
 
 	@Autowired
 	AdminDao adao;
+	@Autowired
+	LoanApplicationRepository larepos;
 	
 	@GetMapping(path="/verifyAdminLogin")
 	public boolean verifyAdminLogin(@RequestBody LoginDto login) {
@@ -34,8 +37,9 @@ public class AdminController {
 		adao.adminRegisterService(admin);
 	}
 	
-	@PutMapping(path="/modifyStatus")
-	public void modifyStatus(@RequestBody LoanAppTable loanapp) {
+	@PutMapping(path="/modifyStatus/{chassisNo}")
+	public void modifyStatus(@PathVariable int chassisNo) {
+		LoanAppTable loanapp=larepos.getById(chassisNo);
 		adao.modifyStatus(loanapp);
 	}
 	

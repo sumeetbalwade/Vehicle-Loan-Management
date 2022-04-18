@@ -2,11 +2,13 @@ package com.capgemini.repository;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.capgemini.model.LoanAppTable;
+import com.capgemini.model.Status;
 
 @Repository
 public interface LoanApplicationRepository extends JpaRepository<LoanAppTable,Integer>{
@@ -18,7 +20,7 @@ public interface LoanApplicationRepository extends JpaRepository<LoanAppTable,In
 	public List<LoanAppTable> getAllRejectedByEmail(String email);
 	
 	//@Query(value="update loan_app_table_vla set status=?1 where chassis_no=?2",nativeQuery=true)
-	//public void modifyStatus(String status,int i);
+	//public void modifyStatus(Status status,int i);
 	
 	@Query(value="select * from loan_app_table_vla where status='ACCEPTED'",nativeQuery=true)
 	public List<LoanAppTable> viewAllAcceptedLoanApplications();
