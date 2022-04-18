@@ -20,6 +20,8 @@ public class UserBasic {
 	@Id
 	private String email;
 	
+	private String username;
+	
 	@NotBlank(message="Name shouldn't be left empty.")
 	private String name;
 	
@@ -94,6 +96,16 @@ public class UserBasic {
 	public void setUserdetails(UserAdvanced userdetails) {
 		this.userdetails = userdetails;
 	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	
+	
 	
 	
 
