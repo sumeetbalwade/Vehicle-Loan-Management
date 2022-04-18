@@ -1593,3 +1593,1146 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x16
 2022-21-18-14:21:00 - Scanning for api listing references
 2022-21-18-14:21:00 - Started VehicleLoanAppDemoApplication in 4.41 seconds (JVM running for 8379.362)
 2022-21-18-14:21:00 - Condition evaluation unchanged
+2022-48-18-15:48:22 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 17512 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-48-18-15:48:22 - No active profile set, falling back to default profiles: default
+2022-48-18-15:48:22 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-48-18-15:48:22 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-48-18-15:48:24 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-48-18-15:48:25 - Finished Spring Data repository scanning in 264 ms. Found 6 JPA repository interfaces.
+2022-48-18-15:48:26 - Tomcat initialized with port(s): 8234 (http)
+2022-48-18-15:48:26 - Starting service [Tomcat]
+2022-48-18-15:48:26 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-48-18-15:48:26 - Initializing Spring embedded WebApplicationContext
+2022-48-18-15:48:26 - Root WebApplicationContext: initialization completed in 3956 ms
+2022-48-18-15:48:26 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-48-18-15:48:26 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-48-18-15:48:27 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-48-18-15:48:27 - HikariPool-1 - Starting...
+2022-48-18-15:48:28 - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.capgemini.VehicleLoanAppDemoApplication.main(VehicleLoanAppDemoApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2022-48-18-15:48:28 - HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.capgemini.VehicleLoanAppDemoApplication.main(VehicleLoanAppDemoApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2022-48-18-15:48:28 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-48-18-15:48:30 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-48-18-15:48:31 - HikariPool-1 - Starting...
+2022-48-18-15:48:32 - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.capgemini.VehicleLoanAppDemoApplication.main(VehicleLoanAppDemoApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2022-48-18-15:48:32 - SQL Error: 0, SQLState: 28P01
+2022-48-18-15:48:32 - FATAL: password authentication failed for user "postgres"
+2022-48-18-15:48:32 - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-48-18-15:48:32 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-48-18-15:48:32 - Stopping service [Tomcat]
+2022-48-18-15:48:32 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-48-18-15:48:32 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.capgemini.VehicleLoanAppDemoApplication.main(VehicleLoanAppDemoApplication.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 21 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 25 common frames omitted
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:465)
+	at org.postgresql.Driver.connect(Driver.java:264)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	... 39 common frames omitted
+2022-51-18-15:51:32 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13036 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-51-18-15:51:32 - No active profile set, falling back to default profiles: default
+2022-51-18-15:51:32 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-51-18-15:51:32 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-51-18-15:51:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-51-18-15:51:32 - Finished Spring Data repository scanning in 47 ms. Found 6 JPA repository interfaces.
+2022-51-18-15:51:33 - Tomcat initialized with port(s): 8234 (http)
+2022-51-18-15:51:33 - Starting service [Tomcat]
+2022-51-18-15:51:33 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-51-18-15:51:33 - Initializing Spring embedded WebApplicationContext
+2022-51-18-15:51:33 - Root WebApplicationContext: initialization completed in 1405 ms
+2022-51-18-15:51:33 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-51-18-15:51:33 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-51-18-15:51:33 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-51-18-15:51:33 - HikariPool-1 - Starting...
+2022-51-18-15:51:34 - HikariPool-1 - Start completed.
+2022-51-18-15:51:34 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-51-18-15:51:34 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-51-18-15:51:35 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-51-18-15:51:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-51-18-15:51:35 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-51-18-15:51:35 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-51-18-15:51:36 - LiveReload server is running on port 35729
+2022-51-18-15:51:36 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-51-18-15:51:36 - Context refreshed
+2022-51-18-15:51:36 - Found 1 custom documentation plugin(s)
+2022-51-18-15:51:36 - Scanning for api listing references
+2022-51-18-15:51:36 - Started VehicleLoanAppDemoApplication in 4.83 seconds (JVM running for 5.557)
+2022-53-18-15:53:32 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-53-18-15:53:32 - Initializing Servlet 'dispatcherServlet'
+2022-53-18-15:53:32 - Completed initialization in 4 ms
+2022-59-18-15:59:24 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-59-18-15:59:24 - HikariPool-1 - Shutdown initiated...
+2022-59-18-15:59:24 - HikariPool-1 - Shutdown completed.
+2022-59-18-15:59:24 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13036 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-59-18-15:59:24 - No active profile set, falling back to default profiles: default
+2022-59-18-15:59:25 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-59-18-15:59:25 - Finished Spring Data repository scanning in 19 ms. Found 6 JPA repository interfaces.
+2022-59-18-15:59:25 - Tomcat initialized with port(s): 8234 (http)
+2022-59-18-15:59:25 - Starting service [Tomcat]
+2022-59-18-15:59:25 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-59-18-15:59:25 - Initializing Spring embedded WebApplicationContext
+2022-59-18-15:59:25 - Root WebApplicationContext: initialization completed in 402 ms
+2022-59-18-15:59:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-59-18-15:59:25 - HikariPool-2 - Starting...
+2022-59-18-15:59:25 - HikariPool-2 - Start completed.
+2022-59-18-15:59:25 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-59-18-15:59:25 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-59-18-15:59:25 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-59-18-15:59:25 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-59-18-15:59:25 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-59-18-15:59:25 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-59-18-15:59:26 - LiveReload server is running on port 35729
+2022-59-18-15:59:26 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-59-18-15:59:26 - Context refreshed
+2022-59-18-15:59:26 - Found 1 custom documentation plugin(s)
+2022-59-18-15:59:26 - Scanning for api listing references
+2022-59-18-15:59:26 - Started VehicleLoanAppDemoApplication in 1.357 seconds (JVM running for 475.224)
+2022-59-18-15:59:26 - Condition evaluation unchanged
+2022-00-18-16:00:03 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-00-18-16:00:03 - HikariPool-2 - Shutdown initiated...
+2022-00-18-16:00:03 - HikariPool-2 - Shutdown completed.
+2022-00-18-16:00:04 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13036 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-00-18-16:00:04 - No active profile set, falling back to default profiles: default
+2022-00-18-16:00:04 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-00-18-16:00:04 - Finished Spring Data repository scanning in 23 ms. Found 6 JPA repository interfaces.
+2022-00-18-16:00:04 - Tomcat initialized with port(s): 8234 (http)
+2022-00-18-16:00:04 - Starting service [Tomcat]
+2022-00-18-16:00:04 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-00-18-16:00:04 - Initializing Spring embedded WebApplicationContext
+2022-00-18-16:00:04 - Root WebApplicationContext: initialization completed in 330 ms
+2022-00-18-16:00:04 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-00-18-16:00:04 - HikariPool-3 - Starting...
+2022-00-18-16:00:04 - HikariPool-3 - Start completed.
+2022-00-18-16:00:04 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-00-18-16:00:04 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-00-18-16:00:04 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-00-18-16:00:04 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-00-18-16:00:05 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-00-18-16:00:05 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-00-18-16:00:05 - LiveReload server is running on port 35729
+2022-00-18-16:00:05 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-00-18-16:00:05 - Context refreshed
+2022-00-18-16:00:05 - Found 1 custom documentation plugin(s)
+2022-00-18-16:00:05 - Scanning for api listing references
+2022-00-18-16:00:05 - Started VehicleLoanAppDemoApplication in 1.414 seconds (JVM running for 514.384)
+2022-00-18-16:00:05 - Condition evaluation unchanged
+2022-01-18-16:01:49 - Application shutdown requested.
+2022-01-18-16:01:49 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-18-16:01:49 - HikariPool-3 - Shutdown initiated...
+2022-01-18-16:01:49 - HikariPool-3 - Shutdown completed.
+2022-01-18-16:01:53 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13588 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-01-18-16:01:53 - No active profile set, falling back to default profiles: default
+2022-01-18-16:01:53 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-18-16:01:53 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-18-16:01:54 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-18-16:01:54 - Finished Spring Data repository scanning in 49 ms. Found 6 JPA repository interfaces.
+2022-01-18-16:01:54 - Tomcat initialized with port(s): 8234 (http)
+2022-01-18-16:01:54 - Starting service [Tomcat]
+2022-01-18-16:01:54 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-01-18-16:01:55 - Initializing Spring embedded WebApplicationContext
+2022-01-18-16:01:55 - Root WebApplicationContext: initialization completed in 1448 ms
+2022-01-18-16:01:55 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-18-16:01:55 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-01-18-16:01:55 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-18-16:01:55 - HikariPool-1 - Starting...
+2022-01-18-16:01:55 - HikariPool-1 - Start completed.
+2022-01-18-16:01:55 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-01-18-16:01:56 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-01-18-16:01:56 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-18-16:01:56 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-18-16:01:57 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-18-16:01:57 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-01-18-16:01:57 - LiveReload server is running on port 35729
+2022-01-18-16:01:57 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-01-18-16:01:57 - Context refreshed
+2022-01-18-16:01:57 - Found 1 custom documentation plugin(s)
+2022-01-18-16:01:57 - Scanning for api listing references
+2022-01-18-16:01:58 - Started VehicleLoanAppDemoApplication in 5.003 seconds (JVM running for 5.86)
+2022-02-18-16:02:56 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-18-16:02:56 - Initializing Servlet 'dispatcherServlet'
+2022-02-18-16:02:56 - Completed initialization in 1 ms
+2022-09-18-16:09:18 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-18-16:09:18 - HikariPool-1 - Shutdown initiated...
+2022-09-18-16:09:18 - HikariPool-1 - Shutdown completed.
+2022-09-18-16:09:18 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13588 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-09-18-16:09:18 - No active profile set, falling back to default profiles: default
+2022-09-18-16:09:18 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-18-16:09:18 - Finished Spring Data repository scanning in 21 ms. Found 6 JPA repository interfaces.
+2022-09-18-16:09:19 - Tomcat initialized with port(s): 8234 (http)
+2022-09-18-16:09:19 - Starting service [Tomcat]
+2022-09-18-16:09:19 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-09-18-16:09:19 - Initializing Spring embedded WebApplicationContext
+2022-09-18-16:09:19 - Root WebApplicationContext: initialization completed in 385 ms
+2022-09-18-16:09:19 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-18-16:09:19 - HikariPool-2 - Starting...
+2022-09-18-16:09:19 - HikariPool-2 - Start completed.
+2022-09-18-16:09:19 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-09-18-16:09:19 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-09-18-16:09:19 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-18-16:09:19 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-18-16:09:19 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-18-16:09:19 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-09-18-16:09:19 - LiveReload server is running on port 35729
+2022-09-18-16:09:19 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-09-18-16:09:19 - Context refreshed
+2022-09-18-16:09:19 - Found 1 custom documentation plugin(s)
+2022-09-18-16:09:19 - Scanning for api listing references
+2022-09-18-16:09:19 - Started VehicleLoanAppDemoApplication in 1.344 seconds (JVM running for 447.65)
+2022-09-18-16:09:19 - Condition evaluation unchanged
+2022-10-18-16:10:16 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-18-16:10:16 - HikariPool-2 - Shutdown initiated...
+2022-10-18-16:10:16 - HikariPool-2 - Shutdown completed.
+2022-10-18-16:10:17 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13588 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-10-18-16:10:17 - No active profile set, falling back to default profiles: default
+2022-10-18-16:10:17 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-18-16:10:17 - Finished Spring Data repository scanning in 17 ms. Found 6 JPA repository interfaces.
+2022-10-18-16:10:17 - Tomcat initialized with port(s): 8234 (http)
+2022-10-18-16:10:17 - Starting service [Tomcat]
+2022-10-18-16:10:17 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-10-18-16:10:17 - Initializing Spring embedded WebApplicationContext
+2022-10-18-16:10:17 - Root WebApplicationContext: initialization completed in 330 ms
+2022-10-18-16:10:17 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-18-16:10:17 - HikariPool-3 - Starting...
+2022-10-18-16:10:17 - HikariPool-3 - Start completed.
+2022-10-18-16:10:17 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-10-18-16:10:17 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-10-18-16:10:17 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-18-16:10:17 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-18-16:10:17 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-18-16:10:18 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-10-18-16:10:18 - LiveReload server is running on port 35729
+2022-10-18-16:10:18 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-10-18-16:10:18 - Context refreshed
+2022-10-18-16:10:18 - Found 1 custom documentation plugin(s)
+2022-10-18-16:10:18 - Scanning for api listing references
+2022-10-18-16:10:18 - Started VehicleLoanAppDemoApplication in 1.166 seconds (JVM running for 505.865)
+2022-10-18-16:10:18 - Condition evaluation unchanged
+2022-10-18-16:10:25 - Application shutdown requested.
+2022-10-18-16:10:25 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-18-16:10:25 - HikariPool-3 - Shutdown initiated...
+2022-10-18-16:10:25 - HikariPool-3 - Shutdown completed.
+2022-10-18-16:10:28 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 1596 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-10-18-16:10:28 - No active profile set, falling back to default profiles: default
+2022-10-18-16:10:28 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-18-16:10:28 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-18-16:10:29 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-18-16:10:29 - Finished Spring Data repository scanning in 44 ms. Found 6 JPA repository interfaces.
+2022-10-18-16:10:30 - Tomcat initialized with port(s): 8234 (http)
+2022-10-18-16:10:30 - Starting service [Tomcat]
+2022-10-18-16:10:30 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-10-18-16:10:30 - Initializing Spring embedded WebApplicationContext
+2022-10-18-16:10:30 - Root WebApplicationContext: initialization completed in 1463 ms
+2022-10-18-16:10:30 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-18-16:10:30 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-10-18-16:10:30 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-18-16:10:30 - HikariPool-1 - Starting...
+2022-10-18-16:10:31 - HikariPool-1 - Start completed.
+2022-10-18-16:10:31 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-10-18-16:10:32 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-10-18-16:10:32 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-18-16:10:32 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-18-16:10:34 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-18-16:10:34 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-10-18-16:10:34 - LiveReload server is running on port 35729
+2022-10-18-16:10:34 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-10-18-16:10:34 - Context refreshed
+2022-10-18-16:10:34 - Found 1 custom documentation plugin(s)
+2022-10-18-16:10:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-18-16:10:34 - Initializing Servlet 'dispatcherServlet'
+2022-10-18-16:10:34 - Completed initialization in 1 ms
+2022-10-18-16:10:34 - Scanning for api listing references
+2022-10-18-16:10:35 - Started VehicleLoanAppDemoApplication in 7.282 seconds (JVM running for 8.113)
+2022-13-18-16:13:54 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-13-18-16:13:54 - HikariPool-1 - Shutdown initiated...
+2022-13-18-16:13:54 - HikariPool-1 - Shutdown completed.
+2022-13-18-16:13:54 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 1596 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-13-18-16:13:54 - No active profile set, falling back to default profiles: default
+2022-13-18-16:13:55 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-13-18-16:13:55 - Finished Spring Data repository scanning in 42 ms. Found 6 JPA repository interfaces.
+2022-13-18-16:13:55 - Tomcat initialized with port(s): 8234 (http)
+2022-13-18-16:13:55 - Starting service [Tomcat]
+2022-13-18-16:13:55 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-13-18-16:13:55 - Initializing Spring embedded WebApplicationContext
+2022-13-18-16:13:55 - Root WebApplicationContext: initialization completed in 588 ms
+2022-13-18-16:13:55 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-13-18-16:13:55 - HikariPool-2 - Starting...
+2022-13-18-16:13:55 - HikariPool-2 - Start completed.
+2022-13-18-16:13:55 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-13-18-16:13:55 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-13-18-16:13:55 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-13-18-16:13:55 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-13-18-16:13:56 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-13-18-16:13:56 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-13-18-16:13:56 - LiveReload server is running on port 35729
+2022-13-18-16:13:56 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-13-18-16:13:56 - Context refreshed
+2022-13-18-16:13:56 - Found 1 custom documentation plugin(s)
+2022-13-18-16:13:56 - Scanning for api listing references
+2022-13-18-16:13:56 - Started VehicleLoanAppDemoApplication in 1.563 seconds (JVM running for 209.111)
+2022-13-18-16:13:56 - Condition evaluation unchanged
+2022-14-18-16:14:11 - Application shutdown requested.
+2022-14-18-16:14:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-18-16:14:11 - HikariPool-2 - Shutdown initiated...
+2022-14-18-16:14:11 - HikariPool-2 - Shutdown completed.
+2022-14-18-16:14:16 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 2264 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-14-18-16:14:16 - No active profile set, falling back to default profiles: default
+2022-14-18-16:14:16 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-18-16:14:16 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-18-16:14:16 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-18-16:14:17 - Finished Spring Data repository scanning in 79 ms. Found 6 JPA repository interfaces.
+2022-14-18-16:14:18 - Tomcat initialized with port(s): 8234 (http)
+2022-14-18-16:14:18 - Starting service [Tomcat]
+2022-14-18-16:14:18 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-14-18-16:14:18 - Initializing Spring embedded WebApplicationContext
+2022-14-18-16:14:18 - Root WebApplicationContext: initialization completed in 2041 ms
+2022-14-18-16:14:18 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-18-16:14:18 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-14-18-16:14:18 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-18-16:14:18 - HikariPool-1 - Starting...
+2022-14-18-16:14:19 - HikariPool-1 - Start completed.
+2022-14-18-16:14:19 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-14-18-16:14:20 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-14-18-16:14:20 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-18-16:14:20 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-18-16:14:21 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-18-16:14:21 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-14-18-16:14:21 - LiveReload server is running on port 35729
+2022-14-18-16:14:21 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-14-18-16:14:21 - Context refreshed
+2022-14-18-16:14:21 - Found 1 custom documentation plugin(s)
+2022-14-18-16:14:21 - Scanning for api listing references
+2022-14-18-16:14:21 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-14-18-16:14:21 - Initializing Servlet 'dispatcherServlet'
+2022-14-18-16:14:21 - Completed initialization in 3 ms
+2022-14-18-16:14:22 - Started VehicleLoanAppDemoApplication in 6.589 seconds (JVM running for 7.358)
+2022-15-18-16:15:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-15-18-16:15:11 - HikariPool-1 - Shutdown initiated...
+2022-15-18-16:15:11 - HikariPool-1 - Shutdown completed.
+2022-15-18-16:15:11 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 2264 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-15-18-16:15:11 - No active profile set, falling back to default profiles: default
+2022-15-18-16:15:12 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-15-18-16:15:12 - Finished Spring Data repository scanning in 17 ms. Found 6 JPA repository interfaces.
+2022-15-18-16:15:12 - Tomcat initialized with port(s): 8234 (http)
+2022-15-18-16:15:12 - Starting service [Tomcat]
+2022-15-18-16:15:12 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-15-18-16:15:12 - Initializing Spring embedded WebApplicationContext
+2022-15-18-16:15:12 - Root WebApplicationContext: initialization completed in 526 ms
+2022-15-18-16:15:12 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-15-18-16:15:12 - HikariPool-2 - Starting...
+2022-15-18-16:15:12 - HikariPool-2 - Start completed.
+2022-15-18-16:15:12 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-15-18-16:15:12 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-15-18-16:15:12 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-15-18-16:15:12 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-15-18-16:15:12 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-15-18-16:15:12 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-15-18-16:15:12 - LiveReload server is running on port 35729
+2022-15-18-16:15:13 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-15-18-16:15:13 - Context refreshed
+2022-15-18-16:15:13 - Found 1 custom documentation plugin(s)
+2022-15-18-16:15:13 - Scanning for api listing references
+2022-15-18-16:15:13 - Started VehicleLoanAppDemoApplication in 1.482 seconds (JVM running for 58.434)
+2022-15-18-16:15:13 - Condition evaluation unchanged
+2022-15-18-16:15:15 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-15-18-16:15:15 - Initializing Servlet 'dispatcherServlet'
+2022-15-18-16:15:15 - Completed initialization in 2 ms
+2022-17-18-16:17:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-17-18-16:17:23 - HikariPool-2 - Shutdown initiated...
+2022-17-18-16:17:23 - HikariPool-2 - Shutdown completed.
+2022-17-18-16:17:23 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 2264 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-17-18-16:17:23 - No active profile set, falling back to default profiles: default
+2022-17-18-16:17:24 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-17-18-16:17:24 - Finished Spring Data repository scanning in 56 ms. Found 6 JPA repository interfaces.
+2022-17-18-16:17:24 - Tomcat initialized with port(s): 8234 (http)
+2022-17-18-16:17:24 - Starting service [Tomcat]
+2022-17-18-16:17:24 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-17-18-16:17:24 - Initializing Spring embedded WebApplicationContext
+2022-17-18-16:17:24 - Root WebApplicationContext: initialization completed in 863 ms
+2022-17-18-16:17:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-17-18-16:17:24 - HikariPool-3 - Starting...
+2022-17-18-16:17:24 - HikariPool-3 - Start completed.
+2022-17-18-16:17:24 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-17-18-16:17:24 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-17-18-16:17:24 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-17-18-16:17:24 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-17-18-16:17:25 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-17-18-16:17:25 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-17-18-16:17:25 - LiveReload server is running on port 35729
+2022-17-18-16:17:25 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-17-18-16:17:25 - Context refreshed
+2022-17-18-16:17:25 - Found 1 custom documentation plugin(s)
+2022-17-18-16:17:25 - Scanning for api listing references
+2022-17-18-16:17:25 - Started VehicleLoanAppDemoApplication in 2.211 seconds (JVM running for 190.829)
+2022-17-18-16:17:25 - Condition evaluation unchanged
+2022-17-18-16:17:26 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-17-18-16:17:26 - Initializing Servlet 'dispatcherServlet'
+2022-17-18-16:17:26 - Completed initialization in 3 ms
+2022-17-18-16:17:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-17-18-16:17:26 - HikariPool-3 - Shutdown initiated...
+2022-17-18-16:17:26 - HikariPool-3 - Shutdown completed.
+2022-17-18-16:17:27 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 2264 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-17-18-16:17:27 - No active profile set, falling back to default profiles: default
+2022-17-18-16:17:27 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-17-18-16:17:27 - Finished Spring Data repository scanning in 22 ms. Found 6 JPA repository interfaces.
+2022-17-18-16:17:27 - Tomcat initialized with port(s): 8234 (http)
+2022-17-18-16:17:27 - Starting service [Tomcat]
+2022-17-18-16:17:27 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-17-18-16:17:27 - Initializing Spring embedded WebApplicationContext
+2022-17-18-16:17:27 - Root WebApplicationContext: initialization completed in 533 ms
+2022-17-18-16:17:27 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-17-18-16:17:27 - HikariPool-4 - Starting...
+2022-17-18-16:17:27 - HikariPool-4 - Start completed.
+2022-17-18-16:17:27 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-17-18-16:17:27 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-17-18-16:17:28 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-17-18-16:17:28 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-17-18-16:17:28 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-17-18-16:17:29 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-17-18-16:17:29 - LiveReload server is running on port 35729
+2022-17-18-16:17:29 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-17-18-16:17:29 - Context refreshed
+2022-17-18-16:17:29 - Found 1 custom documentation plugin(s)
+2022-17-18-16:17:29 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-17-18-16:17:29 - Scanning for api listing references
+2022-17-18-16:17:29 - Initializing Servlet 'dispatcherServlet'
+2022-17-18-16:17:29 - Completed initialization in 3 ms
+2022-17-18-16:17:29 - Started VehicleLoanAppDemoApplication in 2.565 seconds (JVM running for 194.842)
+2022-17-18-16:17:29 - Condition evaluation unchanged
+2022-19-18-16:19:28 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-19-18-16:19:28 - HikariPool-4 - Shutdown initiated...
+2022-19-18-16:19:28 - HikariPool-4 - Shutdown completed.
+2022-19-18-16:19:28 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 2264 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-19-18-16:19:28 - No active profile set, falling back to default profiles: default
+2022-19-18-16:19:28 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-19-18-16:19:28 - Finished Spring Data repository scanning in 16 ms. Found 6 JPA repository interfaces.
+2022-19-18-16:19:28 - Tomcat initialized with port(s): 8234 (http)
+2022-19-18-16:19:28 - Starting service [Tomcat]
+2022-19-18-16:19:28 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-19-18-16:19:28 - Initializing Spring embedded WebApplicationContext
+2022-19-18-16:19:28 - Root WebApplicationContext: initialization completed in 307 ms
+2022-19-18-16:19:28 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-19-18-16:19:28 - HikariPool-5 - Starting...
+2022-19-18-16:19:29 - HikariPool-5 - Start completed.
+2022-19-18-16:19:29 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-19-18-16:19:29 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-19-18-16:19:29 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-19-18-16:19:29 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-19-18-16:19:29 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-19-18-16:19:29 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-19-18-16:19:29 - LiveReload server is running on port 35729
+2022-19-18-16:19:29 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-19-18-16:19:29 - Context refreshed
+2022-19-18-16:19:29 - Found 1 custom documentation plugin(s)
+2022-19-18-16:19:29 - Scanning for api listing references
+2022-19-18-16:19:29 - Started VehicleLoanAppDemoApplication in 1.175 seconds (JVM running for 315.01)
+2022-19-18-16:19:29 - Condition evaluation unchanged
+2022-19-18-16:19:34 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-19-18-16:19:34 - HikariPool-5 - Shutdown initiated...
+2022-19-18-16:19:34 - HikariPool-5 - Shutdown completed.
+2022-19-18-16:19:34 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 2264 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-19-18-16:19:34 - No active profile set, falling back to default profiles: default
+2022-19-18-16:19:34 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-19-18-16:19:34 - Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+2022-19-18-16:19:34 - Tomcat initialized with port(s): 8234 (http)
+2022-19-18-16:19:34 - Starting service [Tomcat]
+2022-19-18-16:19:34 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-19-18-16:19:34 - Initializing Spring embedded WebApplicationContext
+2022-19-18-16:19:34 - Root WebApplicationContext: initialization completed in 299 ms
+2022-19-18-16:19:34 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-19-18-16:19:34 - HikariPool-6 - Starting...
+2022-19-18-16:19:34 - HikariPool-6 - Start completed.
+2022-19-18-16:19:34 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-19-18-16:19:34 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-19-18-16:19:34 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-19-18-16:19:34 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-19-18-16:19:34 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-19-18-16:19:35 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-19-18-16:19:35 - LiveReload server is running on port 35729
+2022-19-18-16:19:35 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-19-18-16:19:35 - Context refreshed
+2022-19-18-16:19:35 - Found 1 custom documentation plugin(s)
+2022-19-18-16:19:35 - Scanning for api listing references
+2022-19-18-16:19:35 - Started VehicleLoanAppDemoApplication in 1.009 seconds (JVM running for 320.444)
+2022-19-18-16:19:35 - Condition evaluation unchanged
+2022-19-18-16:19:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-19-18-16:19:36 - Initializing Servlet 'dispatcherServlet'
+2022-19-18-16:19:36 - Completed initialization in 2 ms
+2022-20-18-16:20:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-20-18-16:20:11 - HikariPool-6 - Shutdown initiated...
+2022-20-18-16:20:11 - HikariPool-6 - Shutdown completed.
+2022-20-18-16:20:11 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 2264 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-20-18-16:20:11 - No active profile set, falling back to default profiles: default
+2022-20-18-16:20:11 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-20-18-16:20:11 - Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+2022-20-18-16:20:11 - Tomcat initialized with port(s): 8234 (http)
+2022-20-18-16:20:11 - Starting service [Tomcat]
+2022-20-18-16:20:11 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-20-18-16:20:11 - Initializing Spring embedded WebApplicationContext
+2022-20-18-16:20:11 - Root WebApplicationContext: initialization completed in 311 ms
+2022-20-18-16:20:11 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-20-18-16:20:11 - HikariPool-7 - Starting...
+2022-20-18-16:20:11 - HikariPool-7 - Start completed.
+2022-20-18-16:20:11 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-20-18-16:20:11 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-20-18-16:20:11 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-20-18-16:20:11 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-20-18-16:20:11 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-20-18-16:20:11 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-20-18-16:20:12 - LiveReload server is running on port 35729
+2022-20-18-16:20:12 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-20-18-16:20:12 - Context refreshed
+2022-20-18-16:20:12 - Found 1 custom documentation plugin(s)
+2022-20-18-16:20:12 - Scanning for api listing references
+2022-20-18-16:20:12 - Started VehicleLoanAppDemoApplication in 1.015 seconds (JVM running for 357.383)
+2022-20-18-16:20:12 - Condition evaluation unchanged
+2022-20-18-16:20:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-20-18-16:20:14 - Initializing Servlet 'dispatcherServlet'
+2022-20-18-16:20:14 - Completed initialization in 1 ms
+2022-20-18-16:20:36 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-20-18-16:20:36 - HikariPool-7 - Shutdown initiated...
+2022-20-18-16:20:36 - HikariPool-7 - Shutdown completed.
+2022-20-18-16:20:36 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 2264 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-20-18-16:20:36 - No active profile set, falling back to default profiles: default
+2022-20-18-16:20:37 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-20-18-16:20:37 - Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+2022-20-18-16:20:37 - Tomcat initialized with port(s): 8234 (http)
+2022-20-18-16:20:37 - Starting service [Tomcat]
+2022-20-18-16:20:37 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-20-18-16:20:37 - Initializing Spring embedded WebApplicationContext
+2022-20-18-16:20:37 - Root WebApplicationContext: initialization completed in 314 ms
+2022-20-18-16:20:37 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-20-18-16:20:37 - HikariPool-8 - Starting...
+2022-20-18-16:20:37 - HikariPool-8 - Start completed.
+2022-20-18-16:20:37 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-20-18-16:20:37 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-20-18-16:20:37 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-20-18-16:20:37 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-20-18-16:20:37 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-20-18-16:20:37 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-20-18-16:20:37 - LiveReload server is running on port 35729
+2022-20-18-16:20:38 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-20-18-16:20:38 - Context refreshed
+2022-20-18-16:20:38 - Found 1 custom documentation plugin(s)
+2022-20-18-16:20:38 - Scanning for api listing references
+2022-20-18-16:20:38 - Started VehicleLoanAppDemoApplication in 1.182 seconds (JVM running for 383.365)
+2022-20-18-16:20:38 - Condition evaluation unchanged
+2022-20-18-16:20:43 - Application shutdown requested.
+2022-20-18-16:20:43 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-20-18-16:20:43 - HikariPool-8 - Shutdown initiated...
+2022-20-18-16:20:43 - HikariPool-8 - Shutdown completed.
+2022-21-18-16:21:34 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13704 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-21-18-16:21:34 - No active profile set, falling back to default profiles: default
+2022-21-18-16:21:34 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-21-18-16:21:34 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-21-18-16:21:35 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-21-18-16:21:35 - Finished Spring Data repository scanning in 47 ms. Found 6 JPA repository interfaces.
+2022-21-18-16:21:36 - Tomcat initialized with port(s): 8234 (http)
+2022-21-18-16:21:36 - Starting service [Tomcat]
+2022-21-18-16:21:36 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-21-18-16:21:36 - Initializing Spring embedded WebApplicationContext
+2022-21-18-16:21:36 - Root WebApplicationContext: initialization completed in 1634 ms
+2022-21-18-16:21:36 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-21-18-16:21:36 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-21-18-16:21:36 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-21-18-16:21:36 - HikariPool-1 - Starting...
+2022-21-18-16:21:37 - HikariPool-1 - Start completed.
+2022-21-18-16:21:37 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-21-18-16:21:37 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-21-18-16:21:38 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-21-18-16:21:38 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-21-18-16:21:39 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-21-18-16:21:39 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-21-18-16:21:39 - LiveReload server is running on port 35729
+2022-21-18-16:21:39 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-21-18-16:21:39 - Context refreshed
+2022-21-18-16:21:39 - Found 1 custom documentation plugin(s)
+2022-21-18-16:21:39 - Scanning for api listing references
+2022-21-18-16:21:39 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-21-18-16:21:39 - Initializing Servlet 'dispatcherServlet'
+2022-21-18-16:21:39 - Completed initialization in 1 ms
+2022-21-18-16:21:40 - Started VehicleLoanAppDemoApplication in 5.774 seconds (JVM running for 6.587)
+2022-25-18-16:25:37 - Resolved [com.capgemini.exception.UserAlreadyExistsException: Passsword is not valid]
+2022-25-18-16:25:52 - Resolved [com.capgemini.exception.UserAlreadyExistsException: Passsword is not valid]
+2022-29-18-16:29:03 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-29-18-16:29:03 - HikariPool-1 - Shutdown initiated...
+2022-29-18-16:29:03 - HikariPool-1 - Shutdown completed.
+2022-29-18-16:29:03 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13704 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-29-18-16:29:03 - No active profile set, falling back to default profiles: default
+2022-29-18-16:29:03 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-29-18-16:29:03 - Finished Spring Data repository scanning in 20 ms. Found 6 JPA repository interfaces.
+2022-29-18-16:29:03 - Tomcat initialized with port(s): 8234 (http)
+2022-29-18-16:29:03 - Starting service [Tomcat]
+2022-29-18-16:29:03 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-29-18-16:29:03 - Initializing Spring embedded WebApplicationContext
+2022-29-18-16:29:03 - Root WebApplicationContext: initialization completed in 421 ms
+2022-29-18-16:29:03 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-29-18-16:29:03 - HikariPool-2 - Starting...
+2022-29-18-16:29:03 - HikariPool-2 - Start completed.
+2022-29-18-16:29:03 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-29-18-16:29:03 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-29-18-16:29:04 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-29-18-16:29:04 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-29-18-16:29:04 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-29-18-16:29:04 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-29-18-16:29:04 - LiveReload server is running on port 35729
+2022-29-18-16:29:04 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-29-18-16:29:04 - Context refreshed
+2022-29-18-16:29:04 - Found 1 custom documentation plugin(s)
+2022-29-18-16:29:04 - Scanning for api listing references
+2022-29-18-16:29:04 - Started VehicleLoanAppDemoApplication in 1.32 seconds (JVM running for 451.147)
+2022-29-18-16:29:04 - Condition evaluation unchanged
+2022-29-18-16:29:59 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-29-18-16:29:59 - Initializing Servlet 'dispatcherServlet'
+2022-29-18-16:29:59 - Completed initialization in 1 ms
+2022-29-18-16:29:59 - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot invoke "com.capgemini.model.UserAdvanced.setUserId(int)" because the return value of "com.capgemini.model.Account.getUser()" is null; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke "com.capgemini.model.UserAdvanced.setUserId(int)" because the return value of "com.capgemini.model.Account.getUser()" is null
+ at [Source: (PushbackInputStream); line: 12, column: 5] (through reference chain: com.capgemini.model.UserBasic["userdetails"]->com.capgemini.model.UserAdvanced["account"])]
+2022-31-18-16:31:43 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-31-18-16:31:43 - HikariPool-2 - Shutdown initiated...
+2022-31-18-16:31:43 - HikariPool-2 - Shutdown completed.
+2022-31-18-16:31:43 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13704 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-31-18-16:31:43 - No active profile set, falling back to default profiles: default
+2022-31-18-16:31:43 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-31-18-16:31:43 - Finished Spring Data repository scanning in 18 ms. Found 6 JPA repository interfaces.
+2022-31-18-16:31:43 - Tomcat initialized with port(s): 8234 (http)
+2022-31-18-16:31:43 - Starting service [Tomcat]
+2022-31-18-16:31:43 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-31-18-16:31:43 - Initializing Spring embedded WebApplicationContext
+2022-31-18-16:31:43 - Root WebApplicationContext: initialization completed in 337 ms
+2022-31-18-16:31:43 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-31-18-16:31:43 - HikariPool-3 - Starting...
+2022-31-18-16:31:43 - HikariPool-3 - Start completed.
+2022-31-18-16:31:43 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-31-18-16:31:43 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-31-18-16:31:43 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-31-18-16:31:43 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-31-18-16:31:44 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-31-18-16:31:44 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-31-18-16:31:44 - LiveReload server is running on port 35729
+2022-31-18-16:31:44 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-31-18-16:31:44 - Context refreshed
+2022-31-18-16:31:44 - Found 1 custom documentation plugin(s)
+2022-31-18-16:31:44 - Scanning for api listing references
+2022-31-18-16:31:44 - Started VehicleLoanAppDemoApplication in 1.224 seconds (JVM running for 610.964)
+2022-31-18-16:31:44 - Condition evaluation unchanged
+2022-31-18-16:31:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-31-18-16:31:51 - Initializing Servlet 'dispatcherServlet'
+2022-31-18-16:31:51 - Completed initialization in 1 ms
+2022-39-18-16:39:38 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-39-18-16:39:38 - HikariPool-3 - Shutdown initiated...
+2022-39-18-16:39:38 - HikariPool-3 - Shutdown completed.
+2022-39-18-16:39:38 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 13704 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-39-18-16:39:38 - No active profile set, falling back to default profiles: default
+2022-39-18-16:39:39 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-39-18-16:39:39 - Finished Spring Data repository scanning in 17 ms. Found 6 JPA repository interfaces.
+2022-39-18-16:39:39 - Tomcat initialized with port(s): 8234 (http)
+2022-39-18-16:39:39 - Starting service [Tomcat]
+2022-39-18-16:39:39 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-39-18-16:39:39 - Initializing Spring embedded WebApplicationContext
+2022-39-18-16:39:39 - Root WebApplicationContext: initialization completed in 424 ms
+2022-39-18-16:39:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-39-18-16:39:39 - HikariPool-4 - Starting...
+2022-39-18-16:39:39 - HikariPool-4 - Start completed.
+2022-39-18-16:39:39 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-39-18-16:39:39 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-39-18-16:39:39 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-39-18-16:39:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-39-18-16:39:39 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-39-18-16:39:39 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-39-18-16:39:40 - LiveReload server is running on port 35729
+2022-39-18-16:39:40 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-39-18-16:39:40 - Context refreshed
+2022-39-18-16:39:40 - Found 1 custom documentation plugin(s)
+2022-39-18-16:39:40 - Scanning for api listing references
+2022-39-18-16:39:40 - Started VehicleLoanAppDemoApplication in 1.383 seconds (JVM running for 1086.766)
+2022-39-18-16:39:40 - Condition evaluation unchanged
+2022-41-18-16:41:55 - Application shutdown requested.
+2022-41-18-16:41:55 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-41-18-16:41:55 - HikariPool-4 - Shutdown initiated...
+2022-41-18-16:41:55 - HikariPool-4 - Shutdown completed.
+2022-06-18-17:06:44 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 10748 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-06-18-17:06:44 - No active profile set, falling back to default profiles: default
+2022-06-18-17:06:44 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-18-17:06:44 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-18-17:06:45 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-18-17:06:45 - Finished Spring Data repository scanning in 57 ms. Found 6 JPA repository interfaces.
+2022-06-18-17:06:46 - Tomcat initialized with port(s): 8234 (http)
+2022-06-18-17:06:46 - Starting service [Tomcat]
+2022-06-18-17:06:46 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-06-18-17:06:46 - Initializing Spring embedded WebApplicationContext
+2022-06-18-17:06:46 - Root WebApplicationContext: initialization completed in 1696 ms
+2022-06-18-17:06:46 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-18-17:06:46 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-06-18-17:06:46 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-18-17:06:46 - HikariPool-1 - Starting...
+2022-06-18-17:06:47 - HikariPool-1 - Start completed.
+2022-06-18-17:06:47 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-06-18-17:06:47 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-06-18-17:06:48 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-18-17:06:48 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-18-17:06:48 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-18-17:06:49 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-06-18-17:06:49 - LiveReload server is running on port 35729
+2022-06-18-17:06:49 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-06-18-17:06:49 - Context refreshed
+2022-06-18-17:06:49 - Found 1 custom documentation plugin(s)
+2022-06-18-17:06:49 - Scanning for api listing references
+2022-06-18-17:06:49 - Started VehicleLoanAppDemoApplication in 5.369 seconds (JVM running for 6.509)
+2022-07-18-17:07:01 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-18-17:07:01 - Initializing Servlet 'dispatcherServlet'
+2022-07-18-17:07:01 - Completed initialization in 3 ms
+2022-08-18-17:08:33 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-18-17:08:33 - HikariPool-1 - Shutdown initiated...
+2022-08-18-17:08:33 - HikariPool-1 - Shutdown completed.
+2022-08-18-17:08:33 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 10748 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-08-18-17:08:33 - No active profile set, falling back to default profiles: default
+2022-08-18-17:08:33 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-18-17:08:33 - Finished Spring Data repository scanning in 38 ms. Found 6 JPA repository interfaces.
+2022-08-18-17:08:34 - Tomcat initialized with port(s): 8234 (http)
+2022-08-18-17:08:34 - Starting service [Tomcat]
+2022-08-18-17:08:34 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-08-18-17:08:34 - Initializing Spring embedded WebApplicationContext
+2022-08-18-17:08:34 - Root WebApplicationContext: initialization completed in 770 ms
+2022-08-18-17:08:34 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-18-17:08:34 - HikariPool-2 - Starting...
+2022-08-18-17:08:34 - HikariPool-2 - Start completed.
+2022-08-18-17:08:34 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-18-17:08:34 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-08-18-17:08:34 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-18-17:08:34 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-18-17:08:34 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-18-17:08:34 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-18-17:08:35 - LiveReload server is running on port 35729
+2022-08-18-17:08:35 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-08-18-17:08:35 - Context refreshed
+2022-08-18-17:08:35 - Found 1 custom documentation plugin(s)
+2022-08-18-17:08:35 - Scanning for api listing references
+2022-08-18-17:08:35 - Started VehicleLoanAppDemoApplication in 2.148 seconds (JVM running for 112.106)
+2022-08-18-17:08:35 - Condition evaluation unchanged
+2022-16-18-17:16:04 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-16-18-17:16:04 - Initializing Servlet 'dispatcherServlet'
+2022-16-18-17:16:04 - Completed initialization in 9 ms
+2022-26-18-17:26:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-26-18-17:26:48 - HikariPool-2 - Shutdown initiated...
+2022-26-18-17:26:48 - HikariPool-2 - Shutdown completed.
+2022-26-18-17:26:48 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 10748 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-26-18-17:26:48 - No active profile set, falling back to default profiles: default
+2022-26-18-17:26:48 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-26-18-17:26:48 - Finished Spring Data repository scanning in 36 ms. Found 6 JPA repository interfaces.
+2022-26-18-17:26:48 - Tomcat initialized with port(s): 8234 (http)
+2022-26-18-17:26:48 - Starting service [Tomcat]
+2022-26-18-17:26:48 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-26-18-17:26:48 - Initializing Spring embedded WebApplicationContext
+2022-26-18-17:26:48 - Root WebApplicationContext: initialization completed in 522 ms
+2022-26-18-17:26:48 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-26-18-17:26:48 - HikariPool-3 - Starting...
+2022-26-18-17:26:48 - HikariPool-3 - Start completed.
+2022-26-18-17:26:48 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-26-18-17:26:48 - Failed to initialize JPA EntityManagerFactory: Referenced property not a (One|Many)ToOne: com.capgemini.model.UserAdvanced.userId in mappedBy of com.capgemini.model.Account.user
+2022-26-18-17:26:48 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Referenced property not a (One|Many)ToOne: com.capgemini.model.UserAdvanced.userId in mappedBy of com.capgemini.model.Account.user
+2022-26-18-17:26:48 - HikariPool-3 - Shutdown initiated...
+2022-26-18-17:26:48 - HikariPool-3 - Shutdown completed.
+2022-26-18-17:26:48 - Stopping service [Tomcat]
+2022-26-18-17:26:48 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-26-18-17:26:49 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Referenced property not a (One|Many)ToOne: com.capgemini.model.UserAdvanced.userId in mappedBy of com.capgemini.model.Account.user
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.2.jar:2.5.2]
+	at com.capgemini.VehicleLoanAppDemoApplication.main(VehicleLoanAppDemoApplication.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.2.jar:2.5.2]
+Caused by: org.hibernate.AnnotationException: Referenced property not a (One|Many)ToOne: com.capgemini.model.UserAdvanced.userId in mappedBy of com.capgemini.model.Account.user
+	at org.hibernate.cfg.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1693) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1661) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.8.jar:5.3.8]
+	... 21 common frames omitted
+2022-27-18-17:27:36 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 10748 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-27-18-17:27:36 - No active profile set, falling back to default profiles: default
+2022-27-18-17:27:36 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-27-18-17:27:36 - Finished Spring Data repository scanning in 18 ms. Found 6 JPA repository interfaces.
+2022-27-18-17:27:36 - Tomcat initialized with port(s): 8234 (http)
+2022-27-18-17:27:36 - Starting service [Tomcat]
+2022-27-18-17:27:36 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-27-18-17:27:36 - Initializing Spring embedded WebApplicationContext
+2022-27-18-17:27:36 - Root WebApplicationContext: initialization completed in 389 ms
+2022-27-18-17:27:36 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-27-18-17:27:36 - HikariPool-4 - Starting...
+2022-27-18-17:27:36 - HikariPool-4 - Start completed.
+2022-27-18-17:27:36 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-27-18-17:27:36 - Failed to initialize JPA EntityManagerFactory: Unknown mappedBy in: com.capgemini.model.Account.user, referenced property unknown: com.capgemini.model.UserAdvanced.UserAdvanced
+2022-27-18-17:27:36 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.capgemini.model.Account.user, referenced property unknown: com.capgemini.model.UserAdvanced.UserAdvanced
+2022-27-18-17:27:36 - HikariPool-4 - Shutdown initiated...
+2022-27-18-17:27:36 - HikariPool-4 - Shutdown completed.
+2022-27-18-17:27:36 - Stopping service [Tomcat]
+2022-27-18-17:27:36 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-27-18-17:27:36 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: Unknown mappedBy in: com.capgemini.model.Account.user, referenced property unknown: com.capgemini.model.UserAdvanced.UserAdvanced
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.8.jar:5.3.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.2.jar:2.5.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.2.jar:2.5.2]
+	at com.capgemini.VehicleLoanAppDemoApplication.main(VehicleLoanAppDemoApplication.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.2.jar:2.5.2]
+Caused by: org.hibernate.AnnotationException: Unknown mappedBy in: com.capgemini.model.Account.user, referenced property unknown: com.capgemini.model.UserAdvanced.UserAdvanced
+	at org.hibernate.cfg.OneToOneSecondPass.doSecondPass(OneToOneSecondPass.java:171) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1693) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1661) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.8.jar:5.3.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.8.jar:5.3.8]
+	... 21 common frames omitted
+2022-27-18-17:27:52 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 10748 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-27-18-17:27:52 - No active profile set, falling back to default profiles: default
+2022-27-18-17:27:52 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-27-18-17:27:52 - Finished Spring Data repository scanning in 18 ms. Found 6 JPA repository interfaces.
+2022-27-18-17:27:52 - Tomcat initialized with port(s): 8234 (http)
+2022-27-18-17:27:52 - Starting service [Tomcat]
+2022-27-18-17:27:52 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-27-18-17:27:52 - Initializing Spring embedded WebApplicationContext
+2022-27-18-17:27:52 - Root WebApplicationContext: initialization completed in 419 ms
+2022-27-18-17:27:52 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-27-18-17:27:52 - HikariPool-5 - Starting...
+2022-27-18-17:27:52 - HikariPool-5 - Start completed.
+2022-27-18-17:27:52 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-27-18-17:27:52 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-27-18-17:27:53 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-27-18-17:27:53 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-27-18-17:27:53 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-27-18-17:27:53 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-27-18-17:27:53 - LiveReload server is running on port 35729
+2022-27-18-17:27:53 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-27-18-17:27:53 - Context refreshed
+2022-27-18-17:27:53 - Found 1 custom documentation plugin(s)
+2022-27-18-17:27:53 - Scanning for api listing references
+2022-27-18-17:27:53 - Started VehicleLoanAppDemoApplication in 1.433 seconds (JVM running for 1270.333)
+2022-27-18-17:27:53 - Condition evaluation unchanged
+2022-29-18-17:29:01 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-29-18-17:29:01 - Initializing Servlet 'dispatcherServlet'
+2022-29-18-17:29:01 - Completed initialization in 5 ms
+2022-31-18-17:31:47 - Resolved [com.capgemini.exception.UserAlreadyExistsException: Passsword is not valid]
+2022-37-18-17:37:02 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-37-18-17:37:02 - HikariPool-5 - Shutdown initiated...
+2022-37-18-17:37:02 - HikariPool-5 - Shutdown completed.
+2022-37-18-17:37:02 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on LAPTOP-TI39FF3P with PID 10748 (C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo\target\classes started by manob in C:\Users\manob\workspace-spring-tool-suite-4-4.14.0.RELEASE\VehicleLoanAppDemo)
+2022-37-18-17:37:02 - No active profile set, falling back to default profiles: default
+2022-37-18-17:37:02 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-37-18-17:37:02 - Finished Spring Data repository scanning in 19 ms. Found 6 JPA repository interfaces.
+2022-37-18-17:37:02 - Tomcat initialized with port(s): 8234 (http)
+2022-37-18-17:37:02 - Starting service [Tomcat]
+2022-37-18-17:37:02 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-37-18-17:37:02 - Initializing Spring embedded WebApplicationContext
+2022-37-18-17:37:02 - Root WebApplicationContext: initialization completed in 502 ms
+2022-37-18-17:37:02 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-37-18-17:37:02 - HikariPool-6 - Starting...
+2022-37-18-17:37:02 - HikariPool-6 - Start completed.
+2022-37-18-17:37:02 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-37-18-17:37:03 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-37-18-17:37:03 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-37-18-17:37:03 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-37-18-17:37:03 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-37-18-17:37:03 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-37-18-17:37:03 - LiveReload server is running on port 35729
+2022-37-18-17:37:04 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-37-18-17:37:04 - Context refreshed
+2022-37-18-17:37:04 - Found 1 custom documentation plugin(s)
+2022-37-18-17:37:04 - Scanning for api listing references
+2022-37-18-17:37:04 - Started VehicleLoanAppDemoApplication in 1.976 seconds (JVM running for 1820.932)
+2022-37-18-17:37:04 - Condition evaluation unchanged
+2022-41-18-17:41:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-41-18-17:41:34 - Initializing Servlet 'dispatcherServlet'
+2022-41-18-17:41:34 - Completed initialization in 1 ms
+2022-45-18-17:45:18 - Application shutdown requested.
+2022-45-18-17:45:18 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-45-18-17:45:18 - HikariPool-6 - Shutdown initiated...
+2022-45-18-17:45:18 - HikariPool-6 - Shutdown completed.

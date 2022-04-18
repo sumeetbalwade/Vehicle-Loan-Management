@@ -28,7 +28,7 @@ public class Approved  {
 	private LocalDate emidate;
 	
 	@ManyToOne
-	@JsonBackReference
+	//@JsonBackReference
 	private Account account;
 	
 	@OneToOne(cascade=CascadeType.ALL)
@@ -73,6 +73,16 @@ public class Approved  {
 	public void setLoanapp(LoanAppTable loanapp) {
 		this.loanapp = loanapp;
 	}
-	
+
+	public Approved(double emi, LocalDate emidate, Account account, LoanAppTable loanapp) {
+		super();
+		this.emi = emi;
+		this.emidate = emidate;
+		this.account = account;
+		this.loanapp = loanapp;
+	}
+	public Approved() {
+		super();
+	}
 	
 }

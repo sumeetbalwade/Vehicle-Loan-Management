@@ -30,7 +30,7 @@ public class LoanAppTable {
 
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private int chassisNo;
 	
 	@NotNull(message="Existing EMI shouldn't be blank")
@@ -48,16 +48,16 @@ public class LoanAppTable {
 	
 	@Transient
 	@JsonProperty
-	Status status=Status.PENDING;
+	Status stat=Status.PENDING;
 	@JsonIgnore
-	private String s=status.toString();
+	private String status=stat.toString();
 	
-	public String getS() {
-		return s;
+	public String getStatus() {
+		return status;
 	}
 
-	public void setS(String s) {
-		this.s = s;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	@NotBlank(message="Brand shouldn't be left empty.")

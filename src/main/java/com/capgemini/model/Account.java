@@ -12,6 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
@@ -24,12 +25,23 @@ public class Account {
 	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private long accountNo;
 	
-	@OneToOne(fetch = FetchType.LAZY,cascade=CascadeType.ALL)
+	
+	@JsonIgnore
+	@OneToOne(mappedBy="account")
 	private UserAdvanced user;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy="account",cascade=CascadeType.ALL)//targetEntity=Account.class
-	@JsonManagedReference
+	//@JsonManagedReference
 	private Set<Approved> loans;
+
+	public Set<Approved> getLoans() {
+		return loans;
+	}
+
+	public void setLoans(Set<Approved> loans) {
+		this.loans = loans;
+	}
 
 	public long getAccountNo() {
 		return accountNo;
@@ -46,14 +58,6 @@ public class Account {
 	public void setUser(UserAdvanced user) {
 		this.user = user;
 	}
-
-	public Set<Approved> getLoans() {
-		return loans;
-	}
-
-	public void setLoans(Set<Approved> loans) {
-		this.loans = loans;
-	}	
 	
 	
 

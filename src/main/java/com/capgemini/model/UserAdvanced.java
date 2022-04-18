@@ -49,10 +49,18 @@ public class UserAdvanced  {
 	@OneToMany(cascade=CascadeType.ALL,fetch= FetchType.EAGER)
 	private Set<LoanAppTable> loanapp;
 	
-	@OneToOne
-	private Account account;
-	
-		
+	@OneToOne(cascade=CascadeType.ALL)
+	private Account account;	
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+		this.account.setUser(this);
+	}
+
 	public int getUserId() {
 		return userId;
 	}

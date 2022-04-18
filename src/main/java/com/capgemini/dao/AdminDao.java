@@ -1,5 +1,6 @@
 package com.capgemini.dao;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.capgemini.model.Account;
 import com.capgemini.model.AdminDetails;
 import com.capgemini.model.Approved;
+import com.capgemini.model.EmiClass;
 import com.capgemini.model.LoanAppTable;
 import com.capgemini.model.LoginDto;
 import com.capgemini.model.Status;
@@ -15,6 +17,7 @@ import com.capgemini.model.UserAdvanced;
 import com.capgemini.model.UserBasic;
 import com.capgemini.repository.AdminRepository;
 import com.capgemini.repository.ApprovedRepository;
+import com.capgemini.repository.EMIRepository;
 import com.capgemini.repository.LoanApplicationRepository;
 import com.capgemini.repository.UserBasicRepository;
 import com.capgemini.service.AdminService;
@@ -33,6 +36,12 @@ public class AdminDao implements AdminService{
 	
 	@Autowired
 	LoanApplicationRepository larepo;
+	
+	@Autowired
+	EMIDao emidao;
+	
+	@Autowired
+	EMIRepository emirepo;
 	
 	@Override
 	public boolean verifyAdminLogin(LoginDto login) {
@@ -60,13 +69,18 @@ public class AdminDao implements AdminService{
 		if(ratio<20) {
 			Status status=Status.APPROVED;
 			String s=status.toString();
-			loanapp.setS(s);
+			loanapp.setStatus(s);
 			larepo.save(loanapp);
+			double emi=emidao.EMICalculate(loanapp.getAmount(), loanapp.getTenure(),loanapp.getInterest());
+			Approved ap=new Approved(emi,loanapp.getAppdate(),loanapp.getUser().getAccount(),loanapp);
+			aprepo.save(ap);
+			EmiClass emiclass=new EmiClass(LocalDate.now(),loanapp.getAmount()+emi,emi,loanapp.getAmount(),loanapp.getInterest(),loanapp.getAmount()+emi,s);
+			emirepo.save(emiclass);
 		}
 		else {
 			Status status=Status.REJECTED;
 			String s=status.toString();
-			loanapp.setS(s);
+			loanapp.setStatus(s);
 			larepo.save(loanapp);
 		}
 		//LoanAppTable late=larepo.getById(loanapp.getChassisNo());

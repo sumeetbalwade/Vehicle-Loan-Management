@@ -36,7 +36,6 @@ public class EmiClass {
 	public EmiClass(LocalDate date, double beginningBalance, double emi, double principal, double interest,
 			double endingBalance, String status) {
 		super();
-		this.emiid = emiid;
 		this.date = date;
 		this.beginningBalance = beginningBalance;
 		this.emi = emi;
