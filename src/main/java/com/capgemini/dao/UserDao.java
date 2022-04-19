@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.exception.UserNotFoundException;
+import com.capgemini.helper.JwtUtil;
 import com.capgemini.model.Approved;
 import com.capgemini.model.LoanAppTable;
 import com.capgemini.model.LoanUserHolder;
@@ -112,7 +113,12 @@ public class UserDao implements UserService {
 		if (!ubrepo.existsById(email)) {
 			throw new UserNotFoundException("The User is not found.");
 		}
-		return ubrepo.getById(email);
+		
+		UserBasic ub= ubrepo.getById(email);
+		if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+			throw new UserNotFoundException("The User is NOT ALLOWED.");
+		}
+		return ub;
 	}
 
 	@Override

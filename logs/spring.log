@@ -3464,3 +3464,800 @@ java.lang.Error: Unresolved compilation problem:
 2022-57-19-22:57:32 - Scanning for api listing references
 2022-57-19-22:57:32 - Started VehicleLoanAppDemoApplication in 1.305 seconds (JVM running for 1432.381)
 2022-57-19-22:57:32 - Condition evaluation unchanged
+2022-58-19-22:58:59 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-58-19-22:58:59 - HikariPool-27 - Shutdown initiated...
+2022-58-19-22:58:59 - HikariPool-27 - Shutdown completed.
+2022-59-19-22:59:00 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 4728 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-59-19-22:59:00 - No active profile set, falling back to default profiles: default
+2022-59-19-22:59:00 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-59-19-22:59:00 - Finished Spring Data repository scanning in 16 ms. Found 6 JPA repository interfaces.
+2022-59-19-22:59:00 - Tomcat initialized with port(s): 8234 (http)
+2022-59-19-22:59:00 - Starting service [Tomcat]
+2022-59-19-22:59:00 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-59-19-22:59:00 - Initializing Spring embedded WebApplicationContext
+2022-59-19-22:59:00 - Root WebApplicationContext: initialization completed in 430 ms
+2022-59-19-22:59:00 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-59-19-22:59:00 - HikariPool-28 - Starting...
+2022-59-19-22:59:00 - HikariPool-28 - Start completed.
+2022-59-19-22:59:00 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-59-19-22:59:00 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-59-19-22:59:00 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-59-19-22:59:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-59-19-22:59:00 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-59-19-22:59:01 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-59-19-22:59:01 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-59-19-22:59:01 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-59-19-22:59:01 - Will secure Ant [pattern='/configuration/security'] with []
+2022-59-19-22:59:01 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-59-19-22:59:01 - Will secure Ant [pattern='/webjars/**'] with []
+2022-59-19-22:59:01 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@381996e6, org.springframework.security.web.context.SecurityContextPersistenceFilter@2df61c9d, org.springframework.security.web.header.HeaderWriterFilter@2a24a7b9, org.springframework.security.web.authentication.logout.LogoutFilter@791533a7, com.capgemini.config.JwtAuthenticationFilter@b0b435a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64aa4714, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b3c2d57, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fea8bb2, org.springframework.security.web.session.SessionManagementFilter@61fb1814, org.springframework.security.web.access.ExceptionTranslationFilter@38ce3b6c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ff46368]
+2022-59-19-22:59:01 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-59-19-22:59:01 - LiveReload server is running on port 35729
+2022-59-19-22:59:01 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-59-19-22:59:01 - Context refreshed
+2022-59-19-22:59:01 - Found 1 custom documentation plugin(s)
+2022-59-19-22:59:01 - Scanning for api listing references
+2022-59-19-22:59:01 - Started VehicleLoanAppDemoApplication in 1.312 seconds (JVM running for 1521.264)
+2022-59-19-22:59:01 - Condition evaluation unchanged
+2022-59-19-22:59:35 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-59-19-22:59:35 - HikariPool-28 - Shutdown initiated...
+2022-59-19-22:59:35 - HikariPool-28 - Shutdown completed.
+2022-59-19-22:59:35 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 4728 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-59-19-22:59:35 - No active profile set, falling back to default profiles: default
+2022-59-19-22:59:35 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-59-19-22:59:35 - Finished Spring Data repository scanning in 16 ms. Found 6 JPA repository interfaces.
+2022-59-19-22:59:35 - Tomcat initialized with port(s): 8234 (http)
+2022-59-19-22:59:35 - Starting service [Tomcat]
+2022-59-19-22:59:35 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-59-19-22:59:35 - Initializing Spring embedded WebApplicationContext
+2022-59-19-22:59:35 - Root WebApplicationContext: initialization completed in 372 ms
+2022-59-19-22:59:35 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-59-19-22:59:35 - HikariPool-29 - Starting...
+2022-59-19-22:59:35 - HikariPool-29 - Start completed.
+2022-59-19-22:59:35 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-59-19-22:59:35 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-59-19-22:59:36 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-59-19-22:59:36 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-59-19-22:59:36 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-59-19-22:59:36 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-59-19-22:59:36 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-59-19-22:59:36 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-59-19-22:59:36 - Will secure Ant [pattern='/configuration/security'] with []
+2022-59-19-22:59:36 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-59-19-22:59:36 - Will secure Ant [pattern='/webjars/**'] with []
+2022-59-19-22:59:36 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52a9e454, org.springframework.security.web.context.SecurityContextPersistenceFilter@274bd0c, org.springframework.security.web.header.HeaderWriterFilter@380f27e6, org.springframework.security.web.authentication.logout.LogoutFilter@45b2563b, com.capgemini.config.JwtAuthenticationFilter@6e64c953, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10a57830, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51d45dd5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74bda58a, org.springframework.security.web.session.SessionManagementFilter@5ffd9276, org.springframework.security.web.access.ExceptionTranslationFilter@17f0a674, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e1000a4]
+2022-59-19-22:59:36 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-59-19-22:59:36 - LiveReload server is running on port 35729
+2022-59-19-22:59:36 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-59-19-22:59:36 - Context refreshed
+2022-59-19-22:59:36 - Found 1 custom documentation plugin(s)
+2022-59-19-22:59:36 - Scanning for api listing references
+2022-59-19-22:59:36 - Started VehicleLoanAppDemoApplication in 1.147 seconds (JVM running for 1556.356)
+2022-59-19-22:59:36 - Condition evaluation unchanged
+2022-03-19-23:03:03 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-19-23:03:03 - HikariPool-29 - Shutdown initiated...
+2022-03-19-23:03:03 - HikariPool-29 - Shutdown completed.
+2022-03-19-23:03:03 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 4728 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-03-19-23:03:03 - No active profile set, falling back to default profiles: default
+2022-03-19-23:03:03 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-19-23:03:03 - Finished Spring Data repository scanning in 16 ms. Found 6 JPA repository interfaces.
+2022-03-19-23:03:03 - Tomcat initialized with port(s): 8234 (http)
+2022-03-19-23:03:03 - Starting service [Tomcat]
+2022-03-19-23:03:03 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-03-19-23:03:03 - Initializing Spring embedded WebApplicationContext
+2022-03-19-23:03:03 - Root WebApplicationContext: initialization completed in 399 ms
+2022-03-19-23:03:04 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-19-23:03:04 - HikariPool-30 - Starting...
+2022-03-19-23:03:04 - HikariPool-30 - Start completed.
+2022-03-19-23:03:04 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-03-19-23:03:04 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-03-19-23:03:04 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-19-23:03:04 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-19-23:03:04 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-19-23:03:04 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-03-19-23:03:04 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-03-19-23:03:04 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-03-19-23:03:04 - Will secure Ant [pattern='/configuration/security'] with []
+2022-03-19-23:03:04 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-03-19-23:03:04 - Will secure Ant [pattern='/webjars/**'] with []
+2022-03-19-23:03:04 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@604b5266, org.springframework.security.web.context.SecurityContextPersistenceFilter@129501eb, org.springframework.security.web.header.HeaderWriterFilter@63e29d7b, org.springframework.security.web.authentication.logout.LogoutFilter@46e10235, com.capgemini.config.JwtAuthenticationFilter@4ecd42f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b552489, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c2b63dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2191e9c6, org.springframework.security.web.session.SessionManagementFilter@356caac5, org.springframework.security.web.access.ExceptionTranslationFilter@237d5e9e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21dc9e6b]
+2022-03-19-23:03:04 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-19-23:03:04 - LiveReload server is running on port 35729
+2022-03-19-23:03:04 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-03-19-23:03:04 - Context refreshed
+2022-03-19-23:03:04 - Found 1 custom documentation plugin(s)
+2022-03-19-23:03:04 - Scanning for api listing references
+2022-03-19-23:03:04 - Started VehicleLoanAppDemoApplication in 1.198 seconds (JVM running for 1764.623)
+2022-03-19-23:03:04 - Condition evaluation unchanged
+2022-03-19-23:03:35 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-19-23:03:35 - HikariPool-30 - Shutdown initiated...
+2022-03-19-23:03:35 - HikariPool-30 - Shutdown completed.
+2022-03-19-23:03:35 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 4728 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-03-19-23:03:35 - No active profile set, falling back to default profiles: default
+2022-03-19-23:03:36 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-19-23:03:36 - Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+2022-03-19-23:03:36 - Tomcat initialized with port(s): 8234 (http)
+2022-03-19-23:03:36 - Starting service [Tomcat]
+2022-03-19-23:03:36 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-03-19-23:03:36 - Initializing Spring embedded WebApplicationContext
+2022-03-19-23:03:36 - Root WebApplicationContext: initialization completed in 363 ms
+2022-03-19-23:03:36 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-19-23:03:36 - HikariPool-31 - Starting...
+2022-03-19-23:03:36 - HikariPool-31 - Start completed.
+2022-03-19-23:03:36 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-03-19-23:03:36 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-03-19-23:03:36 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-19-23:03:36 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-19-23:03:36 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-19-23:03:36 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-03-19-23:03:36 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-03-19-23:03:36 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-03-19-23:03:36 - Will secure Ant [pattern='/configuration/security'] with []
+2022-03-19-23:03:36 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-03-19-23:03:36 - Will secure Ant [pattern='/webjars/**'] with []
+2022-03-19-23:03:36 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d5a2dba, org.springframework.security.web.context.SecurityContextPersistenceFilter@18e252af, org.springframework.security.web.header.HeaderWriterFilter@47765e2f, org.springframework.security.web.authentication.logout.LogoutFilter@7be5d14c, com.capgemini.config.JwtAuthenticationFilter@5cb988, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74a7b6ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d50971, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17e5d28, org.springframework.security.web.session.SessionManagementFilter@3c499e97, org.springframework.security.web.access.ExceptionTranslationFilter@2299c611, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@698031b9]
+2022-03-19-23:03:36 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-19-23:03:36 - LiveReload server is running on port 35729
+2022-03-19-23:03:36 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-03-19-23:03:36 - Context refreshed
+2022-03-19-23:03:36 - Found 1 custom documentation plugin(s)
+2022-03-19-23:03:36 - Scanning for api listing references
+2022-03-19-23:03:37 - Started VehicleLoanAppDemoApplication in 1.138 seconds (JVM running for 1796.941)
+2022-03-19-23:03:37 - Condition evaluation unchanged
+2022-03-19-23:03:41 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-19-23:03:41 - HikariPool-31 - Shutdown initiated...
+2022-03-19-23:03:41 - HikariPool-31 - Shutdown completed.
+2022-03-19-23:03:41 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 4728 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-03-19-23:03:41 - No active profile set, falling back to default profiles: default
+2022-03-19-23:03:41 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-19-23:03:41 - Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+2022-03-19-23:03:42 - Tomcat initialized with port(s): 8234 (http)
+2022-03-19-23:03:42 - Starting service [Tomcat]
+2022-03-19-23:03:42 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-03-19-23:03:42 - Initializing Spring embedded WebApplicationContext
+2022-03-19-23:03:42 - Root WebApplicationContext: initialization completed in 405 ms
+2022-03-19-23:03:42 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-19-23:03:42 - HikariPool-32 - Starting...
+2022-03-19-23:03:42 - HikariPool-32 - Start completed.
+2022-03-19-23:03:42 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-03-19-23:03:42 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-03-19-23:03:42 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-19-23:03:42 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-19-23:03:42 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-19-23:03:42 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-03-19-23:03:42 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-03-19-23:03:42 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-03-19-23:03:42 - Will secure Ant [pattern='/configuration/security'] with []
+2022-03-19-23:03:42 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-03-19-23:03:42 - Will secure Ant [pattern='/webjars/**'] with []
+2022-03-19-23:03:42 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1adf781, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d2434, org.springframework.security.web.header.HeaderWriterFilter@77b686d, org.springframework.security.web.authentication.logout.LogoutFilter@5f2ac81, com.capgemini.config.JwtAuthenticationFilter@6b97df4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@610065d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af43ef2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42c603e3, org.springframework.security.web.session.SessionManagementFilter@6d1b79d6, org.springframework.security.web.access.ExceptionTranslationFilter@23b4a1e5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2213852c]
+2022-03-19-23:03:42 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-03-19-23:03:42 - LiveReload server is running on port 35729
+2022-03-19-23:03:42 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-03-19-23:03:42 - Context refreshed
+2022-03-19-23:03:42 - Found 1 custom documentation plugin(s)
+2022-03-19-23:03:42 - Scanning for api listing references
+2022-03-19-23:03:42 - Started VehicleLoanAppDemoApplication in 1.185 seconds (JVM running for 1802.702)
+2022-03-19-23:03:42 - Condition evaluation unchanged
+2022-03-19-23:03:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-19-23:03:52 - Initializing Servlet 'dispatcherServlet'
+2022-03-19-23:03:52 - Completed initialization in 0 ms
+2022-04-19-23:04:24 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:385) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:235) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.8.jar:5.3.8]
+	at jdk.proxy35/jdk.proxy35.$Proxy477.findByUsername(Unknown Source) ~[na:na]
+	at com.capgemini.jwt.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:24) ~[classes/:na]
+	at com.capgemini.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:60) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1659) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:111) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:406) ~[spring-orm-5.3.8.jar:5.3.8]
+	at jdk.proxy35/jdk.proxy35.$Proxy484.getSingleResult(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:196) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:88) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:155) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:143) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:159) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.8.jar:5.3.8]
+	... 58 common frames omitted
+2022-04-19-23:04:59 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-19-23:04:59 - HikariPool-32 - Shutdown initiated...
+2022-04-19-23:04:59 - HikariPool-32 - Shutdown completed.
+2022-04-19-23:04:59 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 4728 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-04-19-23:04:59 - No active profile set, falling back to default profiles: default
+2022-04-19-23:04:59 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-19-23:04:59 - Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces.
+2022-04-19-23:04:59 - Tomcat initialized with port(s): 8234 (http)
+2022-04-19-23:04:59 - Starting service [Tomcat]
+2022-04-19-23:04:59 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-04-19-23:04:59 - Initializing Spring embedded WebApplicationContext
+2022-04-19-23:04:59 - Root WebApplicationContext: initialization completed in 386 ms
+2022-04-19-23:04:59 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-19-23:04:59 - HikariPool-33 - Starting...
+2022-04-19-23:04:59 - HikariPool-33 - Start completed.
+2022-04-19-23:04:59 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-04-19-23:04:59 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-04-19-23:04:59 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-19-23:04:59 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19-23:05:00 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-19-23:05:00 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-05-19-23:05:00 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-05-19-23:05:00 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-05-19-23:05:00 - Will secure Ant [pattern='/configuration/security'] with []
+2022-05-19-23:05:00 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-05-19-23:05:00 - Will secure Ant [pattern='/webjars/**'] with []
+2022-05-19-23:05:00 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@715fc1c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7988803, org.springframework.security.web.header.HeaderWriterFilter@234b5edf, org.springframework.security.web.authentication.logout.LogoutFilter@2f3baf99, com.capgemini.config.JwtAuthenticationFilter@5c8d5b0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@137515d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a310cc1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c5abec7, org.springframework.security.web.session.SessionManagementFilter@43044f5, org.springframework.security.web.access.ExceptionTranslationFilter@6f5f64d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cc74fc9]
+2022-05-19-23:05:00 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-19-23:05:00 - LiveReload server is running on port 35729
+2022-05-19-23:05:00 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-05-19-23:05:00 - Context refreshed
+2022-05-19-23:05:00 - Found 1 custom documentation plugin(s)
+2022-05-19-23:05:00 - Scanning for api listing references
+2022-05-19-23:05:00 - Started VehicleLoanAppDemoApplication in 1.123 seconds (JVM running for 1880.248)
+2022-05-19-23:05:00 - Condition evaluation unchanged
+2022-05-19-23:05:06 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-19-23:05:06 - Initializing Servlet 'dispatcherServlet'
+2022-05-19-23:05:06 - Completed initialization in 1 ms
+2022-05-19-23:05:06 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:385) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:235) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.8.jar:5.3.8]
+	at jdk.proxy36/jdk.proxy36.$Proxy489.findByUsername(Unknown Source) ~[na:na]
+	at com.capgemini.jwt.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:24) ~[classes/:na]
+	at com.capgemini.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:60) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1659) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:111) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:406) ~[spring-orm-5.3.8.jar:5.3.8]
+	at jdk.proxy36/jdk.proxy36.$Proxy496.getSingleResult(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:196) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:88) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:155) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:143) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:159) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.8.jar:5.3.8]
+	... 58 common frames omitted
+2022-05-19-23:05:34 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19-23:05:34 - HikariPool-33 - Shutdown initiated...
+2022-05-19-23:05:34 - HikariPool-33 - Shutdown completed.
+2022-05-19-23:05:34 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 4728 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-05-19-23:05:34 - No active profile set, falling back to default profiles: default
+2022-05-19-23:05:35 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-19-23:05:35 - Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+2022-05-19-23:05:35 - Tomcat initialized with port(s): 8234 (http)
+2022-05-19-23:05:35 - Starting service [Tomcat]
+2022-05-19-23:05:35 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-05-19-23:05:35 - Initializing Spring embedded WebApplicationContext
+2022-05-19-23:05:35 - Root WebApplicationContext: initialization completed in 378 ms
+2022-05-19-23:05:35 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-19-23:05:35 - HikariPool-34 - Starting...
+2022-05-19-23:05:35 - HikariPool-34 - Start completed.
+2022-05-19-23:05:35 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-05-19-23:05:35 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-05-19-23:05:35 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-19-23:05:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19-23:05:35 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-19-23:05:35 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-05-19-23:05:35 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-05-19-23:05:35 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-05-19-23:05:35 - Will secure Ant [pattern='/configuration/security'] with []
+2022-05-19-23:05:35 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-05-19-23:05:35 - Will secure Ant [pattern='/webjars/**'] with []
+2022-05-19-23:05:35 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@709d05bc, org.springframework.security.web.context.SecurityContextPersistenceFilter@56e12741, org.springframework.security.web.header.HeaderWriterFilter@37e5532, org.springframework.security.web.authentication.logout.LogoutFilter@62dcbe9a, com.capgemini.config.JwtAuthenticationFilter@5b9be26f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cf6ad3a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7dd0be53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@408d46d2, org.springframework.security.web.session.SessionManagementFilter@1e83412, org.springframework.security.web.access.ExceptionTranslationFilter@6ea69d6a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ef13aab]
+2022-05-19-23:05:35 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-19-23:05:35 - LiveReload server is running on port 35729
+2022-05-19-23:05:35 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-05-19-23:05:35 - Context refreshed
+2022-05-19-23:05:35 - Found 1 custom documentation plugin(s)
+2022-05-19-23:05:35 - Scanning for api listing references
+2022-05-19-23:05:35 - Started VehicleLoanAppDemoApplication in 1.205 seconds (JVM running for 1915.868)
+2022-05-19-23:05:35 - Condition evaluation unchanged
+2022-05-19-23:05:44 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19-23:05:44 - HikariPool-34 - Shutdown initiated...
+2022-05-19-23:05:44 - HikariPool-34 - Shutdown completed.
+2022-05-19-23:05:44 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 4728 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-05-19-23:05:44 - No active profile set, falling back to default profiles: default
+2022-05-19-23:05:44 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-19-23:05:44 - Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+2022-05-19-23:05:45 - Tomcat initialized with port(s): 8234 (http)
+2022-05-19-23:05:45 - Starting service [Tomcat]
+2022-05-19-23:05:45 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-05-19-23:05:45 - Initializing Spring embedded WebApplicationContext
+2022-05-19-23:05:45 - Root WebApplicationContext: initialization completed in 378 ms
+2022-05-19-23:05:45 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-19-23:05:45 - HikariPool-35 - Starting...
+2022-05-19-23:05:45 - HikariPool-35 - Start completed.
+2022-05-19-23:05:45 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-05-19-23:05:45 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-05-19-23:05:45 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-19-23:05:45 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19-23:05:45 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-19-23:05:45 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-05-19-23:05:45 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-05-19-23:05:45 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-05-19-23:05:45 - Will secure Ant [pattern='/configuration/security'] with []
+2022-05-19-23:05:45 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-05-19-23:05:45 - Will secure Ant [pattern='/webjars/**'] with []
+2022-05-19-23:05:45 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51d5d678, org.springframework.security.web.context.SecurityContextPersistenceFilter@40d06288, org.springframework.security.web.header.HeaderWriterFilter@509d6f4d, org.springframework.security.web.authentication.logout.LogoutFilter@79c0ce1c, com.capgemini.config.JwtAuthenticationFilter@210e896a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@701239d4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bced79c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1626b1f5, org.springframework.security.web.session.SessionManagementFilter@75b08912, org.springframework.security.web.access.ExceptionTranslationFilter@5c3d99e7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d603e62]
+2022-05-19-23:05:45 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-05-19-23:05:45 - LiveReload server is running on port 35729
+2022-05-19-23:05:45 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-05-19-23:05:45 - Context refreshed
+2022-05-19-23:05:45 - Found 1 custom documentation plugin(s)
+2022-05-19-23:05:45 - Scanning for api listing references
+2022-05-19-23:05:45 - Started VehicleLoanAppDemoApplication in 1.091 seconds (JVM running for 1925.641)
+2022-05-19-23:05:45 - Condition evaluation unchanged
+2022-05-19-23:05:54 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-19-23:05:54 - Initializing Servlet 'dispatcherServlet'
+2022-05-19-23:05:54 - Completed initialization in 1 ms
+2022-05-19-23:05:54 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:385) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:235) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.8.jar:5.3.8]
+	at jdk.proxy38/jdk.proxy38.$Proxy512.findByUsername(Unknown Source) ~[na:na]
+	at com.capgemini.jwt.CustomUserDetailsService.loadUserByUsername(CustomUserDetailsService.java:24) ~[classes/:na]
+	at com.capgemini.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:60) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.1.jar:5.5.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.8.jar:5.3.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.48.jar:9.0.48]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: javax.persistence.NonUniqueResultException: query did not return a unique result: 2
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1659) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:111) ~[hibernate-core-5.4.32.Final.jar:5.4.32.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:406) ~[spring-orm-5.3.8.jar:5.3.8]
+	at jdk.proxy38/jdk.proxy38.$Proxy519.getSingleResult(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:196) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:88) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:155) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:143) ~[spring-data-jpa-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:159) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.5.2.jar:2.5.2]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.8.jar:5.3.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.8.jar:5.3.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.8.jar:5.3.8]
+	... 58 common frames omitted
+2022-07-19-23:07:38 - Application shutdown requested.
+2022-07-19-23:07:38 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-19-23:07:38 - HikariPool-35 - Shutdown initiated...
+2022-07-19-23:07:38 - HikariPool-35 - Shutdown completed.
+2022-08-19-23:08:23 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 24168 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-08-19-23:08:23 - No active profile set, falling back to default profiles: default
+2022-08-19-23:08:23 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-19-23:08:23 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-19-23:08:24 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-19-23:08:24 - Finished Spring Data repository scanning in 55 ms. Found 6 JPA repository interfaces.
+2022-08-19-23:08:25 - Tomcat initialized with port(s): 8234 (http)
+2022-08-19-23:08:25 - Starting service [Tomcat]
+2022-08-19-23:08:25 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-08-19-23:08:25 - Initializing Spring embedded WebApplicationContext
+2022-08-19-23:08:25 - Root WebApplicationContext: initialization completed in 1523 ms
+2022-08-19-23:08:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-19-23:08:25 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-08-19-23:08:25 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-19-23:08:25 - HikariPool-1 - Starting...
+2022-08-19-23:08:26 - HikariPool-1 - Start completed.
+2022-08-19-23:08:26 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-08-19-23:08:26 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-08-19-23:08:27 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-19-23:08:27 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-19-23:08:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19-23:08:27 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-08-19-23:08:27 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-08-19-23:08:27 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-08-19-23:08:27 - Will secure Ant [pattern='/configuration/security'] with []
+2022-08-19-23:08:27 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-08-19-23:08:27 - Will secure Ant [pattern='/webjars/**'] with []
+2022-08-19-23:08:27 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c37fb4b, org.springframework.security.web.context.SecurityContextPersistenceFilter@539974f9, org.springframework.security.web.header.HeaderWriterFilter@2c706a51, org.springframework.security.web.authentication.logout.LogoutFilter@260e01d0, com.capgemini.config.JwtAuthenticationFilter@70dfb141, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@351f4ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4511e97b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27df882, org.springframework.security.web.session.SessionManagementFilter@3f48be3, org.springframework.security.web.access.ExceptionTranslationFilter@521b6bb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@19873426]
+2022-08-19-23:08:27 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-19-23:08:28 - LiveReload server is running on port 35729
+2022-08-19-23:08:28 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-08-19-23:08:28 - Context refreshed
+2022-08-19-23:08:28 - Found 1 custom documentation plugin(s)
+2022-08-19-23:08:28 - Scanning for api listing references
+2022-08-19-23:08:28 - Started VehicleLoanAppDemoApplication in 5.061 seconds (JVM running for 5.895)
+2022-08-19-23:08:40 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19-23:08:40 - Initializing Servlet 'dispatcherServlet'
+2022-08-19-23:08:40 - Completed initialization in 1 ms
+2022-10-19-23:10:50 - Resolved [com.capgemini.exception.UserNotFoundException: The User is NOT ALLOWED.]
+2022-11-19-23:11:31 - Resolved [com.capgemini.exception.UserNotFoundException: The User is NOT ALLOWED.]
+2022-11-19-23:11:47 - Resolved [com.capgemini.exception.UserNotFoundException: The User is NOT ALLOWED.]
+2022-11-19-23:11:52 - Resolved [com.capgemini.exception.UserNotFoundException: The User is NOT ALLOWED.]
+2022-12-19-23:12:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19-23:12:26 - HikariPool-1 - Shutdown initiated...
+2022-12-19-23:12:26 - HikariPool-1 - Shutdown completed.
+2022-12-19-23:12:26 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 24168 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-12-19-23:12:26 - No active profile set, falling back to default profiles: default
+2022-12-19-23:12:26 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-19-23:12:26 - Finished Spring Data repository scanning in 20 ms. Found 6 JPA repository interfaces.
+2022-12-19-23:12:26 - Tomcat initialized with port(s): 8234 (http)
+2022-12-19-23:12:26 - Starting service [Tomcat]
+2022-12-19-23:12:26 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-12-19-23:12:26 - Initializing Spring embedded WebApplicationContext
+2022-12-19-23:12:26 - Root WebApplicationContext: initialization completed in 442 ms
+2022-12-19-23:12:26 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-19-23:12:26 - HikariPool-2 - Starting...
+2022-12-19-23:12:26 - HikariPool-2 - Start completed.
+2022-12-19-23:12:26 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-19-23:12:26 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-12-19-23:12:27 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-19-23:12:27 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19-23:12:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-19-23:12:27 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-12-19-23:12:27 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-12-19-23:12:27 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-12-19-23:12:27 - Will secure Ant [pattern='/configuration/security'] with []
+2022-12-19-23:12:27 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-12-19-23:12:27 - Will secure Ant [pattern='/webjars/**'] with []
+2022-12-19-23:12:27 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fce1987, org.springframework.security.web.context.SecurityContextPersistenceFilter@14fea371, org.springframework.security.web.header.HeaderWriterFilter@6228f867, org.springframework.security.web.authentication.logout.LogoutFilter@1b7a9e0a, com.capgemini.config.JwtAuthenticationFilter@4de673ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15050b2b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@304b222c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30fb8ac, org.springframework.security.web.session.SessionManagementFilter@73408c79, org.springframework.security.web.access.ExceptionTranslationFilter@563ae805, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@dce99ec]
+2022-12-19-23:12:27 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-12-19-23:12:27 - LiveReload server is running on port 35729
+2022-12-19-23:12:27 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-12-19-23:12:27 - Context refreshed
+2022-12-19-23:12:27 - Found 1 custom documentation plugin(s)
+2022-12-19-23:12:27 - Scanning for api listing references
+2022-12-19-23:12:27 - Started VehicleLoanAppDemoApplication in 1.433 seconds (JVM running for 245.079)
+2022-12-19-23:12:27 - Condition evaluation unchanged
+2022-12-19-23:12:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19-23:12:32 - HikariPool-2 - Shutdown initiated...
+2022-12-19-23:12:32 - HikariPool-2 - Shutdown completed.
+2022-12-19-23:12:32 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 24168 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-12-19-23:12:32 - No active profile set, falling back to default profiles: default
+2022-12-19-23:12:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-19-23:12:32 - Finished Spring Data repository scanning in 20 ms. Found 6 JPA repository interfaces.
+2022-12-19-23:12:32 - Tomcat initialized with port(s): 8234 (http)
+2022-12-19-23:12:32 - Starting service [Tomcat]
+2022-12-19-23:12:32 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-12-19-23:12:32 - Initializing Spring embedded WebApplicationContext
+2022-12-19-23:12:32 - Root WebApplicationContext: initialization completed in 350 ms
+2022-12-19-23:12:32 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-19-23:12:32 - HikariPool-3 - Starting...
+2022-12-19-23:12:32 - HikariPool-3 - Start completed.
+2022-12-19-23:12:32 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-12-19-23:12:32 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-12-19-23:12:32 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-19-23:12:32 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19-23:12:33 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-19-23:12:33 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-12-19-23:12:33 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-12-19-23:12:33 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-12-19-23:12:33 - Will secure Ant [pattern='/configuration/security'] with []
+2022-12-19-23:12:33 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-12-19-23:12:33 - Will secure Ant [pattern='/webjars/**'] with []
+2022-12-19-23:12:33 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6147826e, org.springframework.security.web.context.SecurityContextPersistenceFilter@f23d4dd, org.springframework.security.web.header.HeaderWriterFilter@395cf444, org.springframework.security.web.authentication.logout.LogoutFilter@47194985, com.capgemini.config.JwtAuthenticationFilter@5179629a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b2f5a49, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@750f75bc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45f2748d, org.springframework.security.web.session.SessionManagementFilter@8a56088, org.springframework.security.web.access.ExceptionTranslationFilter@14d61fd7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@fde51a2]
+2022-12-19-23:12:33 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-12-19-23:12:33 - LiveReload server is running on port 35729
+2022-12-19-23:12:33 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-12-19-23:12:33 - Context refreshed
+2022-12-19-23:12:33 - Found 1 custom documentation plugin(s)
+2022-12-19-23:12:33 - Scanning for api listing references
+2022-12-19-23:12:33 - Started VehicleLoanAppDemoApplication in 1.194 seconds (JVM running for 250.83)
+2022-12-19-23:12:33 - Condition evaluation unchanged
+2022-12-19-23:12:59 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-19-23:12:59 - HikariPool-3 - Shutdown initiated...
+2022-12-19-23:12:59 - HikariPool-3 - Shutdown completed.
+2022-12-19-23:12:59 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 24168 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-12-19-23:12:59 - No active profile set, falling back to default profiles: default
+2022-12-19-23:12:59 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-19-23:12:59 - Finished Spring Data repository scanning in 20 ms. Found 6 JPA repository interfaces.
+2022-13-19-23:13:00 - Tomcat initialized with port(s): 8234 (http)
+2022-13-19-23:13:00 - Starting service [Tomcat]
+2022-13-19-23:13:00 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-13-19-23:13:00 - Initializing Spring embedded WebApplicationContext
+2022-13-19-23:13:00 - Root WebApplicationContext: initialization completed in 357 ms
+2022-13-19-23:13:00 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-13-19-23:13:00 - HikariPool-4 - Starting...
+2022-13-19-23:13:00 - HikariPool-4 - Start completed.
+2022-13-19-23:13:00 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-13-19-23:13:00 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-13-19-23:13:00 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-13-19-23:13:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-13-19-23:13:00 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-13-19-23:13:00 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-13-19-23:13:00 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-13-19-23:13:00 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-13-19-23:13:00 - Will secure Ant [pattern='/configuration/security'] with []
+2022-13-19-23:13:00 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-13-19-23:13:00 - Will secure Ant [pattern='/webjars/**'] with []
+2022-13-19-23:13:00 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76739ad8, org.springframework.security.web.context.SecurityContextPersistenceFilter@3f2cf976, org.springframework.security.web.header.HeaderWriterFilter@bc08eae, org.springframework.security.web.authentication.logout.LogoutFilter@74e5eac6, com.capgemini.config.JwtAuthenticationFilter@50371d36, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61f8106f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ec24700, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4627f546, org.springframework.security.web.session.SessionManagementFilter@6a9519eb, org.springframework.security.web.access.ExceptionTranslationFilter@f2a2418, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d615503]
+2022-13-19-23:13:00 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-13-19-23:13:00 - LiveReload server is running on port 35729
+2022-13-19-23:13:00 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-13-19-23:13:00 - Context refreshed
+2022-13-19-23:13:00 - Found 1 custom documentation plugin(s)
+2022-13-19-23:13:00 - Scanning for api listing references
+2022-13-19-23:13:00 - Started VehicleLoanAppDemoApplication in 1.241 seconds (JVM running for 278.274)
+2022-13-19-23:13:00 - Condition evaluation unchanged
+2022-13-19-23:13:22 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-13-19-23:13:22 - Initializing Servlet 'dispatcherServlet'
+2022-13-19-23:13:22 - Completed initialization in 1 ms
+2022-13-19-23:13:22 - Resolved [com.capgemini.exception.UserNotFoundException: The User is NOT ALLOWED.]
+2022-14-19-23:14:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-19-23:14:13 - HikariPool-4 - Shutdown initiated...
+2022-14-19-23:14:13 - HikariPool-4 - Shutdown completed.
+2022-14-19-23:14:14 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 24168 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-14-19-23:14:14 - No active profile set, falling back to default profiles: default
+2022-14-19-23:14:14 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-19-23:14:14 - Finished Spring Data repository scanning in 16 ms. Found 6 JPA repository interfaces.
+2022-14-19-23:14:14 - Tomcat initialized with port(s): 8234 (http)
+2022-14-19-23:14:14 - Starting service [Tomcat]
+2022-14-19-23:14:14 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-14-19-23:14:14 - Initializing Spring embedded WebApplicationContext
+2022-14-19-23:14:14 - Root WebApplicationContext: initialization completed in 347 ms
+2022-14-19-23:14:14 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-19-23:14:14 - HikariPool-5 - Starting...
+2022-14-19-23:14:14 - HikariPool-5 - Start completed.
+2022-14-19-23:14:14 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-14-19-23:14:14 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-14-19-23:14:14 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-19-23:14:14 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-19-23:14:14 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-19-23:14:14 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-14-19-23:14:14 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-14-19-23:14:14 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-14-19-23:14:14 - Will secure Ant [pattern='/configuration/security'] with []
+2022-14-19-23:14:14 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-14-19-23:14:14 - Will secure Ant [pattern='/webjars/**'] with []
+2022-14-19-23:14:14 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4781f8e8, org.springframework.security.web.context.SecurityContextPersistenceFilter@241196bb, org.springframework.security.web.header.HeaderWriterFilter@4f7f2df9, org.springframework.security.web.authentication.logout.LogoutFilter@20f196bf, com.capgemini.config.JwtAuthenticationFilter@5ad6cc57, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45d98a87, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@737f6720, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4bdced80, org.springframework.security.web.session.SessionManagementFilter@495655f7, org.springframework.security.web.access.ExceptionTranslationFilter@4b65498f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a22752f]
+2022-14-19-23:14:14 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-14-19-23:14:15 - LiveReload server is running on port 35729
+2022-14-19-23:14:15 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-14-19-23:14:15 - Context refreshed
+2022-14-19-23:14:15 - Found 1 custom documentation plugin(s)
+2022-14-19-23:14:15 - Scanning for api listing references
+2022-14-19-23:14:15 - Started VehicleLoanAppDemoApplication in 1.143 seconds (JVM running for 352.546)
+2022-14-19-23:14:15 - Condition evaluation unchanged
+2022-14-19-23:14:44 - Application shutdown requested.
+2022-14-19-23:14:44 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-14-19-23:14:44 - HikariPool-5 - Shutdown initiated...
+2022-14-19-23:14:44 - HikariPool-5 - Shutdown completed.
+2022-14-19-23:14:46 - Starting VehicleLoanAppDemoApplication using Java 17.0.2 on Sumeet-Balwade-ROG with PID 20460 (D:\Project\Vehicle-Loan-Management\target\classes started by ASUS in D:\Project\Vehicle-Loan-Management)
+2022-14-19-23:14:46 - No active profile set, falling back to default profiles: default
+2022-14-19-23:14:46 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-14-19-23:14:46 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-14-19-23:14:47 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-14-19-23:14:47 - Finished Spring Data repository scanning in 58 ms. Found 6 JPA repository interfaces.
+2022-14-19-23:14:48 - Tomcat initialized with port(s): 8234 (http)
+2022-14-19-23:14:48 - Starting service [Tomcat]
+2022-14-19-23:14:48 - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-14-19-23:14:48 - Initializing Spring embedded WebApplicationContext
+2022-14-19-23:14:48 - Root WebApplicationContext: initialization completed in 1552 ms
+2022-14-19-23:14:48 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-14-19-23:14:48 - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-14-19-23:14:48 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-14-19-23:14:48 - HikariPool-1 - Starting...
+2022-14-19-23:14:49 - HikariPool-1 - Start completed.
+2022-14-19-23:14:49 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-14-19-23:14:49 - HHH000182: No default (no-argument) constructor for class: com.capgemini.model.EmiClass (class must be instantiated by Interceptor)
+2022-14-19-23:14:50 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-14-19-23:14:50 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-14-19-23:14:50 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-14-19-23:14:50 - Will secure Ant [pattern='/v2/api-docs'] with []
+2022-14-19-23:14:50 - Will secure Ant [pattern='/configuration/ui'] with []
+2022-14-19-23:14:50 - Will secure Ant [pattern='/swagger-resources/**'] with []
+2022-14-19-23:14:50 - Will secure Ant [pattern='/configuration/security'] with []
+2022-14-19-23:14:50 - Will secure Ant [pattern='/swagger-ui.html'] with []
+2022-14-19-23:14:50 - Will secure Ant [pattern='/webjars/**'] with []
+2022-14-19-23:14:51 - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d0264a5, org.springframework.security.web.context.SecurityContextPersistenceFilter@54e8eebb, org.springframework.security.web.header.HeaderWriterFilter@307d353e, org.springframework.security.web.authentication.logout.LogoutFilter@45280b7b, com.capgemini.config.JwtAuthenticationFilter@1e10ed0a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22c12d7b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20d76363, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e8fa4a5, org.springframework.security.web.session.SessionManagementFilter@5b2c25be, org.springframework.security.web.access.ExceptionTranslationFilter@313659ae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e63ef3d]
+2022-14-19-23:14:51 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-14-19-23:14:51 - LiveReload server is running on port 35729
+2022-14-19-23:14:51 - Tomcat started on port(s): 8234 (http) with context path ''
+2022-14-19-23:14:51 - Context refreshed
+2022-14-19-23:14:51 - Found 1 custom documentation plugin(s)
+2022-14-19-23:14:51 - Scanning for api listing references
+2022-14-19-23:14:51 - Started VehicleLoanAppDemoApplication in 5.173 seconds (JVM running for 6.007)
