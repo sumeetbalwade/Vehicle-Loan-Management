@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class UserAdvanced  {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private int userId;
 	
 	@NotBlank(message="Address shouldn't be left empty.")
@@ -58,7 +58,6 @@ public class UserAdvanced  {
 
 	public void setAccount(Account account) {
 		this.account = account;
-		this.account.setUser(this);
 	}
 
 	public int getUserId() {

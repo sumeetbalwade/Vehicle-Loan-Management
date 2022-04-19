@@ -1,4 +1,4 @@
-	package com.capgemini.model;
+package com.capgemini.model;
 
 import java.util.Set;
 
@@ -27,7 +27,7 @@ public class Account {
 	
 	
 	@JsonIgnore
-	@OneToOne(mappedBy="account")
+	@OneToOne(fetch=FetchType.LAZY,optional=false)
 	private UserAdvanced user;
 	
 	@JsonIgnore
