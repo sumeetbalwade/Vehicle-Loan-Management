@@ -27,7 +27,7 @@ public class Account {
 	
 	
 	@JsonIgnore
-	@OneToOne(mappedBy="account")
+	@OneToOne(fetch=FetchType.LAZY,optional = false)
 	private UserAdvanced user;
 	
 	@JsonIgnore
@@ -58,7 +58,4 @@ public class Account {
 	public void setUser(UserAdvanced user) {
 		this.user = user;
 	}
-	
-	
-
 }
