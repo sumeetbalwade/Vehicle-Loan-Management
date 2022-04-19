@@ -1,8 +1,12 @@
 package com.capgemini.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.capgemini.dao.UserDao;
 import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.exception.UserNotFoundException;
+import com.capgemini.helper.JwtUtil;
 import com.capgemini.model.Approved;
 import com.capgemini.model.LoanAppTable;
 import com.capgemini.model.LoanUserHolder;
@@ -26,6 +31,7 @@ public class UserController {
 	@Autowired
 	UserDao udao;
 	
+
 	@PostMapping(path="/registerUser")
 	public void UserRegisterService(@RequestBody UserBasic userbasic) throws UserAlreadyExistsException {
 		udao.UserRegisterService(userbasic);
@@ -49,6 +55,7 @@ public class UserController {
 	
 	@GetMapping(path="/getUserRegistrationdetails/{email}")
 	public UserBasic getUserRegistrationdetails(@PathVariable String email) throws UserNotFoundException {
+	
 		return udao.getUserRegistrationdetails(email);
 	}
 	

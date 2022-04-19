@@ -38,10 +38,16 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
     	
-    	http.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN").antMatchers("/user/**").hasRole("USER")
-    	.antMatchers("/**").permitAll().and().csrf().disable().cors().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-        .and()
-        .exceptionHandling().authenticationEntryPoint(entryPoint);
+    	http
+    		.authorizeRequests()
+    		.antMatchers("/token").permitAll()
+    		.antMatchers("/registerUser").permitAll()
+    		.antMatchers("/**").authenticated()
+    		.antMatchers("/admin/**").hasRole("ADMIN")
+    		.antMatchers("/user/**").hasRole("USER")
+    		.and().csrf().disable().cors().disable()
+    		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+    		.and().exceptionHandling().authenticationEntryPoint(entryPoint);
     	
 //        http
 //                .csrf()
