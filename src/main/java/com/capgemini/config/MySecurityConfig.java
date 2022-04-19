@@ -37,19 +37,29 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .csrf()
-                .disable()
-                .cors()
-                .disable()
-                .authorizeRequests()
-                .antMatchers("/token").permitAll()
-                .antMatchers(HttpMethod.OPTIONS).permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .exceptionHandling().authenticationEntryPoint(entryPoint);
+    	
+    	http.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN").antMatchers("/user/**").hasRole("USER")
+    	.antMatchers("/**").permitAll().and().csrf().disable().cors().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        .and()
+        .exceptionHandling().authenticationEntryPoint(entryPoint);
+    	
+//        http
+//                .csrf()
+//                .disable()
+//                .cors()
+//                .disable()
+//                .authorizeRequests()
+//                .antMatchers("/admin/**")
+//                .hasRole("ADMIN")
+//                .antMatchers("/user/**")
+//                .hasRole("USER")
+//                .antMatchers("/**").permitAll()
+////                .antMatchers(HttpMethod.OPTIONS).permitAll()
+////                .anyRequest().authenticated()
+//                .and()
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//                .and()
+//                .exceptionHandling().authenticationEntryPoint(entryPoint);
 
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 

@@ -10,6 +10,9 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.UniqueElements;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -19,9 +22,19 @@ public class UserBasic {
 	
 	@Id
 	private String email;
-	
+//	@UniqueElements
 	private String username;
+//	@JsonIgnore
+	private String role;
 	
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 	@NotBlank(message="Name shouldn't be left empty.")
 	private String name;
 	

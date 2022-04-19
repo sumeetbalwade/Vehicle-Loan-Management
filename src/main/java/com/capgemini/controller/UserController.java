@@ -47,12 +47,12 @@ public class UserController {
 		udao.modifyUserDetails(user);
 	}
 	
-	@GetMapping(path="/getUserRegistrationdetails/{email}")
+	@GetMapping(path="/user/getUserRegistrationdetails/{email}")
 	public UserBasic getUserRegistrationdetails(@PathVariable String email) throws UserNotFoundException {
 		return udao.getUserRegistrationdetails(email);
 	}
 	
-	@GetMapping(path="/getUserDetailsService/{email}")
+	@GetMapping(path="/admin/getUserDetailsService/{email}")
 	public UserAdvanced getUserDetailsService(@PathVariable String email) throws UserNotFoundException {
 		return udao.getUserDetailsService(email);
 	}
