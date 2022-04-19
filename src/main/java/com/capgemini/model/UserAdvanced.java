@@ -13,6 +13,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -22,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class UserAdvanced  {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private int userId;
 	
 	@NotBlank(message="Address shouldn't be left empty.")
@@ -32,14 +33,17 @@ public class UserAdvanced  {
 	@NotBlank(message="City shouldn't be left empty.")
 	private String city;
 	@NotBlank(message="Pin shouldn't be left empty.")
+	@Pattern(regexp="^[0-9]{6}$")
 	private String pin;
 	@NotBlank(message="Employee Type shouldn't be left empty.")
 	private String emptype;
 	@NotNull(message="Salary shouldn't be blank")
 	private double salary;
 	@NotBlank(message="Aadhar details shouldn't be left empty.")
+	@Pattern(regexp="^[2-9]{1}[0-9]{11}$", message="Aadhar is not valid")
 	private String aadhar;
 	@NotBlank(message="PAN details shouldn't be left empty.")
+	@Pattern(regexp="^[A-Z]{5}[0-9]{4}[A-Z]{1}", message="Pan is not valid")
 	private String pan;
 	@NotBlank(message="Salary Slip details shouldn't be left empty.")
 	private String salarySlip;
