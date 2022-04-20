@@ -1,6 +1,7 @@
 package com.capgemini.model;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -26,6 +27,7 @@ public class UserBasic {
 	@Email
 	private String email;
 //	@UniqueElements
+	@Column(unique = true)
 	private String username;
 //	@JsonIgnore
 	private String role;
