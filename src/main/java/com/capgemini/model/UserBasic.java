@@ -1,7 +1,6 @@
 package com.capgemini.model;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -13,9 +12,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.UniqueElements;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -26,20 +22,7 @@ public class UserBasic {
 	@Id
 	@Email
 	private String email;
-//	@UniqueElements
-	@Column(unique = true)
-	private String username;
-//	@JsonIgnore
-	private String role;
 	
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
-
 	@NotBlank(message="Name shouldn't be left empty.")
 	private String name;
 	
@@ -115,16 +98,6 @@ public class UserBasic {
 	public void setUserdetails(UserAdvanced userdetails) {
 		this.userdetails = userdetails;
 	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	
-	
 	
 	
 

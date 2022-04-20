@@ -40,10 +40,10 @@ public class UserAdvanced  {
 	@NotNull(message="Salary shouldn't be blank")
 	private double salary;
 	@NotBlank(message="Aadhar details shouldn't be left empty.")
-//	@Pattern(regexp="^[2-9]{1}[0-9]{11}$", message="Aadhar is not valid")
+	@Pattern(regexp="^[2-9]{1}[0-9]{11}$", message="Aadhar is not valid")
 	private String aadhar;
 	@NotBlank(message="PAN details shouldn't be left empty.")
-//	@Pattern(regexp="^[A-Z]{5}[0-9]{4}[A-Z]{1}", message="Pan is not valid")
+	@Pattern(regexp="^[A-Z]{5}[0-9]{4}[A-Z]{1}", message="Pan is not valid")
 	private String pan;
 	@NotBlank(message="Salary Slip details shouldn't be left empty.")
 	private String salarySlip;

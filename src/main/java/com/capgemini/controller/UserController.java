@@ -1,12 +1,8 @@
 package com.capgemini.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.capgemini.dao.UserDao;
 import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.exception.UserNotFoundException;
-import com.capgemini.helper.JwtUtil;
 import com.capgemini.model.Approved;
 import com.capgemini.model.LoanAppTable;
 import com.capgemini.model.LoanUserHolder;
@@ -31,14 +26,13 @@ public class UserController {
 	@Autowired
 	UserDao udao;
 	
-
 	@PostMapping(path="/registerUser")
 	public void UserRegisterService(@RequestBody UserBasic userbasic) throws UserAlreadyExistsException {
 		udao.UserRegisterService(userbasic);
 	}
 	
-	@PutMapping(path="/user/applyVehicleLoan")
-	public void applyVehicleLoan(@RequestBody LoanUserHolder loanuserholder) throws UserNotFoundException {
+	@PutMapping(path="/applyVehicleLoan")
+	public void applyVehicleLoan(@RequestBody LoanUserHolder loanuserholder) {
 		udao.applyVehicleLoan(loanuserholder);
 	}
 
@@ -48,14 +42,13 @@ public class UserController {
 		udao.resetPasswordService(userbasic);
 	}
 	
-	@PostMapping(path="/user/modifyUserDetails")
+	@PostMapping(path="/modifyUserDetails")
 	public void modifyUserDetails(@RequestBody UserAdvanced user) throws UserNotFoundException {
 		udao.modifyUserDetails(user);
 	}
 	
 	@GetMapping(path="/getUserRegistrationdetails/{email}")
 	public UserBasic getUserRegistrationdetails(@PathVariable String email) throws UserNotFoundException {
-	
 		return udao.getUserRegistrationdetails(email);
 	}
 	
@@ -65,7 +58,7 @@ public class UserController {
 	}
 
 	@GetMapping(path="/getAllLoanApplication/{email}")
-	public List<LoanAppTable> getAllLoanApplication(@PathVariable String email) throws UserNotFoundException {
+	public List<LoanAppTable> getAllLoanApplication(@PathVariable String email) {
 		return udao.getAllLoanApplication(email);
 	}
 	

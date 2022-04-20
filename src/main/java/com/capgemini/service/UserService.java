@@ -13,12 +13,12 @@ import com.capgemini.model.UserBasic;
 
 public interface UserService {
 	public void UserRegisterService(UserBasic userbasic) throws UserAlreadyExistsException;
-	public void applyVehicleLoan(LoanUserHolder loanuserholder) throws UserNotFoundException;
+	public void applyVehicleLoan(LoanUserHolder loanuserholder);
 	public void resetPasswordService(UserBasic userbasic) throws UserNotFoundException;
 	public void modifyUserDetails(UserAdvanced user) throws UserNotFoundException;
 	public UserBasic getUserRegistrationdetails(String email) throws UserNotFoundException;
 	public UserAdvanced getUserDetailsService(String email) throws UserNotFoundException;
-	public List<LoanAppTable> getAllLoanApplication(String email) throws UserNotFoundException;
+	public List<LoanAppTable> getAllLoanApplication(String email);
 	public List<Approved> viewAllApprovedByEmail(String email);
 	public LoanAppTable getLoanApplicationByChassis(int chassisNo);
 	public Approved viewApprovedByLoanId(int loanId);
