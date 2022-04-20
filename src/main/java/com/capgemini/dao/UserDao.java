@@ -92,28 +92,37 @@ public class UserDao implements UserService {
 		if (ubrepo.existsById(loanuserholder.email)) {
 			UserBasic ub=ubrepo.getById(loanuserholder.email);
 			if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+				logger.error("The User is NOT ALLOWED.");
 				throw new UserNotFoundException("The User is NOT ALLOWED.");
 			}
 			loanuserholder.lat.setAppdate(LocalDate.now());
 			loanuserholder.lat.setUser(ub.getUserdetails());
 			larepo.save(loanuserholder.lat);
+			logger.info("Loan Applied Successfully");
 			
 		}
-		else throw new UserNotFoundException("User doesn't exist");
+		else {
+			logger.error("User doesn't exist");
+			throw new UserNotFoundException("User doesn't exist");
+		}
 	}
 
 	@Override
 	public void resetPasswordService(UserBasic userbasic) throws UserNotFoundException {
 		if (!ubrepo.existsById(userbasic.getEmail())) {
+			logger.error("The User is not found.");
 			throw new UserNotFoundException("The User is not found.");
+			
 		}
 		
 		if(!userbasic.getUsername().equals(JwtUtil.getTokenUsername())) {
+			logger.error("The User is NOT ALLOWED."); 
 			throw new UserNotFoundException("The User is NOT ALLOWED.");
 		}
 		UserBasic ub = ubrepo.getById(userbasic.getEmail());
 		ub.setPassword(userbasic.getPassword());
 		ubrepo.save(ub);
+		logger.info("reseted Password");
 	}
 
 	@Override
@@ -121,11 +130,16 @@ public class UserDao implements UserService {
 		if (uadrepo.existsById(user.getUserId())) {
 			
 			if(!ubrepo.getUserByUserId(user.getUserId()).getUsername().equals(JwtUtil.getTokenUsername())) {
+				logger.error("The User is NOT ALLOWED."); 
 				throw new UserNotFoundException("The User is NOT ALLOWED.");
 			}
 			uadrepo.save(user);
+			logger.info("reseted Password");
 		}
-		else throw new UserNotFoundException("The user doesn't exist. Create a new Profile.");
+		else {
+			logger.error("The user doesn't exist. Create a new Profile."); 
+			throw new UserNotFoundException("The user doesn't exist. Create a new Profile.");
+		}
 	}
 
 
@@ -136,22 +150,28 @@ public class UserDao implements UserService {
 		if(u.getRole().equals("ROLE_USER")) {
 			if(u.getEmail().equals(email)) {
 				if (!ubrepo.existsById(email)) {
+					logger.error("The User is not found."); 
 					throw new UserNotFoundException("The User is not found.");
 				}
 				
 				UserBasic ub= ubrepo.getById(email);
 				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					logger.error("The User is NOT ALLOWED."); 
 					throw new UserNotFoundException("The User is NOT ALLOWED.");
 				}
+				logger.info("getUserRegistrationdetails fetched");
 				return ub;
 			}
 		} else if(u.getRole().equals("ROLE_ADMIN")) {
 			if (!ubrepo.existsById(email)) {
+				logger.error("The User is not found."); 
 				throw new UserNotFoundException("The User is not found.");
 			}
 			UserBasic ub= ubrepo.getById(email);
+			logger.info("getUserRegistrationdetails fetched");
 			return ub;
 		}
+		logger.error("The User is NOT ALLOWED."); 
 		throw new UserNotFoundException("The User is NOT ALLOWED.");
 
 	}
@@ -163,21 +183,28 @@ public class UserDao implements UserService {
 		if(u.getRole().equals("ROLE_USER")) {
 			if(u.getEmail().equals(email)) {
 				if (!ubrepo.existsById(email)) {
+					logger.error("The User is not found.");
 					throw new UserNotFoundException("The User is not found.");
 				}
 				
 				UserBasic ub= ubrepo.getById(email);
 				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					logger.error("The User is NOT ALLOWED.");
 					throw new UserNotFoundException("The User is NOT ALLOWED.");
 				}
+				logger.info("getUserDetailsService fetched");
 				return ubrepo.getById(email).getUserdetails();
 			}
 		} else if(u.getRole().equals("ROLE_ADMIN")) {
 			if (!ubrepo.existsById(email)) {
+				logger.error("The User is not found.");
 				throw new UserNotFoundException("The User is not found.");
 			}
+			
+			logger.info("getUserDetailsService fetched");
 			return ubrepo.getById(email).getUserdetails();
 		}
+		logger.error("The User is NOT ALLOWED.");
 		throw new UserNotFoundException("The User is NOT ALLOWED.");
 		
 		
@@ -190,21 +217,27 @@ public class UserDao implements UserService {
 		if(u.getRole().equals("ROLE_USER")) {
 			if(u.getEmail().equals(email)) {
 				if (!ubrepo.existsById(email)) {
+					logger.error("The User is not found.");
 					throw new UserNotFoundException("The User is not found.");
 				}
 				
 				UserBasic ub= ubrepo.getById(email);
 				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					logger.error("The User is NOT ALLOWED.");
 					throw new UserNotFoundException("The User is NOT ALLOWED.");
 				}
+				logger.info("getAllLoanApplication fetched");
 				return larepo.getAllLoanApplication(email);
 			}
 		} else if(u.getRole().equals("ROLE_ADMIN")) {
 			if (!ubrepo.existsById(email)) {
+				logger.error("The User is not found.");
 				throw new UserNotFoundException("The User is not found.");
 			}
+			logger.info("getAllLoanApplication fetched");
 			return larepo.getAllLoanApplication(email);
 		}
+		logger.error("The User is NOT ALLOWED.");
 		throw new UserNotFoundException("The User is NOT ALLOWED.");
 		
 
@@ -218,21 +251,27 @@ public class UserDao implements UserService {
 		if(u.getRole().equals("ROLE_USER")) {
 			if(u.getEmail().equals(email)) {
 				if (!ubrepo.existsById(email)) {
+					logger.error("The User is not found.");
 					throw new UserNotFoundException("The User is not found.");
 				}
 				
 				UserBasic ub= ubrepo.getById(email);
 				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					logger.error("The User is NOT ALLOWED.");
 					throw new UserNotFoundException("The User is NOT ALLOWED.");
 				}
+				logger.info("viewAllApprovedByEmail fetched");
 				return aprepo.viewAllApprovedByEmail(email);
 			}
 		} else if(u.getRole().equals("ROLE_ADMIN")) {
 			if (!ubrepo.existsById(email)) {
+				logger.error("The User is not found.");
 				throw new UserNotFoundException("The User is not found.");
 			}
+			logger.info("viewAllApprovedByEmail fetched");
 			return aprepo.viewAllApprovedByEmail(email);
 		}
+		logger.error("The User is NOT ALLOWED.");
 		throw new UserNotFoundException("The User is NOT ALLOWED.");
 		
 	
@@ -243,8 +282,10 @@ public class UserDao implements UserService {
 
 		
 		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId() || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("RULE_ADMIN") ) {
+			logger.info("getLoanApplicationByChassis fetched");
 			return larepo.getById(chassisNo);
 		} else {
+			logger.error("USER NOT ALLOWED TO ACCESS THIS RECORD");
 			throw new UserNotAllowed("USER NOT ALLOWED TO ACCESS THIS RECORD");
 		}
 		
@@ -256,8 +297,10 @@ public class UserDao implements UserService {
 		
 		int chassisNo = aprepo.findById(loanId).get().getLoanapp().getChassisNo();
 		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId() || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("RULE_ADMIN") ) {
+			logger.info("viewApprovedByLoanId fetched");
 			return aprepo.viewApprovedByLoanId(loanId);
 		} else {
+			logger.error("USER NOT ALLOWED TO ACCESS THIS RECORD");
 			throw new UserNotAllowed("USER NOT ALLOWED TO ACCESS THIS RECORD");
 		}
 	}
@@ -266,8 +309,10 @@ public class UserDao implements UserService {
 	public List<LoanAppTable> getAllRejectedByEmail(String email) throws UserNotAllowed {
 		
 		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getEmail().equals(email) || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("RULE_ADMIN") ) {
+			logger.info("getAllRejectedByEmail fetched");
 			return larepo.getAllRejectedByEmail(email);
 		} else {
+			logger.error("USER NOT ALLOWED TO ACCESS THIS RECORD");
 			throw new UserNotAllowed("USER NOT ALLOWED TO ACCESS THIS RECORD");
 		}
 	}
@@ -275,11 +320,17 @@ public class UserDao implements UserService {
 	@Override
 	public boolean verifyUserLogin(LoginDto login) throws UserNotFoundException {
 		if (!ubrepo.existsById(login.getEmail())) {
+			logger.error("The User is not found.");
 			throw new UserNotFoundException("The User is not found.");
 		}
+		
 		UserBasic ub = ubrepo.getById(login.getEmail());
-		if (ub.getEmail().equals(login.getEmail()) && ub.getPassword().equals(login.getPassword()) && ub.getRole().equals("ROLE_USER"))
+		if (ub.getEmail().equals(login.getEmail()) && ub.getPassword().equals(login.getPassword()) && ub.getRole().equals("ROLE_USER")) {
+			
+			logger.info("verifyUserLogin true");
 			return true;
+		}
+		logger.info("verifyUserLogin false");
 		return false;
 	}
 }
