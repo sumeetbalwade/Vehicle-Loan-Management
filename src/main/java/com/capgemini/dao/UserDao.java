@@ -5,9 +5,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.capgemini.controller.UserController;
 import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.exception.UserNotAllowed;
 import com.capgemini.exception.UserNotFoundException;
@@ -39,7 +42,7 @@ public class UserDao implements UserService {
 	@Autowired
 	ApprovedRepository aprepo;
 	
-
+	Logger logger = LoggerFactory.getLogger(UserController.class); 
 	public static boolean isValidPassword(String password) {
 
 		// Regex to check valid password.
@@ -67,12 +70,15 @@ public class UserDao implements UserService {
 	@Override
 	public void UserRegisterService(UserBasic userbasic) throws UserAlreadyExistsException {
 		if (ubrepo.existsById(userbasic.getEmail())) {
+			logger.error("The User already exists.");
 			throw new UserAlreadyExistsException("The User already exists.");
 		}
 		if(isValidPassword(userbasic.getPassword())) {
 			userbasic.setRole("ROLE_USER");
 			ubrepo.save(userbasic);
+			logger.info("User has been added");
 		}else {
+			logger.error("Passsword is not valid");
 			throw new UserAlreadyExistsException("Passsword is not valid");
 		}
 
