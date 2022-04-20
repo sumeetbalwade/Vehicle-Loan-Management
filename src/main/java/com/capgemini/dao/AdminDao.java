@@ -78,6 +78,7 @@ public class AdminDao implements AdminService{
 			aprepo.save(ap);
 			EmiClass emiclass=new EmiClass(LocalDate.now(),loanapp.getAmount()+emi,emi,loanapp.getAmount(),loanapp.getInterest(),loanapp.getAmount()+emi,s);
 			emirepo.save(emiclass);
+			//emidao.sendOTP(loanapp.getUser().get, s, s)
 		}
 		else {
 			Status status=Status.REJECTED;

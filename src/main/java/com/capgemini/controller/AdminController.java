@@ -38,7 +38,7 @@ public class AdminController {
 		adao.adminRegisterService(admin);
 	}
 	
-	@PutMapping(path="/modifyStatus/{chassisNo}")
+	@PutMapping(path="/admin/modifyStatus/{chassisNo}")
 	public void modifyStatus(@PathVariable int chassisNo) {
 		LoanAppTable loanapp=larepos.getById(chassisNo);
 		adao.modifyStatus(loanapp);

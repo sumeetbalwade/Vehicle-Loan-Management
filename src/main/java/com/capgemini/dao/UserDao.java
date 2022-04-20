@@ -79,17 +79,19 @@ public class UserDao implements UserService {
 
 	@Override
 	public void applyVehicleLoan(LoanUserHolder loanuserholder) throws UserNotFoundException {
-		loanuserholder.lat.setAppdate(LocalDate.now());
-		System.out.println("DAO");
-		larepo.save(loanuserholder.lat);
-		System.out.println("DAO1");
+		/*
 		if(!loanuserholder.ub.getUsername().equals(JwtUtil.getTokenUsername())) {
 			throw new UserNotFoundException("The User is NOT ALLOWED.");
+		}*/
+		
+		if (ubrepo.existsById(loanuserholder.email)) {
+			loanuserholder.lat.setAppdate(LocalDate.now());
+			UserBasic ub=ubrepo.getById(loanuserholder.email);
+			loanuserholder.lat.setUser(ub.getUserdetails());
+			larepo.save(loanuserholder.lat);
+			
 		}
-		if (ubrepo.existsById(loanuserholder.ub.getEmail())) {
-		}
-		else ubrepo.save(loanuserholder.ub);
-		System.out.println("DAO2");
+		else throw new UserNotFoundException("User doesn't exist");
 	}
 
 	@Override
