@@ -43,7 +43,7 @@ public class EMIDao implements EMIService{
 	@Override
 	public double EMICalculate(double loanAmount, int termInYears, double interestRate) {
 		//double E= loanAmount*interestRate[ ((1+interestRate)^n)/ (((1+interestRate)^n)-1)] ;
-		return (double) loanAmount*interestRate*((Math.pow((1+interestRate),(termInYears*12))/ (Math.pow((1+interestRate),(termInYears*12))-1)));
+		return (double) loanAmount*interestRate*(Math.pow((1+interestRate),(termInYears*12))/ (Math.pow((1+interestRate),(termInYears*12))-1));
 	}
 
 	@Override
