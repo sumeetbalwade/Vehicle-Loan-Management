@@ -7,8 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -18,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class UserBasic {
 	
 	@Id
+	@Email
 	private String email;
 	
 	@NotBlank(message="Name shouldn't be left empty.")
@@ -27,6 +30,7 @@ public class UserBasic {
 	private String gender;
 	
 	@NotBlank(message="Mobile Number shouldn't be left empty.")
+	@Pattern(regexp="^[6-9]{1}[0-9]{9}$", message="Mobile number is not valid")
 	private String mobile;
 	
 	@NotNull(message="Age shouldn't be blank")
