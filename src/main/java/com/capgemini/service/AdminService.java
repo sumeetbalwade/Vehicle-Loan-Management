@@ -2,6 +2,7 @@ package com.capgemini.service;
 
 import java.util.List;
 
+import com.capgemini.exception.AdminNotFoundException;
 import com.capgemini.model.Account;
 import com.capgemini.model.AdminDetails;
 import com.capgemini.model.Approved;
@@ -14,7 +15,7 @@ public interface AdminService {
 	public void adminRegisterService(AdminDetails admin);
 	public void modifyStatus(LoanAppTable loanapp);
 	public void AddApprovedDetails(Approved approved);
-	public AdminDetails getAdminRegistrationdetails(String email);
+	public UserBasic getAdminRegistrationdetails(String email) throws AdminNotFoundException;
 	public List<UserBasic> findAllUserRegistrationDetails(); 
 	public Account getAccountByEmailService(String email);
 	public List<LoanAppTable> viewAllAcceptedLoanApplications();

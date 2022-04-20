@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.capgemini.dao.AdminDao;
+import com.capgemini.exception.AdminNotFoundException;
 import com.capgemini.model.Account;
 import com.capgemini.model.AdminDetails;
 import com.capgemini.model.Approved;
@@ -48,43 +49,43 @@ public class AdminController {
 		adao.AddApprovedDetails(approved);
 	}
 	
-	@GetMapping(path="/getAdminRegistrationdetails/{email}")
-	public AdminDetails getAdminRegistrationdetails(@PathVariable String email) {
+	@GetMapping(path="/admin/getAdminRegistrationdetails/{email}")
+	public UserBasic getAdminRegistrationdetails(@PathVariable String email) throws AdminNotFoundException {
 		return adao.getAdminRegistrationdetails(email);
 	}
 	
-	@GetMapping(path="/findAllUserRegistrationDetails")
+	@GetMapping(path="/admin/findAllUserRegistrationDetails")
 	public List<UserBasic> findAllUserRegistrationDetails() {
 		return adao.findAllUserRegistrationDetails();
 	}
 	
-	@GetMapping(path="/getAccountByEmailService/{email}")
+	@GetMapping(path="/admin/getAccountByEmailService/{email}")
 	public Account getAccountByEmailService(@PathVariable String email) {
 		return adao.getAccountByEmailService(email);
 	}
 	
-	@GetMapping(path="/viewAllAcceptedLoanApplications")
+	@GetMapping(path="/admin/viewAllAcceptedLoanApplications")
 	public List<LoanAppTable> viewAllAcceptedLoanApplications() {
 		return adao.viewAllAcceptedLoanApplications();
 	}
 
-	@GetMapping(path="/viewAllRejectedLoanApplications")
+	@GetMapping(path="/admin/viewAllRejectedLoanApplications")
 	public List<LoanAppTable> viewAllRejectedLoanApplications() {
 		return adao.viewAllRejectedLoanApplications();
 	}
 	
 	
-	@GetMapping(path="/viewAllApprovedUsers")
+	@GetMapping(path="/admin/viewAllApprovedUsers")
 	public List<UserBasic> viewAllApprovedUsers() {
 		return adao.viewAllApprovedUsers();
 	}
 	
-	@GetMapping(path="/viewAllRejectedUsers")
+	@GetMapping(path="/admin/viewAllRejectedUsers")
 	public List<UserBasic> viewAllRejectedUsers() {
 		return adao.viewAllRejectedUsers();
 	}
 	
-	@GetMapping(path="/viewAllPendingUsers")
+	@GetMapping(path="/admin/viewAllPendingUsers")
 	public List<UserBasic> viewAllPendingUsers() {
 		return adao.viewAllPendingUsers();
 	}
