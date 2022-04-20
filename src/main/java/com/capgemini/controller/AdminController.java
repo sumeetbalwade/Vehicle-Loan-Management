@@ -35,7 +35,7 @@ public class AdminController {
 	}
 	
 	@PostMapping(path="/adminRegisterService")
-	public void adminRegisterService(UserBasic admin) throws UserAlreadyExistsException {
+	public void adminRegisterService(@RequestBody UserBasic admin) throws UserAlreadyExistsException {
 		adao.adminRegisterService(admin);
 	}
 	
