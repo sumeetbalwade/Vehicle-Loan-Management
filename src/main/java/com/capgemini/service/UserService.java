@@ -22,7 +22,7 @@ public interface UserService {
 	public List<LoanAppTable> getAllLoanApplication(String email) throws UserNotFoundException;
 	public List<Approved> viewAllApprovedByEmail(String email) throws UserNotFoundException;
 	public LoanAppTable getLoanApplicationByChassis(int chassisNo) throws UserNotAllowed;
-	public Approved viewApprovedByLoanId(int loanId);
-	public List<LoanAppTable> getAllRejectedByEmail(String email);
+	public Approved viewApprovedByLoanId(int loanId) throws UserNotAllowed;
+	public List<LoanAppTable> getAllRejectedByEmail(String email) throws UserNotAllowed;
 	public boolean verifyUserLogin(LoginDto login) throws UserNotFoundException;
 }

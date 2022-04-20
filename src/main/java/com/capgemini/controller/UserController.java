@@ -82,12 +82,12 @@ public class UserController {
 	}
 
 	@GetMapping(path="/viewApprovedByLoanId/{loanId}")
-	public Approved viewApprovedByLoanId(@PathVariable int loanId) {
+	public Approved viewApprovedByLoanId(@PathVariable int loanId) throws UserNotAllowed {
 		return udao.viewApprovedByLoanId(loanId);
 	}
 	
 	@GetMapping(path="/getAllRejectedByEmail/{email}")
-	public List<LoanAppTable> getAllRejectedByEmail(@PathVariable String email) {
+	public List<LoanAppTable> getAllRejectedByEmail(@PathVariable String email) throws UserNotAllowed {
 		return udao.getAllRejectedByEmail(email);
 	}
 	

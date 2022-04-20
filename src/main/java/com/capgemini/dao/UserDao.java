@@ -236,7 +236,7 @@ public class UserDao implements UserService {
 	public LoanAppTable getLoanApplicationByChassis(int chassisNo) throws UserNotAllowed {
 
 		
-		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId()) {
+		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId() || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("RULE_ADMIN") ) {
 			return larepo.getById(chassisNo);
 		} else {
 			throw new UserNotAllowed("USER NOT ALLOWED TO ACCESS THIS RECORD");
@@ -245,13 +245,25 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public Approved viewApprovedByLoanId(int loanId) {
-		return aprepo.viewApprovedByLoanId(loanId);
+	public Approved viewApprovedByLoanId(int loanId) throws UserNotAllowed {
+		
+		
+		int chassisNo = aprepo.findById(loanId).get().getLoanapp().getChassisNo();
+		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId() || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("RULE_ADMIN") ) {
+			return aprepo.viewApprovedByLoanId(loanId);
+		} else {
+			throw new UserNotAllowed("USER NOT ALLOWED TO ACCESS THIS RECORD");
+		}
 	}
 
 	@Override
-	public List<LoanAppTable> getAllRejectedByEmail(String email) {
-		return larepo.getAllRejectedByEmail(email);
+	public List<LoanAppTable> getAllRejectedByEmail(String email) throws UserNotAllowed {
+		
+		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getEmail().equals(email) || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("RULE_ADMIN") ) {
+			return larepo.getAllRejectedByEmail(email);
+		} else {
+			throw new UserNotAllowed("USER NOT ALLOWED TO ACCESS THIS RECORD");
+		}
 	}
 
 	@Override
