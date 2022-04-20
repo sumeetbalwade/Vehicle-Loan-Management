@@ -47,11 +47,11 @@ public class AdminDao implements AdminService{
 	
 	@Override
 	public boolean verifyAdminLogin(LoginDto login) {
-		if(!adrepo.existsById(login.getEmail())) {
+		if(!ubrepo.existsById(login.getEmail())) {
 			//throw new UserNotFoundException("The User is not found.");
 		}
-		AdminDetails ad=adrepo.getById(login.getEmail());
-		if(ad.getEmail().equals(login.getEmail()) && ad.getPassword().equals(login.getPassword()))
+		UserBasic ad=ubrepo.getById(login.getEmail());
+		if(ad.getEmail().equals(login.getEmail()) && ad.getPassword().equals(login.getPassword()) && ad.getRole().equals("ROLE_ADMIN"))
 			return true;
 		return false;
 	}

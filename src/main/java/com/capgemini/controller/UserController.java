@@ -71,7 +71,7 @@ public class UserController {
 	
 	
 	@GetMapping(path="/viewAllApprovedByEmail/{email}")
-	public List<Approved> viewAllApprovedByEmail(@PathVariable String email) {
+	public List<Approved> viewAllApprovedByEmail(@PathVariable String email) throws UserNotFoundException {
 		return udao.viewAllApprovedByEmail(email);
 	}
 	

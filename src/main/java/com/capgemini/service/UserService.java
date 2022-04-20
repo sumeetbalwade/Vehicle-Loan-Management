@@ -19,7 +19,7 @@ public interface UserService {
 	public UserBasic getUserRegistrationdetails(String email) throws UserNotFoundException;
 	public UserAdvanced getUserDetailsService(String email) throws UserNotFoundException;
 	public List<LoanAppTable> getAllLoanApplication(String email) throws UserNotFoundException;
-	public List<Approved> viewAllApprovedByEmail(String email);
+	public List<Approved> viewAllApprovedByEmail(String email) throws UserNotFoundException;
 	public LoanAppTable getLoanApplicationByChassis(int chassisNo);
 	public Approved viewApprovedByLoanId(int loanId);
 	public List<LoanAppTable> getAllRejectedByEmail(String email);

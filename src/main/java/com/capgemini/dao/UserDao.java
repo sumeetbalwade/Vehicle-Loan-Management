@@ -79,14 +79,15 @@ public class UserDao implements UserService {
 
 	@Override
 	public void applyVehicleLoan(LoanUserHolder loanuserholder) throws UserNotFoundException {
-		/*
-		if(!loanuserholder.ub.getUsername().equals(JwtUtil.getTokenUsername())) {
-			throw new UserNotFoundException("The User is NOT ALLOWED.");
-		}*/
+		
+		
 		
 		if (ubrepo.existsById(loanuserholder.email)) {
-			loanuserholder.lat.setAppdate(LocalDate.now());
 			UserBasic ub=ubrepo.getById(loanuserholder.email);
+			if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+				throw new UserNotFoundException("The User is NOT ALLOWED.");
+			}
+			loanuserholder.lat.setAppdate(LocalDate.now());
 			loanuserholder.lat.setUser(ub.getUserdetails());
 			larepo.save(loanuserholder.lat);
 			
@@ -203,8 +204,31 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public List<Approved> viewAllApprovedByEmail(String email) {
-		return aprepo.viewAllApprovedByEmail(email);
+	public List<Approved> viewAllApprovedByEmail(String email) throws UserNotFoundException {
+		
+		
+		UserBasic u = ubrepo.getUserByUserName(JwtUtil.getTokenUsername());
+		if(u.getRole().equals("ROLE_USER")) {
+			if(u.getEmail().equals(email)) {
+				if (!ubrepo.existsById(email)) {
+					throw new UserNotFoundException("The User is not found.");
+				}
+				
+				UserBasic ub= ubrepo.getById(email);
+				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					throw new UserNotFoundException("The User is NOT ALLOWED.");
+				}
+				return aprepo.viewAllApprovedByEmail(email);
+			}
+		} else if(u.getRole().equals("ROLE_ADMIN")) {
+			if (!ubrepo.existsById(email)) {
+				throw new UserNotFoundException("The User is not found.");
+			}
+			return aprepo.viewAllApprovedByEmail(email);
+		}
+		throw new UserNotFoundException("The User is NOT ALLOWED.");
+		
+	
 	}
 
 	@Override
@@ -228,7 +252,7 @@ public class UserDao implements UserService {
 			throw new UserNotFoundException("The User is not found.");
 		}
 		UserBasic ub = ubrepo.getById(login.getEmail());
-		if (ub.getEmail().equals(login.getEmail()) && ub.getPassword().equals(login.getPassword()))
+		if (ub.getEmail().equals(login.getEmail()) && ub.getPassword().equals(login.getPassword()) && ub.getRole().equals("ROLE_USER"))
 			return true;
 		return false;
 	}
