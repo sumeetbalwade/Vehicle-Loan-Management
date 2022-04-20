@@ -1,11 +1,13 @@
 package com.capgemini.dao;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.capgemini.exception.AdminNotFoundException;
 import com.capgemini.model.Account;
 import com.capgemini.model.AdminDetails;
 import com.capgemini.model.Approved;
@@ -95,13 +97,22 @@ public class AdminDao implements AdminService{
 	}
 
 	@Override
-	public AdminDetails getAdminRegistrationdetails(String email) {
-		return adrepo.getById(email);
+	public UserBasic getAdminRegistrationdetails(String email) throws AdminNotFoundException {
+		
+		if(ubrepo.getById(email).getRole().equals("ROLE_ADMIN")) {
+			return ubrepo.getById(email);
+		}
+		throw new AdminNotFoundException("Admin Not Found");
 	}
-
-	@Override
 	public List<UserBasic> findAllUserRegistrationDetails() {
-		return ubrepo.findAll();
+		
+		List<UserBasic> ul = new ArrayList<>();
+		for (UserBasic ub : ubrepo.findAll()) {
+			if(ub.getRole().equals("ROLE_USER")) {
+				ul.add(ub);
+			}
+		}
+		return ul;
 	}
 
 	@Override

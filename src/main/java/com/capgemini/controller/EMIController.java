@@ -34,13 +34,13 @@ public class EMIController {
 		emidao.sendOTP(to, sub, msg);
 	}
 	
-	@PostMapping(path="/EMICalculate/{loanAmount}/{termInYears}/{interestRate}")
+	@PostMapping(path="/admin/EMICalculate/{loanAmount}/{termInYears}/{interestRate}")
 	public EmiClass EMICalculate(@PathVariable double loanAmount,@PathVariable int termInYears,@PathVariable double interestRate) {
 		double emi=emidao.EMICalculate(loanAmount, termInYears, interestRate);
 		return emirepo.save(new EmiClass(LocalDate.now(),loanAmount+emi,emi,loanAmount,termInYears,loanAmount+emi,"APPROVED"));	
 	}
 	
-	@GetMapping(path="/calculateEmi")
+	@GetMapping(path="/admin/calculateEmi")
 	public List<EmiClass> calculateEmi(double loanAmount, int termInYears, double interestRate, Date appdate){
 		return emidao.calculateEmi(loanAmount, termInYears, interestRate, appdate);
 	}

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.exception.UserNotFoundException;
+import com.capgemini.helper.JwtUtil;
 import com.capgemini.model.Approved;
 import com.capgemini.model.LoanAppTable;
 import com.capgemini.model.LoanUserHolder;
@@ -77,11 +78,14 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public void applyVehicleLoan(LoanUserHolder loanuserholder) {
+	public void applyVehicleLoan(LoanUserHolder loanuserholder) throws UserNotFoundException {
 		loanuserholder.lat.setAppdate(LocalDate.now());
 		System.out.println("DAO");
 		larepo.save(loanuserholder.lat);
 		System.out.println("DAO1");
+		if(!loanuserholder.ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+			throw new UserNotFoundException("The User is NOT ALLOWED.");
+		}
 		if (ubrepo.existsById(loanuserholder.ub.getEmail())) {
 		}
 		else ubrepo.save(loanuserholder.ub);
@@ -93,6 +97,10 @@ public class UserDao implements UserService {
 		if (!ubrepo.existsById(userbasic.getEmail())) {
 			throw new UserNotFoundException("The User is not found.");
 		}
+		
+		if(!userbasic.getUsername().equals(JwtUtil.getTokenUsername())) {
+			throw new UserNotFoundException("The User is NOT ALLOWED.");
+		}
 		UserBasic ub = ubrepo.getById(userbasic.getEmail());
 		ub.setPassword(userbasic.getPassword());
 		ubrepo.save(ub);
@@ -101,6 +109,10 @@ public class UserDao implements UserService {
 	@Override
 	public void modifyUserDetails(UserAdvanced user) throws UserNotFoundException {
 		if (uadrepo.existsById(user.getUserId())) {
+			
+			if(!ubrepo.getUserByUserId(user.getUserId()).getUsername().equals(JwtUtil.getTokenUsername())) {
+				throw new UserNotFoundException("The User is NOT ALLOWED.");
+			}
 			uadrepo.save(user);
 		}
 		else throw new UserNotFoundException("The user doesn't exist. Create a new Profile.");
@@ -109,23 +121,83 @@ public class UserDao implements UserService {
 
 	@Override
 	public UserBasic getUserRegistrationdetails(String email) throws UserNotFoundException {
-		if (!ubrepo.existsById(email)) {
-			throw new UserNotFoundException("The User is not found.");
+		
+		UserBasic u = ubrepo.getUserByUserName(JwtUtil.getTokenUsername());
+		if(u.getRole().equals("ROLE_USER")) {
+			if(u.getEmail().equals(email)) {
+				if (!ubrepo.existsById(email)) {
+					throw new UserNotFoundException("The User is not found.");
+				}
+				
+				UserBasic ub= ubrepo.getById(email);
+				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					throw new UserNotFoundException("The User is NOT ALLOWED.");
+				}
+				return ub;
+			}
+		} else if(u.getRole().equals("ROLE_ADMIN")) {
+			if (!ubrepo.existsById(email)) {
+				throw new UserNotFoundException("The User is not found.");
+			}
+			UserBasic ub= ubrepo.getById(email);
+			return ub;
 		}
-		return ubrepo.getById(email);
+		throw new UserNotFoundException("The User is NOT ALLOWED.");
+
 	}
 
 	@Override
 	public UserAdvanced getUserDetailsService(String email) throws UserNotFoundException {
-		if (!ubrepo.existsById(email)) {
-			throw new UserNotFoundException("The User is not found.");
+		
+		UserBasic u = ubrepo.getUserByUserName(JwtUtil.getTokenUsername());
+		if(u.getRole().equals("ROLE_USER")) {
+			if(u.getEmail().equals(email)) {
+				if (!ubrepo.existsById(email)) {
+					throw new UserNotFoundException("The User is not found.");
+				}
+				
+				UserBasic ub= ubrepo.getById(email);
+				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					throw new UserNotFoundException("The User is NOT ALLOWED.");
+				}
+				return ubrepo.getById(email).getUserdetails();
+			}
+		} else if(u.getRole().equals("ROLE_ADMIN")) {
+			if (!ubrepo.existsById(email)) {
+				throw new UserNotFoundException("The User is not found.");
+			}
+			return ubrepo.getById(email).getUserdetails();
 		}
-		return ubrepo.getById(email).getUserdetails();
+		throw new UserNotFoundException("The User is NOT ALLOWED.");
+		
+		
 	}
 
 	@Override
-	public List<LoanAppTable> getAllLoanApplication(String email) {
-		return larepo.getAllLoanApplication(email);
+	public List<LoanAppTable> getAllLoanApplication(String email) throws UserNotFoundException {
+		
+		UserBasic u = ubrepo.getUserByUserName(JwtUtil.getTokenUsername());
+		if(u.getRole().equals("ROLE_USER")) {
+			if(u.getEmail().equals(email)) {
+				if (!ubrepo.existsById(email)) {
+					throw new UserNotFoundException("The User is not found.");
+				}
+				
+				UserBasic ub= ubrepo.getById(email);
+				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					throw new UserNotFoundException("The User is NOT ALLOWED.");
+				}
+				return larepo.getAllLoanApplication(email);
+			}
+		} else if(u.getRole().equals("ROLE_ADMIN")) {
+			if (!ubrepo.existsById(email)) {
+				throw new UserNotFoundException("The User is not found.");
+			}
+			return larepo.getAllLoanApplication(email);
+		}
+		throw new UserNotFoundException("The User is NOT ALLOWED.");
+		
+
 	}
 
 	@Override
