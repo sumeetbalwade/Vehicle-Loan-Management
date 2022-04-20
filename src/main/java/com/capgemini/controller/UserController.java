@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.capgemini.dao.UserDao;
 import com.capgemini.exception.UserAlreadyExistsException;
+import com.capgemini.exception.UserNotAllowed;
 import com.capgemini.exception.UserNotFoundException;
 import com.capgemini.helper.JwtUtil;
 import com.capgemini.model.Approved;
@@ -76,7 +77,7 @@ public class UserController {
 	}
 	
 	@GetMapping(path="/getLoanApplicationByChassis/{chassisNo}")
-	public LoanAppTable getLoanApplicationByChassis(@PathVariable int chassisNo) {
+	public LoanAppTable getLoanApplicationByChassis(@PathVariable int chassisNo) throws UserNotAllowed {
 		return udao.getLoanApplicationByChassis(chassisNo);
 	}
 

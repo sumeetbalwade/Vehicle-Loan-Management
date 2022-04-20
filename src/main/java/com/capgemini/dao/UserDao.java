@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.exception.UserAlreadyExistsException;
+import com.capgemini.exception.UserNotAllowed;
 import com.capgemini.exception.UserNotFoundException;
 import com.capgemini.helper.JwtUtil;
 import com.capgemini.model.Approved;
@@ -232,8 +233,15 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public LoanAppTable getLoanApplicationByChassis(int chassisNo) {
-		return larepo.getById(chassisNo);
+	public LoanAppTable getLoanApplicationByChassis(int chassisNo) throws UserNotAllowed {
+
+		
+		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId()) {
+			return larepo.getById(chassisNo);
+		} else {
+			throw new UserNotAllowed("USER NOT ALLOWED TO ACCESS THIS RECORD");
+		}
+		
 	}
 
 	@Override
