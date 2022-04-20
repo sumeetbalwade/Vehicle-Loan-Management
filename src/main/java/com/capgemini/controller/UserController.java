@@ -65,7 +65,7 @@ public class UserController {
 	}
 
 	@GetMapping(path="/getAllLoanApplication/{email}")
-	public List<LoanAppTable> getAllLoanApplication(@PathVariable String email) {
+	public List<LoanAppTable> getAllLoanApplication(@PathVariable String email) throws UserNotFoundException {
 		return udao.getAllLoanApplication(email);
 	}
 	

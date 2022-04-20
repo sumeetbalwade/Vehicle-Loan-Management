@@ -148,15 +148,56 @@ public class UserDao implements UserService {
 
 	@Override
 	public UserAdvanced getUserDetailsService(String email) throws UserNotFoundException {
-		if (!ubrepo.existsById(email)) {
-			throw new UserNotFoundException("The User is not found.");
+		
+		UserBasic u = ubrepo.getUserByUserName(JwtUtil.getTokenUsername());
+		if(u.getRole().equals("ROLE_USER")) {
+			if(u.getEmail().equals(email)) {
+				if (!ubrepo.existsById(email)) {
+					throw new UserNotFoundException("The User is not found.");
+				}
+				
+				UserBasic ub= ubrepo.getById(email);
+				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					throw new UserNotFoundException("The User is NOT ALLOWED.");
+				}
+				return ubrepo.getById(email).getUserdetails();
+			}
+		} else if(u.getRole().equals("ROLE_ADMIN")) {
+			if (!ubrepo.existsById(email)) {
+				throw new UserNotFoundException("The User is not found.");
+			}
+			return ubrepo.getById(email).getUserdetails();
 		}
-		return ubrepo.getById(email).getUserdetails();
+		throw new UserNotFoundException("The User is NOT ALLOWED.");
+		
+		
 	}
 
 	@Override
-	public List<LoanAppTable> getAllLoanApplication(String email) {
-		return larepo.getAllLoanApplication(email);
+	public List<LoanAppTable> getAllLoanApplication(String email) throws UserNotFoundException {
+		
+		UserBasic u = ubrepo.getUserByUserName(JwtUtil.getTokenUsername());
+		if(u.getRole().equals("ROLE_USER")) {
+			if(u.getEmail().equals(email)) {
+				if (!ubrepo.existsById(email)) {
+					throw new UserNotFoundException("The User is not found.");
+				}
+				
+				UserBasic ub= ubrepo.getById(email);
+				if(!ub.getUsername().equals(JwtUtil.getTokenUsername())) {
+					throw new UserNotFoundException("The User is NOT ALLOWED.");
+				}
+				return larepo.getAllLoanApplication(email);
+			}
+		} else if(u.getRole().equals("ROLE_ADMIN")) {
+			if (!ubrepo.existsById(email)) {
+				throw new UserNotFoundException("The User is not found.");
+			}
+			return larepo.getAllLoanApplication(email);
+		}
+		throw new UserNotFoundException("The User is NOT ALLOWED.");
+		
+
 	}
 
 	@Override
