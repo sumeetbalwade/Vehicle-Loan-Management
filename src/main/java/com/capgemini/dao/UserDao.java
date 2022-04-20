@@ -70,7 +70,7 @@ public class UserDao implements UserService {
 			throw new UserAlreadyExistsException("The User already exists.");
 		}
 		if(isValidPassword(userbasic.getPassword())) {
-			
+			userbasic.setRole("ROLE_USER");
 			ubrepo.save(userbasic);
 		}else {
 			throw new UserAlreadyExistsException("Passsword is not valid");

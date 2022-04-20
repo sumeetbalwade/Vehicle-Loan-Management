@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.capgemini.dao.AdminDao;
 import com.capgemini.exception.AdminNotFoundException;
+import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.model.Account;
 import com.capgemini.model.AdminDetails;
 import com.capgemini.model.Approved;
@@ -29,12 +30,12 @@ public class AdminController {
 	LoanApplicationRepository larepos;
 	
 	@GetMapping(path="/verifyAdminLogin")
-	public boolean verifyAdminLogin(@RequestBody LoginDto login) {
+	public boolean verifyAdminLogin(@RequestBody LoginDto login) throws AdminNotFoundException {
 		return adao.verifyAdminLogin(login);
 	}
 	
 	@PostMapping(path="/adminRegisterService")
-	public void adminRegisterService(AdminDetails admin) {
+	public void adminRegisterService(UserBasic admin) throws UserAlreadyExistsException {
 		adao.adminRegisterService(admin);
 	}
 	
@@ -44,7 +45,7 @@ public class AdminController {
 		adao.modifyStatus(loanapp);
 	}
 	
-	@PostMapping(path="/AddApprovedDetails")
+	@PostMapping(path="/admin/AddApprovedDetails")
 	public void AddApprovedDetails(@RequestBody Approved approved) {
 		adao.AddApprovedDetails(approved);
 	}

@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.exception.AdminNotFoundException;
+import com.capgemini.exception.UserAlreadyExistsException;
+import com.capgemini.exception.UserNotFoundException;
 import com.capgemini.model.Account;
 import com.capgemini.model.AdminDetails;
 import com.capgemini.model.Approved;
@@ -46,22 +48,27 @@ public class AdminDao implements AdminService{
 	EMIRepository emirepo;
 	
 	@Override
-	public boolean verifyAdminLogin(LoginDto login) {
-		if(!ubrepo.existsById(login.getEmail())) {
-			//throw new UserNotFoundException("The User is not found.");
+	public boolean verifyAdminLogin(LoginDto login) throws AdminNotFoundException {
+		if (!ubrepo.existsById(login.getEmail())) {
+			throw new AdminNotFoundException("The User is not found.");
 		}
-		UserBasic ad=ubrepo.getById(login.getEmail());
-		if(ad.getEmail().equals(login.getEmail()) && ad.getPassword().equals(login.getPassword()) && ad.getRole().equals("ROLE_ADMIN"))
+		UserBasic ub = ubrepo.getById(login.getEmail());
+		if (ub.getEmail().equals(login.getEmail()) && ub.getPassword().equals(login.getPassword()) && ub.getRole().equals("ROLE_ADMIN"))
 			return true;
 		return false;
 	}
 
 	@Override
-	public void adminRegisterService(AdminDetails admin) {
-		if(adrepo.existsById(admin.getEmail())) {
-			//throw new UserAlreadyExistsException("The User already exists.");
+	public void adminRegisterService(UserBasic admin) throws UserAlreadyExistsException {
+		if (ubrepo.existsById(admin.getEmail())) {
+			throw new UserAlreadyExistsException("The User already exists.");
 		}
-		adrepo.save(admin);
+		if(UserDao.isValidPassword(admin.getPassword())) {
+			admin.setRole("ROLE_ADMIN");
+			ubrepo.save(admin);
+		}else {
+			throw new UserAlreadyExistsException("Passsword is not valid");
+		}
 		
 	}
 

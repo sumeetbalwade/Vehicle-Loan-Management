@@ -29,7 +29,7 @@ public class UserBasic {
 //	@UniqueElements
 	@Column(unique = true)
 	private String username;
-//	@JsonIgnore
+	@JsonIgnore
 	private String role;
 	
 	public String getRole() {
