@@ -37,8 +37,8 @@ public class UserController {
 		udao.UserRegisterService(userbasic);
 	}
 	
-	@PutMapping(path="/applyVehicleLoan")
-	public void applyVehicleLoan(@RequestBody LoanUserHolder loanuserholder) {
+	@PutMapping(path="/user/applyVehicleLoan")
+	public void applyVehicleLoan(@RequestBody LoanUserHolder loanuserholder) throws UserNotFoundException {
 		udao.applyVehicleLoan(loanuserholder);
 	}
 
@@ -48,7 +48,7 @@ public class UserController {
 		udao.resetPasswordService(userbasic);
 	}
 	
-	@PostMapping(path="/modifyUserDetails")
+	@PostMapping(path="/user/modifyUserDetails")
 	public void modifyUserDetails(@RequestBody UserAdvanced user) throws UserNotFoundException {
 		udao.modifyUserDetails(user);
 	}
@@ -59,7 +59,7 @@ public class UserController {
 		return udao.getUserRegistrationdetails(email);
 	}
 	
-	@GetMapping(path="/user/getUserDetailsService/{email}")
+	@GetMapping(path="/getUserDetailsService/{email}")
 	public UserAdvanced getUserDetailsService(@PathVariable String email) throws UserNotFoundException {
 		return udao.getUserDetailsService(email);
 	}
