@@ -26,7 +26,7 @@ public class UserBasic {
 	@Id
 	@Email
 	private String email;
-//	@UniqueElements
+
 	@Column(unique = true)
 	private String username;
 	@JsonIgnore
