@@ -2,6 +2,8 @@ package com.capgemini.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import com.capgemini.exception.UserAlreadyExistsException;
 import com.capgemini.exception.UserNotAllowed;
 import com.capgemini.exception.UserNotFoundException;
@@ -13,10 +15,10 @@ import com.capgemini.model.UserAdvanced;
 import com.capgemini.model.UserBasic;
 
 public interface UserService {
-	public void UserRegisterService(UserBasic userbasic) throws UserAlreadyExistsException;
-	public void applyVehicleLoan(LoanUserHolder loanuserholder) throws UserNotFoundException;
-	public void resetPasswordService(UserBasic userbasic) throws UserNotFoundException;
-	public void modifyUserDetails(UserAdvanced user) throws UserNotFoundException;
+	public ResponseEntity<String> UserRegisterService(UserBasic userbasic) throws UserAlreadyExistsException;
+	public ResponseEntity<String> applyVehicleLoan(LoanUserHolder loanuserholder) throws UserNotFoundException;
+	public ResponseEntity<String> resetPasswordService(UserBasic userbasic) throws UserNotFoundException;
+	public ResponseEntity<String> modifyUserDetails(UserAdvanced user) throws UserNotFoundException;
 	public UserBasic getUserRegistrationdetails(String email) throws UserNotFoundException;
 	public UserAdvanced getUserDetailsService(String email) throws UserNotFoundException;
 	public List<LoanAppTable> getAllLoanApplication(String email) throws UserNotFoundException;

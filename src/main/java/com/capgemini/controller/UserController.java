@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -34,24 +35,24 @@ public class UserController {
 	
 
 	@PostMapping(path="/registerUser")
-	public void UserRegisterService(@RequestBody UserBasic userbasic) throws UserAlreadyExistsException {
-		udao.UserRegisterService(userbasic);
+	public ResponseEntity<String> UserRegisterService(@RequestBody UserBasic userbasic) throws UserAlreadyExistsException {
+		return udao.UserRegisterService(userbasic);
 	}
 	
 	@PutMapping(path="/user/applyVehicleLoan")
-	public void applyVehicleLoan(@RequestBody LoanUserHolder loanuserholder) throws UserNotFoundException {
-		udao.applyVehicleLoan(loanuserholder);
+	public ResponseEntity<String> applyVehicleLoan(@RequestBody LoanUserHolder loanuserholder) throws UserNotFoundException {
+		return udao.applyVehicleLoan(loanuserholder);
 	}
 
 	
 	@PutMapping(path="/resetPasswordService")
-	public void resetPasswordService(@RequestBody UserBasic userbasic) throws UserNotFoundException{
-		udao.resetPasswordService(userbasic);
+	public ResponseEntity<String> resetPasswordService(@RequestBody UserBasic userbasic) throws UserNotFoundException{
+		return udao.resetPasswordService(userbasic);
 	}
 	
 	@PostMapping(path="/user/modifyUserDetails")
-	public void modifyUserDetails(@RequestBody UserAdvanced user) throws UserNotFoundException {
-		udao.modifyUserDetails(user);
+	public ResponseEntity<String> modifyUserDetails(@RequestBody UserAdvanced user) throws UserNotFoundException {
+		return udao.modifyUserDetails(user);
 	}
 	
 	@GetMapping(path="/getUserRegistrationdetails/{email}")

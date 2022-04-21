@@ -8,6 +8,8 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.controller.UserController;
@@ -68,7 +70,7 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public void UserRegisterService(UserBasic userbasic) throws UserAlreadyExistsException {
+	public ResponseEntity<String> UserRegisterService(UserBasic userbasic) throws UserAlreadyExistsException {
 		if (ubrepo.existsById(userbasic.getEmail())) {
 			logger.error("The User already exists.");
 			throw new UserAlreadyExistsException("The User already exists.");
@@ -77,6 +79,7 @@ public class UserDao implements UserService {
 			userbasic.setRole("ROLE_USER");
 			ubrepo.save(userbasic);
 			logger.info("User has been added");
+			return new ResponseEntity<String>("User Registed Successfully",HttpStatus.OK);
 		}else {
 			logger.error("Passsword is not valid");
 			throw new UserAlreadyExistsException("Passsword is not valid");
@@ -85,7 +88,7 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public void applyVehicleLoan(LoanUserHolder loanuserholder) throws UserNotFoundException {
+	public ResponseEntity<String> applyVehicleLoan(LoanUserHolder loanuserholder) throws UserNotFoundException {
 		
 		
 		
@@ -99,6 +102,7 @@ public class UserDao implements UserService {
 			loanuserholder.lat.setUser(ub.getUserdetails());
 			larepo.save(loanuserholder.lat);
 			logger.info("Loan Applied Successfully");
+			return new ResponseEntity<String>("applyed VehicleLoan Successfully",HttpStatus.OK);
 			
 		}
 		else {
@@ -108,7 +112,7 @@ public class UserDao implements UserService {
 	}
 
 	@Override
-	public void resetPasswordService(UserBasic userbasic) throws UserNotFoundException {
+	public ResponseEntity<String> resetPasswordService(UserBasic userbasic) throws UserNotFoundException {
 		if (!ubrepo.existsById(userbasic.getEmail())) {
 			logger.error("The User is not found.");
 			throw new UserNotFoundException("The User is not found.");
@@ -123,10 +127,12 @@ public class UserDao implements UserService {
 		ub.setPassword(userbasic.getPassword());
 		ubrepo.save(ub);
 		logger.info("reseted Password");
+		return new ResponseEntity<String>("Reseted Password Successfully",HttpStatus.OK);
+		
 	}
 
 	@Override
-	public void modifyUserDetails(UserAdvanced user) throws UserNotFoundException {
+	public ResponseEntity<String> modifyUserDetails(UserAdvanced user) throws UserNotFoundException {
 		if (uadrepo.existsById(user.getUserId())) {
 			
 			if(!ubrepo.getUserByUserId(user.getUserId()).getUsername().equals(JwtUtil.getTokenUsername())) {
@@ -135,6 +141,7 @@ public class UserDao implements UserService {
 			}
 			uadrepo.save(user);
 			logger.info("reseted Password");
+			return new ResponseEntity<String>("modifyUserDetails Successfully",HttpStatus.OK);
 		}
 		else {
 			logger.error("The user doesn't exist. Create a new Profile."); 
