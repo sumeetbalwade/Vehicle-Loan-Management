@@ -32,7 +32,7 @@ public class EMIController {
 		return emidao.generateOTP();
 	}
 	
-	@PutMapping(path="/sendOTP")
+	@PostMapping(path="/sendOTP")
 	public ResponseEntity<String> sendOTP(@RequestBody OtpTemplate otpTemplate) {
 		return emidao.sendOTP(otpTemplate.to, otpTemplate.subject, otpTemplate.messgage);
 	}
