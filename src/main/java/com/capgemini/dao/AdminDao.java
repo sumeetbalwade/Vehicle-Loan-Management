@@ -7,6 +7,8 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.controller.AdminController;
@@ -69,7 +71,7 @@ public class AdminDao implements AdminService{
 	}
 
 	@Override
-	public void adminRegisterService(UserBasic admin) throws UserAlreadyExistsException {
+	public ResponseEntity<String> adminRegisterService(UserBasic admin) throws UserAlreadyExistsException {
 		if (ubrepo.existsById(admin.getEmail())) {
 			logger.error("The User is not found.");
 			throw new UserAlreadyExistsException("\"The User is not found.");
@@ -78,6 +80,7 @@ public class AdminDao implements AdminService{
 			admin.setRole("ROLE_ADMIN");
 			ubrepo.save(admin);
 			logger.info("adminRegisterService successful");
+			return new ResponseEntity<String>("Admin Registed Successfully",HttpStatus.OK);
 		}else {
 			logger.error("Passsword is not valid");
 			throw new UserAlreadyExistsException("Passsword is not valid");
@@ -86,7 +89,7 @@ public class AdminDao implements AdminService{
 	}
 
 	@Override
-	public void modifyStatus(LoanAppTable loanapp) {
+	public ResponseEntity<String> modifyStatus(LoanAppTable loanapp) {
 		int ratio=(int)(loanapp.getAmount()/loanapp.getUser().getSalary());
 		if(ratio<20) {
 			Status status=Status.APPROVED;
@@ -100,6 +103,7 @@ public class AdminDao implements AdminService{
 			emirepo.save(emiclass);
 			logger.info("modifyStatus successful");
 			//emidao.sendOTP(loanapp.getUser().get, s, s)
+			return new ResponseEntity<String>("modifyStatus successful Accepted",HttpStatus.OK);
 		}
 		else {
 			Status status=Status.REJECTED;
@@ -107,6 +111,7 @@ public class AdminDao implements AdminService{
 			loanapp.setStatus(s);
 			larepo.save(loanapp);
 			logger.info("modifyStatus successful");
+			return new ResponseEntity<String>("modifyStatus successful REJECTED",HttpStatus.OK);
 		}
 		//LoanAppTable late=larepo.getById(loanapp.getChassisNo());
 		//late.setStatus(loanapp.getStatus());
@@ -115,9 +120,10 @@ public class AdminDao implements AdminService{
 	}
 
 	@Override
-	public void AddApprovedDetails(Approved approved) {
+	public ResponseEntity<String> AddApprovedDetails(Approved approved) {
 		logger.info("AddApprovedDetails successful");
 		aprepo.save(approved);
+		return new ResponseEntity<String>("AddApprovedDetails successful",HttpStatus.OK);
 	}
 
 	@Override

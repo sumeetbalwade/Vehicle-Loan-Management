@@ -3,6 +3,7 @@ package com.capgemini.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,19 +36,19 @@ public class AdminController {
 	}
 	
 	@PostMapping(path="/adminRegisterService")
-	public void adminRegisterService(@RequestBody UserBasic admin) throws UserAlreadyExistsException {
-		adao.adminRegisterService(admin);
+	public ResponseEntity<String> adminRegisterService(@RequestBody UserBasic admin) throws UserAlreadyExistsException {
+		return adao.adminRegisterService(admin);
 	}
 	
 	@PutMapping(path="/admin/modifyStatus/{chassisNo}")
-	public void modifyStatus(@PathVariable int chassisNo) {
+	public ResponseEntity<String> modifyStatus(@PathVariable int chassisNo) {
 		LoanAppTable loanapp=larepos.getById(chassisNo);
-		adao.modifyStatus(loanapp);
+		return adao.modifyStatus(loanapp);
 	}
 	
 	@PostMapping(path="/admin/AddApprovedDetails")
-	public void AddApprovedDetails(@RequestBody Approved approved) {
-		adao.AddApprovedDetails(approved);
+	public ResponseEntity<String> AddApprovedDetails(@RequestBody Approved approved) {
+		return adao.AddApprovedDetails(approved);
 	}
 	
 	@GetMapping(path="/admin/getAdminRegistrationdetails/{email}")
