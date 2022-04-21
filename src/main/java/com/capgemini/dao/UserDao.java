@@ -183,6 +183,20 @@ public class UserDao implements UserService {
 
 	}
 
+	
+	
+	public UserAdvanced testGetUserRegistrationdetails(String email) throws UserNotFoundException {
+		
+		if(ubrepo.existsById(email)) {
+			
+			UserBasic ub= ubrepo.getById(email);
+			logger.info("getUserRegistrationdetails fetched");
+			return ubrepo.getById(email).getUserdetails();
+		}
+		return null;
+
+	}
+	
 	@Override
 	public UserAdvanced getUserDetailsService(String email) throws UserNotFoundException {
 		

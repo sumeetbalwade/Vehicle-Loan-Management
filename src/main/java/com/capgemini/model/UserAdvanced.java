@@ -56,6 +56,39 @@ public class UserAdvanced  {
 	@OneToOne(cascade=CascadeType.ALL)
 	private Account account;	
 
+	
+	
+	
+	public UserAdvanced() {
+		super();
+	}
+
+	public UserAdvanced(int userId, @NotBlank(message = "Address shouldn't be left empty.") String address,
+			@NotBlank(message = "State shouldn't be left empty.") String state,
+			@NotBlank(message = "City shouldn't be left empty.") String city,
+			@NotBlank(message = "Pin shouldn't be left empty.") @Pattern(regexp = "^[0-9]{6}$") String pin,
+			@NotBlank(message = "Employee Type shouldn't be left empty.") String emptype,
+			@NotNull(message = "Salary shouldn't be blank") double salary,
+			@NotBlank(message = "Aadhar details shouldn't be left empty.") @Pattern(regexp = "^[2-9]{1}[0-9]{11}$", message = "Aadhar is not valid") String aadhar,
+			@NotBlank(message = "PAN details shouldn't be left empty.") @Pattern(regexp = "^[A-Z]{5}[0-9]{4}[A-Z]{1}", message = "Pan is not valid") String pan,
+			@NotBlank(message = "Salary Slip details shouldn't be left empty.") String salarySlip,
+			@NotBlank(message = "Address Proof shouldn't be left empty.") String addressProof, Account account) {
+		super();
+		this.userId = userId;
+		this.address = address;
+		this.state = state;
+		this.city = city;
+		this.pin = pin;
+		this.emptype = emptype;
+		this.salary = salary;
+		this.aadhar = aadhar;
+		this.pan = pan;
+		this.salarySlip = salarySlip;
+		this.addressProof = addressProof;
+
+		this.account = account;
+	}
+
 	public Account getAccount() {
 		return account;
 	}
