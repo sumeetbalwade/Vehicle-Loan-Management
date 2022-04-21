@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.capgemini.dao.EMIDao;
 import com.capgemini.model.EmiClass;
+import com.capgemini.model.OtpTemplate;
 import com.capgemini.repository.EMIRepository;
 
 @RestController
@@ -29,9 +31,9 @@ public class EMIController {
 		return emidao.generateOTP();
 	}
 	
-	@PutMapping(path="/sendOTP/{to}/{sub}/{msg}")
-	public void sendOTP(@PathVariable String to,@PathVariable String sub,@PathVariable String msg) {
-		emidao.sendOTP(to, sub, msg);
+	@PutMapping(path="/sendOTP")
+	public void sendOTP(@RequestBody OtpTemplate otpTemplate) {
+		emidao.sendOTP(otpTemplate.to, otpTemplate.subject, otpTemplate.messgage);
 	}
 	
 	@PostMapping(path="/admin/EMICalculate/{loanAmount}/{termInYears}/{interestRate}")

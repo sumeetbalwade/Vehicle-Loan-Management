@@ -43,8 +43,8 @@ public class EMIDao implements EMIService{
 		smm.setSubject(sub);
 		smm.setText(msg);
 		jms.send(smm);
-		logger.info("OTP Sent sucessful");
-		System.out.println("OTP Sent");
+		logger.info("Message Sent sucessful");
+		System.out.println("Message Sent");
 	}
 
 	@Override
