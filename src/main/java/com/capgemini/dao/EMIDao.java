@@ -6,6 +6,8 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -35,7 +37,7 @@ public class EMIDao implements EMIService{
 	}
 
 	@Override
-	public void sendOTP(String to, String sub, String msg) {
+	public ResponseEntity<String> sendOTP(String to, String sub, String msg) {
 		String from="balwadesr@gmail.com";
 		SimpleMailMessage smm=new SimpleMailMessage();
 		smm.setTo(to);
@@ -44,7 +46,7 @@ public class EMIDao implements EMIService{
 		smm.setText(msg);
 		jms.send(smm);
 		logger.info("Message Sent sucessful");
-		System.out.println("Message Sent");
+		return new ResponseEntity<String>("Message Sent sucessful",HttpStatus.OK);
 	}
 
 	@Override
