@@ -288,7 +288,7 @@ public class UserDao implements UserService {
 	public LoanAppTable getLoanApplicationByChassis(int chassisNo) throws UserNotAllowed {
 
 		
-		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId() || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("RULE_ADMIN") ) {
+		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId() || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("ROLE_ADMIN") ) {
 			logger.info("getLoanApplicationByChassis fetched");
 			return larepo.getById(chassisNo);
 		} else {
@@ -303,7 +303,7 @@ public class UserDao implements UserService {
 		
 		
 		int chassisNo = aprepo.findById(loanId).get().getLoanapp().getChassisNo();
-		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId() || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("RULE_ADMIN") ) {
+		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getUserdetails().getUserId() == larepo.getById(chassisNo).getUser().getUserId() || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("ROLE_ADMIN") ) {
 			logger.info("viewApprovedByLoanId fetched");
 			return aprepo.viewApprovedByLoanId(loanId);
 		} else {
@@ -315,7 +315,7 @@ public class UserDao implements UserService {
 	@Override
 	public List<LoanAppTable> getAllRejectedByEmail(String email) throws UserNotAllowed {
 		
-		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getEmail().equals(email) || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("RULE_ADMIN") ) {
+		if(ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getEmail().equals(email) || ubrepo.getUserByUserName(JwtUtil.getTokenUsername()).getRole().equals("ROLE_ADMIN") ) {
 			logger.info("getAllRejectedByEmail fetched");
 			return larepo.getAllRejectedByEmail(email);
 		} else {

@@ -25,6 +25,7 @@ import com.capgemini.model.LoginDto;
 import com.capgemini.model.Status;
 import com.capgemini.model.UserAdvanced;
 import com.capgemini.model.UserBasic;
+import com.capgemini.repository.AccountRepository;
 import com.capgemini.repository.AdminRepository;
 import com.capgemini.repository.ApprovedRepository;
 import com.capgemini.repository.EMIRepository;
@@ -52,6 +53,9 @@ public class AdminDao implements AdminService{
 	
 	@Autowired
 	EMIRepository emirepo;
+	
+	@Autowired
+	AccountRepository accrepo;
 	
 	Logger logger = LoggerFactory.getLogger(AdminController.class);
 	
@@ -152,7 +156,7 @@ public class AdminDao implements AdminService{
 	@Override
 	public Account getAccountByEmailService(String email) {
 		logger.info("getAccountByEmailService successful");
-		return adrepo.getAccountByEmailService(email);
+		return accrepo.getAccountByEmailService(email);
 	}
 
 	@Override

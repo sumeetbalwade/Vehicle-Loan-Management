@@ -74,6 +74,7 @@ public class LoanAppTable {
 	private double onRoadPrice;
 	
 	@ManyToOne
+	@JsonIgnore
 	private UserAdvanced user;
 
 	public int getChassisNo() {
