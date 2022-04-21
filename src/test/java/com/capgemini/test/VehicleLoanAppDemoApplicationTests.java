@@ -16,11 +16,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.capgemini.dao.AdminDao;
 import com.capgemini.dao.UserDao;
+import com.capgemini.exception.AdminNotFoundException;
 import com.capgemini.exception.UserNotFoundException;
 import com.capgemini.model.Account;
 import com.capgemini.model.LoanAppTable;
+import com.capgemini.model.LoginDto;
 import com.capgemini.model.UserAdvanced;
+import com.capgemini.model.UserBasic;
 import com.capgemini.repository.UserAdvancedRepository;
 import com.capgemini.repository.UserBasicRepository;
 
@@ -34,6 +38,11 @@ class VehicleLoanAppDemoApplicationTests {
 
 	@Autowired
 	private UserDao ud;
+	
+	
+	@Autowired
+	private AdminDao ad;
+	
 	
 	@Autowired
 	UserBasicRepository ubrepo;
@@ -50,6 +59,22 @@ class VehicleLoanAppDemoApplicationTests {
 //		try {
 //			assertEquals(userAdvanced, ud.testGetUserRegistrationdetails(email));
 //		} catch (UserNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+	}
+	
+	@Test
+	public void verifyAdminLoginTest() {
+//		try {
+//			when(ad.verifyAdminLogin(new LoginDto("admin@gmail.com", "Sumeet@26"))).thenReturn(true);
+//		} catch (AdminNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		try {
+//			assertEquals(true, ad.verifyAdminLogin(new LoginDto("admin@gmail.com", "Sumeet@26")));
+//		} catch (AdminNotFoundException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
