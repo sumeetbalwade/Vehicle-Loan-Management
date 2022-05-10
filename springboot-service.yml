@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: spring-boot-postgres-sample
-  name: spring-boot-postgres-sample
+    app: vehicle-loan-managment-app
+  name: vehicle-loan-managment-app
 spec:
   ports:
-    - name: spring-boot-postgres-sample
+    - name: vehicle-loan-managment-app
       port: 8080
       targetPort: 8080
       protocol: TCP
   selector:
-    app: spring-boot-postgres-sample
+    app: vehicle-loan-managment-app
   type: LoadBalancer
