@@ -1,8 +1,8 @@
 version: '3.1'
 services:
   app:
-    container_name: springboot-postgresql
-    image: springboot-postgresql
+    container_name: vloan-docker
+    image: vloan-docker:1.0.1-docker
     build: ./
     ports:
       - "8080:8080"
